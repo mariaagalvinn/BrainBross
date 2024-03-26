@@ -1,0 +1,28 @@
+# Blender MTL File: 'Castle3.blend'
+# Material Count: 2
+
+newmtl Material.002
+Ns 54.901961
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.403509 0.403509 0.403509
+Ke 0.660000 0.660000 0.660000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd Castle Texture.png
+map_Bump -bm 0.337749 Castle Texture New.png
+map_d Castle Texture New.png
+
+newmtl Material.002_Castle_Texture_New.png
+Ns 54.901961
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.403509 0.403509 0.403509
+Ke 0.660000 0.660000 0.660000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd Castle Texture New.png
+map_Bump -bm 0.337749 Castle Texture New.png
+map_d Castle Texture New.png
