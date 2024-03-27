@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/_Project/_Scenes/CrowdControl.unity
+    guid: 9558a817d1842435f93bb0e0921b058a
   m_configObjects: {}
