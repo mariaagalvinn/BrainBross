@@ -20,6 +20,7 @@ public class PersonajeController : MonoBehaviour
     public float jumpSpeed = 4f;
 
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -73,6 +74,7 @@ public class PersonajeController : MonoBehaviour
         {
             isJumping = true;
 
+
             Vector3 startPosition = transform.position;
 
             float time = 0f;
@@ -85,8 +87,9 @@ public class PersonajeController : MonoBehaviour
                 yield return null;
             }
 
-            transform.position = targetPosition;
+            //transform.position = targetPosition;
             isJumping = false;
+        
         }
     }
 
