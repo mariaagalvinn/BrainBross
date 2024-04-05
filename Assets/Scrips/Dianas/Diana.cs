@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Diana : MonoBehaviour
@@ -68,8 +69,12 @@ public class Diana : MonoBehaviour
         }   
         if(cantidadDisparos == 0 || duracionActual >= duracionPartida)
         {
-            textoTiempoRestante.text = "Fin de la partida";
             Destroy(gameObject);
+            if(puntuacionActual >= 100)
+            {
+                textoTiempoRestante.text = "Has ganado";
+            }
+            else textoTiempoRestante.text = "Has perdido";
         }
     }
 
