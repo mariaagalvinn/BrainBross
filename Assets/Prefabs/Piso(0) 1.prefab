@@ -148,6 +148,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7197021167682605600}
     m_Modifications:
+    - target: {fileID: 296935978383736520, guid: e21060a1ed950584eaf924a1ea809812, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1206465716176776683, guid: e21060a1ed950584eaf924a1ea809812, type: 3}
       propertyPath: m_Name
       value: Obstaculo (2)
@@ -210,6 +214,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7197021167682605600}
     m_Modifications:
+    - target: {fileID: 296935978383736520, guid: e21060a1ed950584eaf924a1ea809812, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1206465716176776683, guid: e21060a1ed950584eaf924a1ea809812, type: 3}
       propertyPath: m_Name
       value: Obstaculo (1)
