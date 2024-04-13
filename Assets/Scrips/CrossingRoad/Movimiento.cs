@@ -14,13 +14,19 @@ public class Movimiento : MonoBehaviour
     public Transform grafico;
     public LayerMask capaObstaculos;
     public LayerMask capaAgua;
+    public Animator animaciones;
+    public AnimationCurve curva;
     public float distanciaVista=1;
     public bool vivo=true;
     int posicionZ;
+    bool bloqueo = false;
+    public float tazaIncremento;
+    public float escalainicial = 0.8f;
 
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = escalainicial;
         InvokeRepeating("MirarAgua", 1, 0.5f);
     }
 
@@ -28,7 +34,7 @@ public class Movimiento : MonoBehaviour
     void Update()
     {
         ActualizarPosicion();
-        if(Input.GetKeyDown(KeyCode.W))
+        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {
             Avanzar();
         }
@@ -59,13 +65,27 @@ public class Movimiento : MonoBehaviour
         {
             return;
         }
+        
+    }
+
+    public IEnumerator CambiarPosicion()
+    {
+        bloqueo = true;
         posObjetivo = new Vector3(lateral, 0, posicionZ);
+        Vector3 posActual = transform.position;
+        for(int i=0; i<10;i++)
+        {
+            transform.position = Vector3.Lerp(posActual, posObjetivo, i*0.1f)+Vector3.up*curva.Evaluate(i*0.1f);
+            yield return new WaitForSeconds(1f/velocidad);
+        }
+
         transform.position = Vector3.Lerp(transform.position, posObjetivo, velocidad*Time.deltaTime);
+        bloqueo =false;
     }
 
     public void Avanzar()
     {
-        if(vivo==false)
+        if(vivo==false || bloqueo==true)
         {
             return;
         }
@@ -75,16 +95,19 @@ public class Movimiento : MonoBehaviour
             return; 
         }
         posicionZ++;
+        //animaciones.SetTrigger("saltar");
         if(posicionZ > carril)
         {
             carril=posicionZ;
             mundo.CrearPiso();
+            Time.timeScale = escalainicial+tazaIncremento*carril;
         }
+        StartCoroutine(CambiarPosicion());
     }
 
     public void Retroceder()
     {
-        if(vivo==false)
+        if(vivo==false || bloqueo==true)
         {
             return;
         }
@@ -94,15 +117,17 @@ public class Movimiento : MonoBehaviour
             return ;
         }
         posicionZ--;
+        //animaciones.SetTrigger("saltar");
        if(posicionZ < 0)
        {
             carril=posicionZ;
-       } 
+       }
+       StartCoroutine(CambiarPosicion());
     }
 
     public void MoverLados(int cuanto)
     {
-        if(vivo==false)
+        if(vivo==false || bloqueo==true)
         {
             return;
         }
@@ -112,7 +137,9 @@ public class Movimiento : MonoBehaviour
             return ;
         }
         lateral += cuanto;
+        //animaciones.SetTrigger("saltar");
         lateral = Mathf.Clamp(lateral, -4, 4);
+        StartCoroutine(CambiarPosicion());
     }
 
     public bool MirarAdelante()
@@ -131,6 +158,7 @@ public class Movimiento : MonoBehaviour
     {
         if(other.CompareTag("carro"))
         {
+            animaciones.SetTrigger("morir");
             vivo=false;
         }
     }
@@ -143,6 +171,7 @@ public class Movimiento : MonoBehaviour
         {
             if(hit.collider.CompareTag("agua"))
             {
+                animaciones.SetTrigger("agua");
                 vivo = false;
             }
         }

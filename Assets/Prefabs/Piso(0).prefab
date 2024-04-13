@@ -157,6 +157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstaculo (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1206465716176776683, guid: e21060a1ed950584eaf924a1ea809812, type: 3}
+      propertyPath: m_TagString
+      value: obstaculo
+      objectReference: {fileID: 0}
     - target: {fileID: 4565680391070246160, guid: e21060a1ed950584eaf924a1ea809812, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -222,6 +226,10 @@ PrefabInstance:
     - target: {fileID: 1206465716176776683, guid: e21060a1ed950584eaf924a1ea809812, type: 3}
       propertyPath: m_Name
       value: Obstaculo (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1206465716176776683, guid: e21060a1ed950584eaf924a1ea809812, type: 3}
+      propertyPath: m_TagString
+      value: obstaculo
       objectReference: {fileID: 0}
     - target: {fileID: 4565680391070246160, guid: e21060a1ed950584eaf924a1ea809812, type: 3}
       propertyPath: m_LocalPosition.x
@@ -289,6 +297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstaculo (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1206465716176776683, guid: e21060a1ed950584eaf924a1ea809812, type: 3}
+      propertyPath: m_TagString
+      value: obstaculo
+      objectReference: {fileID: 0}
     - target: {fileID: 4565680391070246160, guid: e21060a1ed950584eaf924a1ea809812, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -354,6 +366,10 @@ PrefabInstance:
     - target: {fileID: 1206465716176776683, guid: e21060a1ed950584eaf924a1ea809812, type: 3}
       propertyPath: m_Name
       value: Obstaculo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1206465716176776683, guid: e21060a1ed950584eaf924a1ea809812, type: 3}
+      propertyPath: m_TagString
+      value: obstaculo
       objectReference: {fileID: 0}
     - target: {fileID: 4565680391070246160, guid: e21060a1ed950584eaf924a1ea809812, type: 3}
       propertyPath: m_LocalPosition.x

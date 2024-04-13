@@ -8,6 +8,8 @@ TagManager:
   - Platform
   - carro
   - agua
+  - hoja
+  - obstaculo
   layers:
   - Default
   - TransparentFX
