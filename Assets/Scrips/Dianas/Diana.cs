@@ -26,9 +26,18 @@ public class Diana : MonoBehaviour
 
     public delegate void textoTiempo(int puntuacion);
     public static event textoTiempo tiempoActualizado;
+
+    public Button boton1;
+    public Button boton2;
+
     // Start is called before the first frame update
     void Start()
     {
+        boton1.gameObject.SetActive(false);
+        boton2.gameObject.SetActive(false);
+        Button btn1 = boton1.GetComponent<Button>();
+        Button btn2 = boton2.GetComponent<Button>();
+        btn2.onClick.AddListener(funcion2);
         puntuacionActual = 0;
         duracionActual = 0;
 
@@ -43,39 +52,59 @@ public class Diana : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        duracionActual += Time.deltaTime;
-        tiempoActualizado?.Invoke((int)(duracionPartida - duracionActual));
-
-
-        if(Input.GetMouseButtonDown(0))
+        if(puntuacionActual < 100 && cantidadDisparos > 0 && duracionActual < duracionPartida)
         {
-            cantidadDisparos--;
-            disparosActualizados?.Invoke(cantidadDisparos);
-            Ray rayo = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if(Physics.Raycast(rayo, out hit))
+            duracionActual += Time.deltaTime;
+            tiempoActualizado?.Invoke((int)(duracionPartida - duracionActual));
+
+
+            if(Input.GetMouseButtonDown(0))
             {
-                int puntosImpacto = hit.collider.GetComponent<PuntuacionDiana>()?.puntosPorImpacto ?? 0;
-                puntuacionActual+= puntosImpacto;
+                cantidadDisparos--;
+                disparosActualizados?.Invoke(cantidadDisparos);
+                Ray rayo = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if(Physics.Raycast(rayo, out hit))
+                {
+                    int puntosImpacto = hit.collider.GetComponent<PuntuacionDiana>()?.puntosPorImpacto ?? 0;
+                    puntuacionActual+= puntosImpacto;
 
-                if(puntosImpacto > 0) 
-                {   
-                    PatronMovimientoAleatorio();
-                    puntuacionActualizada?.Invoke(puntuacionActual);
+                    if(puntosImpacto > 0) 
+                    {   
+                        PatronMovimientoAleatorio();
+                        puntuacionActualizada?.Invoke(puntuacionActual);
+                    }
+
+                    if(puntosImpacto==25) StartCoroutine(GirarDiana());
                 }
-
-                if(puntosImpacto==25) StartCoroutine(GirarDiana());
-            }
-        }   
-        if(cantidadDisparos == 0 || duracionActual >= duracionPartida)
+            }   
+        }
+         else
         {
             Destroy(gameObject);
             if(puntuacionActual >= 100)
             {
-                textoTiempoRestante.text = "Has ganado";
+                textoTiempoRestante.text = "        Has ganado";
+                boton1.gameObject.SetActive(true);
             }
-            else textoTiempoRestante.text = "Has perdido";
+            else 
+            {
+                textoTiempoRestante.text = "        Has perdido";
+                boton2.gameObject.SetActive(true);
+            }           
         }
+
+    }
+
+    private void funcion1()
+    {
+        SceneManager.LoadScene("2CrossingRoad");
+    }
+
+    
+    private void funcion2()
+    {
+        SceneManager.LoadScene("2CrossingRoad");
     }
 
     private void EstablecerPatronesMovimiento()
