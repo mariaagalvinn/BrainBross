@@ -37,7 +37,6 @@ public class Diana : MonoBehaviour
         boton2.gameObject.SetActive(false);
         Button btn1 = boton1.GetComponent<Button>();
         Button btn2 = boton2.GetComponent<Button>();
-        btn2.onClick.AddListener(funcion2);
         puntuacionActual = 0;
         duracionActual = 0;
 
@@ -94,17 +93,6 @@ public class Diana : MonoBehaviour
             }           
         }
 
-    }
-
-    private void funcion1()
-    {
-        SceneManager.LoadScene("2CrossingRoad");
-    }
-
-    
-    private void funcion2()
-    {
-        SceneManager.LoadScene("2CrossingRoad");
     }
 
     private void EstablecerPatronesMovimiento()
