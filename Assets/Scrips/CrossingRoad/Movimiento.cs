@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Movimiento : MonoBehaviour
 {
@@ -22,6 +24,9 @@ public class Movimiento : MonoBehaviour
     bool bloqueo = false;
     public float tazaIncremento;
     public float escalainicial = 0.8f;
+    public Text ganado;
+    private int saltos = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +38,7 @@ public class Movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        comprobar();
         ActualizarPosicion();
         if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {
@@ -50,6 +56,20 @@ public class Movimiento : MonoBehaviour
         {
             MoverLados(-1);
         } 
+        if(!vivo)
+        {
+            SceneManager.LoadScene("CrossingRoad");
+        }
+    }
+
+    private void comprobar()
+    {
+        if(saltos==20)
+        {
+            ganado.text = "Ha ganado";
+            Destroy(gameObject);
+            SceneManager.LoadScene("Diana");
+        }
     }
 
     private void OnDrawGizmos()
@@ -101,6 +121,8 @@ public class Movimiento : MonoBehaviour
             carril=posicionZ;
             mundo.CrearPiso();
             Time.timeScale = escalainicial+tazaIncremento*carril;
+            saltos++;
+            ganado.text = "Carril actual: " + saltos; 
         }
         StartCoroutine(CambiarPosicion());
     }

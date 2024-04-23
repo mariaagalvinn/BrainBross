@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+
+public class DianaDisparos2 : MonoBehaviour
+{
+    private void OnEnable()
+    {
+        Diana.disparosActualizados+=ActualizarDisparos;
+    }
+
+    private void OnDisable()
+    {
+        Diana.puntuacionActualizada-=ActualizarDisparos;
+    }
+
+    private void ActualizarDisparos(int disparos)
+    {
+        GetComponent<Text>().text = $"Disparos restantes: {disparos}";
+    }
+}

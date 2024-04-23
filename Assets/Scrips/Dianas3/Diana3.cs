@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Diana : MonoBehaviour
+public class Diana3 : MonoBehaviour
 {
     public float velocidad = 20;
     public int cantidadDisparos = 20;
