@@ -30,6 +30,7 @@ public class Diana : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("ENTRA scena1");
         puntuacionActual = 0;
         duracionActual = 0;
 
@@ -39,6 +40,9 @@ public class Diana : MonoBehaviour
 
         EstablecerPatronesMovimiento();
         PatronMovimientoAleatorio();
+
+        Debug.Log("SALE scena1");
+        
     }
 
     // Update is called once per frame
@@ -73,17 +77,27 @@ public class Diana : MonoBehaviour
         }
          else
         {
-            Destroy(gameObject);
+            
             if(puntuacionActual >= 100)
             {
-                textoTiempoRestante.text = "        Has ganado";
-                SceneManager.LoadScene("CrossingRoad");
+                Destroy(gameObject);
+                SceneManager.LoadScene("Dianas2");
             }
             else 
             {
-                textoTiempoRestante.text = "        Has perdido";
-                SceneManager.LoadScene("Diana");
-            }           
+                //Destroy(gameObject);
+                //SceneManager.LoadScene("Dianas");
+                puntuacionActual = 0;
+                duracionActual = 0;
+                cantidadDisparos = 20;
+                duracionPartida = 20;
+
+                puntuacionActualizada?.Invoke(puntuacionActual);
+                disparosActualizados?.Invoke(cantidadDisparos);
+                tiempoActualizado?.Invoke((int)(duracionPartida - duracionActual));
+
+            }     
+            //Destroy(gameObject);      
         }
 
     }

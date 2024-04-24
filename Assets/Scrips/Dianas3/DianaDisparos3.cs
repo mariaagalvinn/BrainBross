@@ -8,12 +8,12 @@ public class DianaDisparos3 : MonoBehaviour
 {
     private void OnEnable()
     {
-        Diana.disparosActualizados+=ActualizarDisparos;
+        Diana3.disparosActualizados+=ActualizarDisparos;
     }
 
     private void OnDisable()
     {
-        Diana.puntuacionActualizada-=ActualizarDisparos;
+        Diana3.puntuacionActualizada-=ActualizarDisparos;
     }
 
     private void ActualizarDisparos(int disparos)

@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ce14b4dfff2194ba3d62070c1954bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntosPorImpacto: 5
+  puntosPorImpacto: 10
 --- !u!136 &110757
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -338,7 +338,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Tiempo restante: 20.00'
+  m_Text: 'Tiempo restante: 15'
 --- !u!222 &5118950
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5118947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2c0f16a7debc6c4b884a3bdf8790716, type: 3}
+  m_Script: {fileID: 11500000, guid: 22758009ad619774990cf7e4f097bc65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &159822522
@@ -499,12 +499,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 364507918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d206d00a8bb877e40b8aab4972b155d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 8339f9142007bc8458c555d7de76d1cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 20
-  cantidadDisparos: 20
-  duracionPartida: 20
+  velocidad: 30
+  cantidadDisparos: 15
+  duracionPartida: 15
   textoPuntuacionActual: {fileID: 1319794467}
   textoDisparosRestantes: {fileID: 1122902020}
   textoTiempoRestante: {fileID: 5118949}
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ce14b4dfff2194ba3d62070c1954bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntosPorImpacto: 15
+  puntosPorImpacto: 30
 --- !u!136 &410893148
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -768,7 +768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ce14b4dfff2194ba3d62070c1954bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntosPorImpacto: 10
+  puntosPorImpacto: 20
 --- !u!136 &663703950
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1125,7 +1125,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Disparos restantes: 20'
+  m_Text: 'Disparos restantes: 15'
 --- !u!222 &1122902021
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1143,7 +1143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1122902018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1cb40203404e8e428c9d6f0daa0f752, type: 3}
+  m_Script: {fileID: 11500000, guid: f17087922354a4f449ad0b2147eabb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1319794465
@@ -1235,7 +1235,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1319794465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e390656d6aed02540aed2414300bd38a, type: 3}
+  m_Script: {fileID: 11500000, guid: 518d2fe55acf6df4ab977126249585d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1425106778
@@ -1286,7 +1286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ce14b4dfff2194ba3d62070c1954bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntosPorImpacto: 25
+  puntosPorImpacto: 50
 --- !u!136 &1425106781
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1452,7 +1452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ce14b4dfff2194ba3d62070c1954bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntosPorImpacto: 1
+  puntosPorImpacto: 2
 --- !u!136 &1595268179
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1703,7 +1703,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1816751124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be25a2d1ae665f04c81ef8c6e7c1d7c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 4afc5bb5b4aa6274982322e43ac0e03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1838107304
@@ -1776,7 +1776,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xA1\xA1Consigue m\xE1s de 100 puntos!!     Nivel f\xE1cil"
+  m_Text: "\xA1\xA1Consigue m\xE1s de 200 puntos!!     Nivel medio"
 --- !u!222 &1838107307
 CanvasRenderer:
   m_ObjectHideFlags: 0

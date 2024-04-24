@@ -8,12 +8,12 @@ public class DianaTiempo2 : MonoBehaviour
 {
     private void OnEnable()
     {
-        Diana.tiempoActualizado+=ActualizarTiempo;
+        Diana2.tiempoActualizado+=ActualizarTiempo;
     }
 
     private void OnDisable()
     {
-        Diana.tiempoActualizado-=ActualizarTiempo;
+        Diana2.tiempoActualizado-=ActualizarTiempo;
     }
 
     private void ActualizarTiempo(int tiempo)

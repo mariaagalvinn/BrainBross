@@ -67,8 +67,8 @@ public class Movimiento : MonoBehaviour
         if(saltos==20)
         {
             ganado.text = "Ha ganado";
+            SceneManager.LoadScene("Mapa");
             Destroy(gameObject);
-            SceneManager.LoadScene("Diana");
         }
     }
 

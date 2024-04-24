@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class Diana3 : MonoBehaviour
 {
-    public float velocidad = 20;
-    public int cantidadDisparos = 20;
-    public float duracionPartida = 20;
+    public float velocidad = 40;
+    public int cantidadDisparos = 10;
+    public float duracionPartida = 10;
     public Text textoPuntuacionActual;
     public Text textoDisparosRestantes;
     public Text textoTiempoRestante;
@@ -44,7 +44,7 @@ public class Diana3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(puntuacionActual < 100 && cantidadDisparos > 0 && duracionActual < duracionPartida)
+        if(puntuacionActual < 300 && cantidadDisparos > 0 && duracionActual < duracionPartida)
         {
             duracionActual += Time.deltaTime;
             tiempoActualizado?.Invoke((int)(duracionPartida - duracionActual));
@@ -73,16 +73,21 @@ public class Diana3 : MonoBehaviour
         }
          else
         {
-            Destroy(gameObject);
-            if(puntuacionActual >= 100)
+            if(puntuacionActual >= 300)
             {
-                textoTiempoRestante.text = "        Has ganado";
-                SceneManager.LoadScene("CrossingRoad");
+                Destroy(gameObject);
+                SceneManager.LoadScene("Mapa");
             }
             else 
             {
-                textoTiempoRestante.text = "        Has perdido";
-                SceneManager.LoadScene("Diana");
+                puntuacionActual = 0;
+                duracionActual = 0;
+                cantidadDisparos = 10;
+                duracionPartida = 10;
+
+                puntuacionActualizada?.Invoke(puntuacionActual);
+                disparosActualizados?.Invoke(cantidadDisparos);
+                tiempoActualizado?.Invoke((int)(duracionPartida - duracionActual));
             }           
         }
 

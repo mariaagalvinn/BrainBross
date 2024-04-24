@@ -7,12 +7,12 @@ public class DianaPuntacion3 : MonoBehaviour
 {
     private void OnEnable()
     {
-        Diana.puntuacionActualizada+=ActualizarPuntuacion;
+        Diana3.puntuacionActualizada+=ActualizarPuntuacion;
     }
 
     private void OnDisable()
     {
-        Diana.puntuacionActualizada-=ActualizarPuntuacion;
+        Diana3.puntuacionActualizada-=ActualizarPuntuacion;
     }
 
     private void ActualizarPuntuacion(int puntos)
