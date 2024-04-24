@@ -186,7 +186,7 @@ PrefabInstance:
     - target: {fileID: -7674525478185050737, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dad5713275731344bb8a32d75157a764, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae70cf2b338e464c9361a48eacd0f4d, type: 2}
     - target: {fileID: 919132149155446097, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Name
       value: plataforma2
@@ -491,7 +491,7 @@ PrefabInstance:
     - target: {fileID: -7674525478185050737, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dad5713275731344bb8a32d75157a764, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae70cf2b338e464c9361a48eacd0f4d, type: 2}
     - target: {fileID: 919132149155446097, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Name
       value: plataforma3
@@ -658,7 +658,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4ac0aefaf0e6a40d3bd6d902bc3e6a57, type: 2}
+  - {fileID: 2100000, guid: dad5713275731344bb8a32d75157a764, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -861,7 +861,7 @@ PrefabInstance:
     - target: {fileID: -7674525478185050737, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dad5713275731344bb8a32d75157a764, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae70cf2b338e464c9361a48eacd0f4d, type: 2}
     - target: {fileID: 919132149155446097, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Name
       value: plataforma10
@@ -1037,7 +1037,7 @@ PrefabInstance:
     - target: {fileID: -7674525478185050737, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dad5713275731344bb8a32d75157a764, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae70cf2b338e464c9361a48eacd0f4d, type: 2}
     - target: {fileID: 919132149155446097, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Name
       value: plataforma4
@@ -1992,7 +1992,7 @@ PrefabInstance:
     - target: {fileID: -7674525478185050737, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dad5713275731344bb8a32d75157a764, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae70cf2b338e464c9361a48eacd0f4d, type: 2}
     - target: {fileID: 919132149155446097, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Name
       value: plataforma5
@@ -2117,7 +2117,7 @@ PrefabInstance:
     - target: {fileID: -7674525478185050737, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dad5713275731344bb8a32d75157a764, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae70cf2b338e464c9361a48eacd0f4d, type: 2}
     - target: {fileID: 919132149155446097, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Name
       value: plataforma9
@@ -2242,7 +2242,7 @@ PrefabInstance:
     - target: {fileID: -7674525478185050737, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dad5713275731344bb8a32d75157a764, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae70cf2b338e464c9361a48eacd0f4d, type: 2}
     - target: {fileID: 919132149155446097, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Name
       value: plataforma8
@@ -2484,7 +2484,7 @@ PrefabInstance:
     - target: {fileID: -7674525478185050737, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dad5713275731344bb8a32d75157a764, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae70cf2b338e464c9361a48eacd0f4d, type: 2}
     - target: {fileID: 919132149155446097, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Name
       value: plataforma13
@@ -3201,7 +3201,7 @@ PrefabInstance:
     - target: {fileID: -7674525478185050737, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dad5713275731344bb8a32d75157a764, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae70cf2b338e464c9361a48eacd0f4d, type: 2}
     - target: {fileID: 919132149155446097, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Name
       value: plataforma6
@@ -3355,7 +3355,7 @@ PrefabInstance:
     - target: {fileID: -7674525478185050737, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dad5713275731344bb8a32d75157a764, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae70cf2b338e464c9361a48eacd0f4d, type: 2}
     - target: {fileID: 919132149155446097, guid: 1518001763a7b42b0b16a9db17755865, type: 3}
       propertyPath: m_Name
       value: plataforma11
@@ -4176,6 +4176,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 457450342}
     m_Modifications:
+    - target: {fileID: 249720123938087645, guid: 4e7e223becd5a4a3385e89e7dd479a9f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3ae70cf2b338e464c9361a48eacd0f4d, type: 2}
     - target: {fileID: 1261867582277654713, guid: 4e7e223becd5a4a3385e89e7dd479a9f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.1
