@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PersonajeController : MonoBehaviour
 {
@@ -8,13 +9,14 @@ public class PersonajeController : MonoBehaviour
     private Vector3 offset;
 
     private Rigidbody rb;
-    private PlatformController plataformaActual;
+    private Vector3 targetPosition;
 
-    private Vector3 targetPosition; // Posición a la que se moverá el personaje
     public float velocidadMovimiento = 10f; 
     private bool enMovimiento;
     public float distanciaMinima = 1f; // Distancia mínima para llegar a la posición deseada
+    public Transform[] plataformas;
 
+    private int index;
     private bool isJumping = false;
     public float jumpHeight = 2f;
     public float jumpSpeed = 4f;
@@ -33,13 +35,19 @@ public class PersonajeController : MonoBehaviour
 
     void Update(){
 
-        if(!enMovimiento && Input.GetKeyDown(KeyCode.RightArrow) && plataformaActual != null){
-            // Posición a la que se moverá el personaje
-            targetPosition = plataformaActual.ObtenerSiguientePlataforma().position;
+        if(!enMovimiento && Input.GetKeyDown(KeyCode.RightArrow)){
+            
+            incrementarIndex(); // Movemos el índice a la derecha
+            targetPosition = plataformas[index].position;
             enMovimiento = true;
-
             RotacionPersonaje();
-        } 
+        } else if(!enMovimiento && Input.GetKeyDown(KeyCode.LeftArrow)){
+            decrementarIndex(); // Movemos el índice a la izquierda
+            targetPosition = plataformas[index].position;
+            enMovimiento = true;
+            RotacionPersonaje();
+        }
+
         if(enMovimiento){
              // La velocidad a la que se moverá el personaje
             StartCoroutine(Jump());
@@ -48,25 +56,33 @@ public class PersonajeController : MonoBehaviour
             if(distanceToTarget < distanciaMinima)
             {
                 enMovimiento = false;
-                plataformaActual = null;
                 Debug.Log("El personaje ha llegado a la posición deseada.");
             }
         } 
 
         camara.transform.position = transform.position + offset;
+        
+        
     
     }
 
-
-    private void OnCollisionEnter(Collision collision)
+    void incrementarIndex()
     {
-        if (collision.gameObject.CompareTag("Platform"))
+        if (index < plataformas.Length - 1)
         {
-            Debug.Log("El personaje está en contacto con la plataforma.");
-            // Obtenemos la plataforma con la que colisionamos
-            plataformaActual = collision.gameObject.GetComponent<PlatformController>();   
+            index++;
         }
     }
+
+    void decrementarIndex()
+    {
+        if (index > 0)
+        {
+            index--;
+        }
+    }
+
+    
 
     IEnumerator Jump()
     {
@@ -89,7 +105,8 @@ public class PersonajeController : MonoBehaviour
 
             //transform.position = targetPosition;
             isJumping = false;
-        
+            // Vemos si se puede entrar en un juego
+            EntrarEnJuego();
         }
     }
 
@@ -109,5 +126,13 @@ public class PersonajeController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, -180f, 0f);
         }
 
+    }
+
+    void EntrarEnJuego(){
+        if(index == 1){
+            // Entrar en escena
+            SceneManager.LoadScene("CrowdControl");
+
+        }
     }
 }
