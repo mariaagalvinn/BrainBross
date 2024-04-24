@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _Project.Scripts.Enemy
+namespace Project.Scripts.Enemy
 {
     public interface IDamageable
     {

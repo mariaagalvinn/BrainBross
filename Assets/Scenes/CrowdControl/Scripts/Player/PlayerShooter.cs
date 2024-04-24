@@ -1,46 +1,47 @@
 using System;
 using UnityEngine;
 
-namespace RakibJahan
+
+public class PlayerShooter : MonoBehaviour
 {
-    public class PlayerShooter : MonoBehaviour
+    [SerializeField] private float defaultShootDelay = 1f;
+    [SerializeField] private float damagePerShootable = 100f;
+    [SerializeField] private Shootable shootablePrefab;
+    [SerializeField] private Transform shootFrom;
+    [SerializeField] private float damageAddPerYear = 2f;
+    private float _shootDelay;
+    private float _runningTimer;
+    private float _damagePerShootable;
+    private int _year = 0;
+    private int points = 50;
+
+    private void Start()
     {
-        [SerializeField] private float defaultShootDelay = 1f;
-        [SerializeField] private float damagePerShootable = 100f;
-        [SerializeField] private Shootable shootablePrefab;
-        [SerializeField] private Transform shootFrom;
-        [SerializeField] private float damageAddPerYear = 2f;
-        private float _shootDelay;
-        private float _runningTimer;
-        private float _damagePerShootable;
-        private int _year = 0;
+        _shootDelay = defaultShootDelay;
+        _damagePerShootable = damagePerShootable;
+    }
 
-        private void Start()
+    private void Update()
+    {
+        _runningTimer += Time.deltaTime;
+        if (_runningTimer >= _shootDelay)
         {
-            _shootDelay = defaultShootDelay;
-            _damagePerShootable = damagePerShootable;
+            _runningTimer = 0f;
+            Shoot();
         }
+    }
 
-        private void Update()
-        {
-            _runningTimer += Time.deltaTime;
-            if (_runningTimer >= _shootDelay)
-            {
-                _runningTimer = 0f;
-                Shoot();
-            }
-        }
-
-        public void UpdateWeaponYear(int toAdd)
-        {
-            _year += toAdd;
-            var damageToAdd = _year * damageAddPerYear;
-            _damagePerShootable = damagePerShootable + damageToAdd;
-        }
-        
-        public void Shoot()
-        {
-            Instantiate(shootablePrefab, shootFrom.position, Quaternion.identity).Init(_damagePerShootable);
-        }
+    public void UpdateWeaponYear(int toAdd)
+    {
+        _year += toAdd;
+        var damageToAdd = _year * damageAddPerYear;
+        _damagePerShootable = damagePerShootable + damageToAdd;
+    }
+    
+    public void Shoot()
+    {
+        var shootable = Instantiate(shootablePrefab, shootFrom.position, Quaternion.identity);
+        shootable.Init(_damagePerShootable);
+        Destroy(shootable.gameObject, 1f);
     }
 }

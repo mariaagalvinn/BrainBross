@@ -1,7 +1,8 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-namespace _Project.Scripts.Enemy
+namespace Project.Scripts.Enemy
 {
     public class Enemy : MonoBehaviour,IDamageable
     {

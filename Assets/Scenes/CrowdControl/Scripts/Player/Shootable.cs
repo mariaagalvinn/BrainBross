@@ -1,33 +1,31 @@
 using System;
-using _Project.Scripts.Enemy;
+using Project.Scripts.Enemy;
 using UnityEngine;
 
-namespace RakibJahan
+
+public class Shootable : MonoBehaviour
 {
-    public class Shootable : MonoBehaviour
+    [SerializeField] private float shootableSurviveTime = 3f;
+    private float _damagePerHit = 10;
+
+    public void Init(float damagePerHit)
     {
-        [SerializeField] private float shootableSurviveTime = 3f;
-        private float _damagePerHit = 10;
+        _damagePerHit = damagePerHit;
+        Invoke(nameof(DestroyShootable), shootableSurviveTime);
+    }
 
-        public void Init(float damagePerHit)
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.CompareTag("Damageable"))
         {
-            _damagePerHit = damagePerHit;
-            Invoke(nameof(DestroyShootable), shootableSurviveTime);
+            var damageable = collision.transform.GetComponentInChildren<IDamageable>();
+            damageable.Damage(_damagePerHit);
+            DestroyShootable();
         }
+    }
 
-        private void OnCollisionEnter(Collision collision)
-        {
-            if (collision.transform.CompareTag("Damageable"))
-            {
-                var damageable = collision.transform.GetComponentInChildren<IDamageable>();
-                damageable.Damage(_damagePerHit);
-                DestroyShootable();
-            }
-        }
-
-        private void DestroyShootable()
-        {
-            Destroy(gameObject);
-        }
+    private void DestroyShootable()
+    {
+        Destroy(gameObject);
     }
 }
