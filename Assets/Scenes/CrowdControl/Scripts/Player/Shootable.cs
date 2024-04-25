@@ -28,4 +28,6 @@ public class Shootable : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+
 }

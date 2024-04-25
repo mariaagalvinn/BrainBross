@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 052b211d216c14958b24326f8ce0a2d6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.256948
+      value: 26.489
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 052b211d216c14958b24326f8ce0a2d6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -94,6 +94,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 052b211d216c14958b24326f8ce0a2d6, type: 3}
       propertyPath: m_Name
       value: Peach
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 052b211d216c14958b24326f8ce0a2d6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 052b211d216c14958b24326f8ce0a2d6, type: 3}
       propertyPath: m_Controller

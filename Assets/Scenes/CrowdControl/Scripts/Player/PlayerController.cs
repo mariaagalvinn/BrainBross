@@ -1,10 +1,30 @@
 using System;
 using Modifiers;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerController : MonoBehaviour
 {
+    public ParticleSystem victoryParticles;
+    public GameObject moveForwardObject;
+    public Canvas victoryCanvas;
+
+
+    private MoveForward moveForwardScript;
+    public PlayerShooter playerShooter;
+
+    private void Start() {
+        // Ocultar las partículas al inicio
+        victoryParticles.Stop();
+        victoryParticles.Clear();
+        // Obtener el script de movimiento
+        moveForwardScript = moveForwardObject.GetComponent<MoveForward>();
+        // Ocultar el canvas de victoria
+
+        victoryCanvas.gameObject.SetActive(false);    
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Modifier"))
@@ -14,6 +34,13 @@ public class PlayerController : MonoBehaviour
             {
                 modifier.Modify(this);
             }
+        } else if (other.CompareTag("Meta"))
+        {
+            // Mostrar el canvas de victoria
+            victoryCanvas.gameObject.SetActive(true);
+            victoryParticles.Play();
+            moveForwardScript.StopMoving();
+            playerShooter.StopShooting();
         }
     }
 }

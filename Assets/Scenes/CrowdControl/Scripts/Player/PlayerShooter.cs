@@ -14,6 +14,7 @@ public class PlayerShooter : MonoBehaviour
     private float _damagePerShootable;
     private int _year = 0;
     private int points = 50;
+    private bool canShoot = true;
 
     private void Start()
     {
@@ -24,7 +25,7 @@ public class PlayerShooter : MonoBehaviour
     private void Update()
     {
         _runningTimer += Time.deltaTime;
-        if (_runningTimer >= _shootDelay)
+        if (canShoot && _runningTimer >= _shootDelay)
         {
             _runningTimer = 0f;
             Shoot();
@@ -40,8 +41,14 @@ public class PlayerShooter : MonoBehaviour
     
     public void Shoot()
     {
+        if(canShoot == false) return;
         var shootable = Instantiate(shootablePrefab, shootFrom.position, Quaternion.identity);
         shootable.Init(_damagePerShootable);
         Destroy(shootable.gameObject, 1f);
+    }
+
+    public void StopShooting()
+    {
+        canShoot = false;
     }
 }

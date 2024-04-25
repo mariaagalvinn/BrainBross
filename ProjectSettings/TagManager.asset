@@ -10,6 +10,9 @@ TagManager:
   - agua
   - hoja
   - obstaculo
+  - Damageable
+  - Modifier
+  - Meta
   layers:
   - Default
   - TransparentFX

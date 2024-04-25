@@ -10,4 +10,9 @@ public class MoveForward : MonoBehaviour
     {
         transform.position += Vector3.forward * (moveSpeed * Time.deltaTime);
     }
+
+    public void StopMoving()
+    {
+        moveSpeed = 0f;
+    }
 }
