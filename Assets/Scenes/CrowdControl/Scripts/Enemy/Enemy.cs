@@ -10,13 +10,11 @@ namespace Project.Scripts.Enemy
         [SerializeField] private Animator animator;
         [SerializeField] private float hitPoints = 100f;
         private float _currentHitPoints;
-        public GameObject enemigosObject;
-        private EnemigosScript enemigosScript;
+        public EnemigosScript enemigosScript;
 
         private void Start()
         {
             _currentHitPoints = hitPoints;
-            enemigosScript = enemigosObject.GetComponent<EnemigosScript>();
         }
 
         public void Damage(float damage)
