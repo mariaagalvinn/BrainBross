@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     private MoveForward moveForwardScript;
     public PlayerShooter playerShooter;
+    public EnemigosScript enemigos_;
+    
 
     private void Start() {
         // Ocultar las partículas al inicio
@@ -36,11 +38,15 @@ public class PlayerController : MonoBehaviour
             }
         } else if (other.CompareTag("Meta"))
         {
-            // Mostrar el canvas de victoria
-            victoryCanvas.gameObject.SetActive(true);
-            victoryParticles.Play();
-            moveForwardScript.StopMoving();
-            playerShooter.StopShooting();
+            if(enemigos_.getEnemigos() == 0){
+                // Mostrar el canvas de victoria
+                victoryCanvas.gameObject.SetActive(true);
+                victoryParticles.Play();
+                moveForwardScript.StopMoving();
+                playerShooter.StopShooting();
+            } else {
+                GameManager.Instance.GameOver();
+            }
         }
     }
 }
