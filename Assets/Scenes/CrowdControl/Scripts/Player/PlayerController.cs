@@ -2,6 +2,7 @@ using System;
 using Modifiers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using bb;
 
 
 public class PlayerController : MonoBehaviour
@@ -9,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem victoryParticles;
     public GameObject moveForwardObject;
     public Canvas victoryCanvas;
-
+    public Canvas darkCanvas;
 
     private MoveForward moveForwardScript;
     public PlayerShooter playerShooter;
@@ -38,13 +39,14 @@ public class PlayerController : MonoBehaviour
             }
         } else if (other.CompareTag("Meta"))
         {
-            if(enemigos_.getEnemigos() == 0){
+            if(enemigos_.getEnemigos() <= 0){
                 // Mostrar el canvas de victoria
                 victoryCanvas.gameObject.SetActive(true);
                 victoryParticles.Play();
                 moveForwardScript.StopMoving();
                 playerShooter.StopShooting();
             } else {
+                darkCanvas.gameObject.SetActive(true);
                 GameManager.Instance.GameOver();
             }
         }
