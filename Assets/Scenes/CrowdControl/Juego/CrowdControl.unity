@@ -4660,7 +4660,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3703963, y: 0.007331597, z: -0.0029219121, w: 0.9288403}
+  m_LocalRotation: {x: 0.371299, y: 0.0073287813, z: -0.0029289646, w: 0.92847985}
   m_LocalPosition: {x: 0, y: 8.8, z: -0.53999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12030,6 +12030,7 @@ GameObject:
   - component: {fileID: 1428034784}
   - component: {fileID: 1428034783}
   - component: {fileID: 1428034782}
+  - component: {fileID: 1428034785}
   m_Layer: 5
   m_Name: boton again
   m_TagString: Untagged
@@ -12100,7 +12101,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1428034783}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1428034785}
+        m_TargetAssemblyTypeName: BotonGameOver, Assembly-CSharp
+        m_MethodName: Onclick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1428034783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12139,6 +12152,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428034780}
   m_CullTransparentMesh: 1
+--- !u!114 &1428034785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428034780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7248c046cd73c4859ab09cb5e5acc9f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1431069661
 PrefabInstance:
   m_ObjectHideFlags: 0
