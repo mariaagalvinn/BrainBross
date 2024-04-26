@@ -106,7 +106,9 @@ public class uLipSyncTexture : MonoBehaviour
         if (_info.rawVolume > 0f)
         {
             _volume = Mathf.Log10(_info.rawVolume);
+            
         }
+        
     }
 
     void UpdateVowels()
@@ -121,6 +123,7 @@ public class uLipSyncTexture : MonoBehaviour
         }
 
         int minFrame = (int)Mathf.Max(minDuration / Time.deltaTime, 1f);
+        //Debug.Log(_volume);
         while (_phonemeHistory.Count > minFrame)
         {
             _phonemeHistory.RemoveAt(0);

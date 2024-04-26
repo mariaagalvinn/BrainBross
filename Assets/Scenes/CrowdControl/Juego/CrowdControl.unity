@@ -628,8 +628,8 @@ GameObject:
   - component: {fileID: 110475029}
   - component: {fileID: 110475032}
   - component: {fileID: 110475031}
-  - component: {fileID: 110475030}
   - component: {fileID: 110475033}
+  - component: {fileID: 110475034}
   m_Layer: 5
   m_Name: Mouth
   m_TagString: Untagged
@@ -646,7 +646,7 @@ RectTransform:
   m_GameObject: {fileID: 110475028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.596, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 488377271}
@@ -656,47 +656,6 @@ RectTransform:
   m_AnchoredPosition: {x: 12, y: -88}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &110475030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 110475028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378b12534b0764d18bfa4f29746e96c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  updateMethod: 0
-  targetRenderer: {fileID: 110475033}
-  textures:
-  - phoneme: A
-    texture: {fileID: 2800000, guid: b0f6abfcb4ba44ba6bb2861931f8c406, type: 3}
-    uvScale: {x: 1, y: 1}
-    uvOffset: {x: 0, y: 0}
-  - phoneme: E
-    texture: {fileID: 2800000, guid: 3873aea8bb21a455e89cd6bb06a0b84a, type: 3}
-    uvScale: {x: 1, y: 1}
-    uvOffset: {x: 0, y: 0}
-  - phoneme: I
-    texture: {fileID: 2800000, guid: 7d314c0969536479896d634c5a9c085f, type: 3}
-    uvScale: {x: 1, y: 1}
-    uvOffset: {x: 0, y: 0}
-  - phoneme: O
-    texture: {fileID: 2800000, guid: 1950972e6a4ff41c68d0f1e71ba033ce, type: 3}
-    uvScale: {x: 1, y: 1}
-    uvOffset: {x: 0, y: 0}
-  - phoneme: U
-    texture: {fileID: 2800000, guid: fbf201db64ecc41efb88e13f3919b02b, type: 3}
-    uvScale: {x: 1, y: 1}
-    uvOffset: {x: 0, y: 0}
-  - phoneme: '-'
-    texture: {fileID: 2800000, guid: bdec969c8be6b406396725cb16b3201f, type: 3}
-    uvScale: {x: 1, y: 1}
-    uvOffset: {x: 0, y: 0}
-  minVolume: -2.5
-  minDuration: 0.1
 --- !u!114 &110475031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,7 +676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bdec969c8be6b406396725cb16b3201f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3fa06061141464aa18d592e9f6afc2a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -777,6 +736,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &110475034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110475028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378b12534b0764d18bfa4f29746e96c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateMethod: 0
+  targetRenderer: {fileID: 0}
+  textures:
+  - phoneme: '-'
+    texture: {fileID: 2800000, guid: 3fa06061141464aa18d592e9f6afc2a0, type: 3}
+    uvScale: {x: 1, y: 1}
+    uvOffset: {x: 0, y: 0}
+  - phoneme: A
+    texture: {fileID: 2800000, guid: 377598a20f3984ba6941229b3e8162a0, type: 3}
+    uvScale: {x: 1, y: 1}
+    uvOffset: {x: 0, y: 0}
+  - phoneme: E
+    texture: {fileID: 2800000, guid: 94dce57c2b49e4d05a58fd6e8c9aeeb6, type: 3}
+    uvScale: {x: 1, y: 1}
+    uvOffset: {x: 0, y: 0}
+  - phoneme: I
+    texture: {fileID: 2800000, guid: 8cabf5f036afb4cde9e9fd9235074338, type: 3}
+    uvScale: {x: 1, y: 1}
+    uvOffset: {x: 0, y: 0}
+  - phoneme: O
+    texture: {fileID: 2800000, guid: 46f936fa54ef74a5db5006316264ccd2, type: 3}
+    uvScale: {x: 1, y: 1}
+    uvOffset: {x: 0, y: 0}
+  - phoneme: U
+    texture: {fileID: 2800000, guid: bd6149601c514459b977371cd0b82725, type: 3}
+    uvScale: {x: 1, y: 1}
+    uvOffset: {x: 0, y: 0}
+  minVolume: -2.5
+  minDuration: 0.1
 --- !u!1 &126622514
 GameObject:
   m_ObjectHideFlags: 0
@@ -3097,7 +3097,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488377270}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -3225,7 +3225,7 @@ MonoBehaviour:
   onLipSyncUpdate:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 110475030}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: uLipSync.uLipSyncTexture, uLipSync.Runtime
         m_MethodName: OnLipSyncUpdate
         m_Mode: 0
@@ -5278,7 +5278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.37642926, y: 0.0073126247, z: -0.0029659257, w: 0.9264118}
+  m_LocalRotation: {x: 0.37928137, y: 0.007303531, z: -0.0029882079, w: 0.9252478}
   m_LocalPosition: {x: 0, y: 8.8, z: -0.53999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
