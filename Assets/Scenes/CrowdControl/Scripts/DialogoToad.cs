@@ -13,7 +13,7 @@ public class DialogoToad : MonoBehaviour
         "¡Buena suerte!"
     };
     private int indice = 0;
-    public BakedDataTest bakedDataTest;
+    //public BakedDataTest bakedDataTest;
     public Button button;
     private bool dialogoActivo = true;
 
@@ -50,7 +50,7 @@ public class DialogoToad : MonoBehaviour
         {
             // Muestra la siguiente frase y avanza el índice
             textoDialogo.text = frases[indice];
-            bakedDataTest.PlayBakedData(indice);
+            //bakedDataTest.PlayBakedData(indice);
             indice++;
         }
         else

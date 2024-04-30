@@ -811,7 +811,7 @@ MonoBehaviour:
       - -6.1592174
       - -3.4540453
       - -5.72654
-  - name: S
+  - name: '-'
     mfccCalibrationDataList:
     - array:
       - -94.292145

@@ -44,7 +44,6 @@ public class PlayerShooter : MonoBehaviour
         if(canShoot == false) return;
         var shootable = Instantiate(shootablePrefab, shootFrom.position, Quaternion.identity);
         shootable.Init(_damagePerShootable);
-        Destroy(shootable.gameObject, 1f);
     }
 
     public void StopShooting()
