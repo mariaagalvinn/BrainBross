@@ -41,13 +41,19 @@ public class PlayerShooter : MonoBehaviour
     
     public void Shoot()
     {
-        if(canShoot == false) return;
-        var shootable = Instantiate(shootablePrefab, shootFrom.position, Quaternion.identity);
-        shootable.Init(_damagePerShootable);
+        if(canShoot == true){
+            var shootable = Instantiate(shootablePrefab, shootFrom.position, Quaternion.identity);
+            shootable.Init(_damagePerShootable);
+        }
     }
 
     public void StopShooting()
     {
         canShoot = false;
+    }
+
+    public void ContinueShooting()
+    {
+        canShoot = true;
     }
 }

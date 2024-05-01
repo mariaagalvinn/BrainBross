@@ -120,7 +120,8 @@ public class uLipSyncTexture : MonoBehaviour
             _phonemeHistory.Add("");
         }
 
-        int minFrame = (int)Mathf.Max(minDuration / Time.deltaTime, 1f);
+        int minFrame = (int)Mathf.Max(minDuration / Time.deltaTime, 1f);        
+    
         while (_phonemeHistory.Count > minFrame)
         {
             _phonemeHistory.RemoveAt(0);

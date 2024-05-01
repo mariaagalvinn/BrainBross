@@ -13,30 +13,18 @@ public class DialogoToad : MonoBehaviour
         "¡Buena suerte!"
     };
     private int indice = 0;
-    //public BakedDataTest bakedDataTest;
+    public BakedDataTest bakedDataTest;
     public Button button;
-    private bool dialogoActivo = true;
+    public PlayerController playerController;
+    public bool isPlaying = false;
 
     void Start()
     {
-        Time.timeScale = 0f; // Pausa el juego
+        playerController.StopGame();
         // Mostrar la primera frase al iniciar
         MostrarSiguienteFrase();
-        
     }
 
-    void Update()
-    {
-        // Si el diálogo está activo, bloquear la interacción del usuario
-        if (dialogoActivo)
-        {
-            Time.timeScale = 0f; // Pausa el juego
-        }
-        else
-        {
-            Time.timeScale = 1f; // Reanuda el juego
-        }
-    }
 
     public void onClick()
     {
@@ -50,15 +38,19 @@ public class DialogoToad : MonoBehaviour
         {
             // Muestra la siguiente frase y avanza el índice
             textoDialogo.text = frases[indice];
-            //bakedDataTest.PlayBakedData(indice);
+            bakedDataTest.PlayBakedData(indice+1);
             indice++;
         }
         else
         {
             // Si no quedan más frases, desactiva el diálogo
             dialogoToad.gameObject.SetActive(false);
-            dialogoActivo = false;
-            Time.timeScale = 1f;
+            playerController.ContinueGame();
+            isPlaying = true;
         }
+    }
+
+    public bool getIsPlaying(){
+        return isPlaying;
     }
 }
