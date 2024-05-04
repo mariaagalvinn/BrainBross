@@ -541,6 +541,10 @@ PrefabInstance:
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 9000000, guid: 08038663a8aa64ce886d6ab933292430, type: 3}
+    - target: {fileID: 6212022178418558301, guid: d52343563d83f456db1eed72e894d218, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2e44be4d6ee7946119fe17e4aa01ce66, type: 2}
     m_RemovedComponents:
     - {fileID: 1858061894522289968, guid: d52343563d83f456db1eed72e894d218, type: 3}
     - {fileID: -4076350925652232505, guid: d52343563d83f456db1eed72e894d218, type: 3}
@@ -572,6 +576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camara: {fileID: 963194227}
+  animator: {fileID: 258784894}
   velocidadMovimiento: 20
   distanciaMinima: 4
   plataformas:
@@ -613,6 +618,11 @@ CapsuleCollider:
   m_Height: 214.03299
   m_Direction: 1
   m_Center: {x: -0.000000008812442, y: 70.799286, z: -38.070568}
+--- !u!95 &258784894 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6212022178418558301, guid: d52343563d83f456db1eed72e894d218, type: 3}
+  m_PrefabInstance: {fileID: 258784889}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &277057406
 GameObject:
   m_ObjectHideFlags: 0
