@@ -27,6 +27,9 @@ public class Diana3 : MonoBehaviour
     public delegate void textoTiempo(int puntuacion);
     public static event textoTiempo tiempoActualizado;
 
+    public Canvas ganar;
+    public Canvas perder;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +42,9 @@ public class Diana3 : MonoBehaviour
 
         EstablecerPatronesMovimiento();
         PatronMovimientoAleatorio();
+
+        ganar.gameObject.SetActive(false);
+        perder.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -76,10 +82,13 @@ public class Diana3 : MonoBehaviour
             if(puntuacionActual >= 300)
             {
                 Destroy(gameObject);
-                SceneManager.LoadScene("Mapa");
+                ganar.gameObject.SetActive(true);
             }
             else 
             {
+                //Destroy(gameObject);
+                //perder.gameObject.SetActive(true);
+                
                 puntuacionActual = 0;
                 duracionActual = 0;
                 cantidadDisparos = 10;

@@ -26,8 +26,6 @@ public class Movimiento : MonoBehaviour
     public float escalainicial = 0.8f;
     public Text ganado;
     private int saltos = 0;
-    public Button siguiente;
-    public Button volverempezar;
     public Canvas ganar;
     public Canvas perder;
 
@@ -62,11 +60,10 @@ public class Movimiento : MonoBehaviour
         {
             MoverLados(-1);
         } 
-        if(!vivo)
+        if(!vivo && saltos <20)
         {
             Destroy(gameObject);
             perder.gameObject.SetActive(true);
-            volverempezar.onClick.AddListener(OnAnteriorClick);
         }
     }
 
@@ -78,18 +75,7 @@ public class Movimiento : MonoBehaviour
             //SceneManager.LoadScene("Mapa");
             Destroy(gameObject);
             ganar.gameObject.SetActive(true);
-            siguiente.onClick.AddListener(OnSiguienteClick);
         }
-    }
-
-    public void OnSiguienteClick()
-    {
-        SceneManager.LoadScene("Mapa");
-    }
-
-    public void OnAnteriorClick()
-    {
-        SceneManager.LoadScene("CrossingRoad");
     }
 
     private void OnDrawGizmos()

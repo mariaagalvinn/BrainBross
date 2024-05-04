@@ -27,10 +27,12 @@ public class Diana : MonoBehaviour
     public delegate void textoTiempo(int puntuacion);
     public static event textoTiempo tiempoActualizado;
 
+    public Canvas ganar;
+    public Canvas perder;
+
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("ENTRA scena1");
         puntuacionActual = 0;
         duracionActual = 0;
 
@@ -41,7 +43,8 @@ public class Diana : MonoBehaviour
         EstablecerPatronesMovimiento();
         PatronMovimientoAleatorio();
 
-        Debug.Log("SALE scena1");
+        ganar.gameObject.SetActive(false);
+        perder.gameObject.SetActive(false);
         
     }
 
@@ -81,12 +84,15 @@ public class Diana : MonoBehaviour
             if(puntuacionActual >= 100)
             {
                 Destroy(gameObject);
+                //ganar.gameObject.SetActive(true);
                 SceneManager.LoadScene("Dianas2");
             }
             else 
             {
                 //Destroy(gameObject);
+                //perder.gameObject.SetActive(true);
                 //SceneManager.LoadScene("Dianas");
+                
                 puntuacionActual = 0;
                 duracionActual = 0;
                 cantidadDisparos = 20;
