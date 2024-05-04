@@ -7,6 +7,7 @@ public class PersonajeController : MonoBehaviour
 {
     public Camera camara;
     private Vector3 offset;
+    private Animator animator;
 
     private Vector3 targetPosition;
 
@@ -24,6 +25,7 @@ public class PersonajeController : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         offset = camara.transform.position - transform.position;
 
         enMovimiento = false;
@@ -52,14 +54,11 @@ public class PersonajeController : MonoBehaviour
             if(distanceToTarget < distanciaMinima)
             {
                 enMovimiento = false;
-                Debug.Log("El personaje ha llegado a la posición deseada.");
             }
         } 
 
         camara.transform.position = transform.position + offset;
         
-        
-    
     }
 
     void incrementarIndex()
@@ -84,6 +83,8 @@ public class PersonajeController : MonoBehaviour
     {
         if (!isJumping)
         {
+            animator.SetTrigger("Up");
+
             isJumping = true;
 
 
@@ -93,14 +94,16 @@ public class PersonajeController : MonoBehaviour
 
             while (time < 1f)
             {
+                animator.SetTrigger("Sky");
                 float height = Mathf.Sin(Mathf.PI * time) * jumpHeight;
                 transform.position = Vector3.Lerp(startPosition, targetPosition, time) + Vector3.up * height;
                 time += Time.deltaTime * jumpSpeed;
                 yield return null;
             }
 
-            //transform.position = targetPosition;
+            animator.SetTrigger("Down");
             isJumping = false;
+            
             // Vemos si se puede entrar en un juego
             EntrarEnJuego();
         }
@@ -129,7 +132,7 @@ public class PersonajeController : MonoBehaviour
         if(index == 1 && !jugado1){
             // Entrar en escena
             jugado1 = true;
-            SceneManager.LoadScene("CrowdControl");
+            SceneManager.LoadScene("CrowdToad");
         }
     }
 }
