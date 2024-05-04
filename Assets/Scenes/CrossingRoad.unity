@@ -942,6 +942,10 @@ MonoBehaviour:
   tazaIncremento: 0.01
   escalainicial: 0.8
   ganado: {fileID: 2131317032}
+  siguiente: {fileID: 688439601}
+  volverempezar: {fileID: 1080486645}
+  ganar: {fileID: 637871168}
+  perder: {fileID: 501128535}
 --- !u!4 &570294887
 Transform:
   m_ObjectHideFlags: 0

@@ -26,6 +26,10 @@ public class Movimiento : MonoBehaviour
     public float escalainicial = 0.8f;
     public Text ganado;
     private int saltos = 0;
+    public Button siguiente;
+    public Button volverempezar;
+    public Canvas ganar;
+    public Canvas perder;
 
 
     // Start is called before the first frame update
@@ -33,6 +37,8 @@ public class Movimiento : MonoBehaviour
     {
         Time.timeScale = escalainicial;
         InvokeRepeating("MirarAgua", 1, 0.5f);
+        ganar.gameObject.SetActive(false);
+        perder.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -58,7 +64,9 @@ public class Movimiento : MonoBehaviour
         } 
         if(!vivo)
         {
-            SceneManager.LoadScene("CrossingRoad");
+            Destroy(gameObject);
+            perder.gameObject.SetActive(true);
+            volverempezar.onClick.AddListener(OnAnteriorClick);
         }
     }
 
@@ -66,10 +74,22 @@ public class Movimiento : MonoBehaviour
     {
         if(saltos==20)
         {
-            ganado.text = "Ha ganado";
-            SceneManager.LoadScene("Mapa");
+            //ganado.text = "Ha ganado";
+            //SceneManager.LoadScene("Mapa");
             Destroy(gameObject);
+            ganar.gameObject.SetActive(true);
+            siguiente.onClick.AddListener(OnSiguienteClick);
         }
+    }
+
+    public void OnSiguienteClick()
+    {
+        SceneManager.LoadScene("Mapa");
+    }
+
+    public void OnAnteriorClick()
+    {
+        SceneManager.LoadScene("CrossingRoad");
     }
 
     private void OnDrawGizmos()
