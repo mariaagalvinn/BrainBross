@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10f;
+    
 
     private void Update()
     {
@@ -14,5 +15,10 @@ public class MoveForward : MonoBehaviour
     public void StopMoving()
     {
         moveSpeed = 0f;
+    }
+
+    public void ContinueMoving()
+    {
+        moveSpeed = 6f;
     }
 }

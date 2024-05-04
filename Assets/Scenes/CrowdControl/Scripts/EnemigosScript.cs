@@ -11,11 +11,11 @@ namespace bb {
         private int enemigos = 50;
 
         private void Start() {
-            scoreText.text = "Enemigos: " + enemigos;
+            scoreText.text =  enemigos.ToString();
         }
 
         private void Update() {
-            scoreText.text = "Enemigos: " + enemigos;
+            scoreText.text = enemigos.ToString();
         }
 
         public void disparoEnemy(){

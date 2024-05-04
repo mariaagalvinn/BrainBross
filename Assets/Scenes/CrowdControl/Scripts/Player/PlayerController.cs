@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public PlayerShooter playerShooter;
     public EnemigosScript enemigos_;
     
+    
 
     private void Start() {
         // Ocultar las partículas al inicio
@@ -51,4 +52,14 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    public void StopGame(){
+        moveForwardScript.StopMoving();
+        playerShooter.StopShooting();
+    }
+    public void ContinueGame(){
+        moveForwardScript.ContinueMoving();
+        playerShooter.ContinueShooting();
+    }
+
+    
 }
