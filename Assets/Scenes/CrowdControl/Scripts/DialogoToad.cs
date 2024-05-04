@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogoToad : MonoBehaviour
 {
     public Canvas dialogoToad;
     public Text textoDialogo;
+    // Cambia las frases según tu juego
     private string[] frases = {
         "¡Hola! Te ha tocado jugar a tu primer minijuego.",
         "Para superarlo tienes que matar a tantos enemigos como indica el contador de la esquina izquierda.",
@@ -15,19 +17,18 @@ public class DialogoToad : MonoBehaviour
     private int indice = 0;
     public BakedDataTest bakedDataTest;
     public Button button;
-    public PlayerController playerController;
-    public bool isPlaying = false;
-
+    
     void Start()
     {
-        playerController.StopGame();
-        // Mostrar la primera frase al iniciar
-        MostrarSiguienteFrase();
+        MostrarSiguienteFrase(); // Muestra la primera frase
     }
+
+
 
 
     public void onClick()
     {
+        Debug.Log("Click");
         MostrarSiguienteFrase();
     }
 
@@ -41,16 +42,9 @@ public class DialogoToad : MonoBehaviour
             bakedDataTest.PlayBakedData(indice+1);
             indice++;
         }
-        else
-        {
-            // Si no quedan más frases, desactiva el diálogo
-            dialogoToad.gameObject.SetActive(false);
-            playerController.ContinueGame();
-            isPlaying = true;
+        else {
+            // Cambiar tu juego
+            SceneManager.LoadScene("CrowdControl");
         }
-    }
-
-    public bool getIsPlaying(){
-        return isPlaying;
     }
 }

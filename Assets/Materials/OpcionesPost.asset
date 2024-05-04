@@ -15,25 +15,25 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 0
+    value: 1
   intensity:
     overrideState: 1
-    value: -34
+    value: 12
   intensityX:
     overrideState: 1
-    value: 0.559
+    value: 0
   intensityY:
     overrideState: 1
-    value: 1
+    value: 0
   centerX:
     overrideState: 0
-    value: 0
+    value: -1
   centerY:
     overrideState: 0
-    value: 0
+    value: -1
   scale:
     overrideState: 0
-    value: 1
+    value: 0.01
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,10 +67,10 @@ MonoBehaviour:
     value: 1
   filtering:
     overrideState: 1
-    value: {x: 54.000015, y: 99}
+    value: {x: 54.000027, y: 99}
   minLuminance:
     overrideState: 1
-    value: 1.1
+    value: 1.7
   maxLuminance:
     overrideState: 1
     value: 9

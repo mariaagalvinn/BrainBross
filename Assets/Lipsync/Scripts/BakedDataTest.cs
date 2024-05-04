@@ -5,13 +5,14 @@ public class BakedDataTest : MonoBehaviour
 {
     public GameObject lipSyncComp;
     public BakedData s1, s2, s3, s4, s5;
-    private uLipSyncBakedDataPlayer bakedPlayer;
+    public uLipSyncBakedDataPlayer bakedPlayer;
 
 
-    // Start is called before the first frame update
     void Start()
     {
-        bakedPlayer = lipSyncComp.GetComponent<uLipSyncBakedDataPlayer>();
+        if(bakedPlayer == null){
+            bakedPlayer = lipSyncComp.GetComponent<uLipSyncBakedDataPlayer>();
+        }   
     }
 
     public void PlayBakedData(int index)

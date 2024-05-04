@@ -8,7 +8,6 @@ public class PersonajeController : MonoBehaviour
     public Camera camara;
     private Vector3 offset;
 
-    private Rigidbody rb;
     private Vector3 targetPosition;
 
     public float velocidadMovimiento = 10f; 
@@ -25,9 +24,6 @@ public class PersonajeController : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.freezeRotation = true; // Para evitar que se caiga de frente
-
         offset = camara.transform.position - transform.position;
 
         enMovimiento = false;
@@ -129,10 +125,11 @@ public class PersonajeController : MonoBehaviour
     }
 
     void EntrarEnJuego(){
-        if(index == 1){
+        bool jugado1 = false;
+        if(index == 1 && !jugado1){
             // Entrar en escena
+            jugado1 = true;
             SceneManager.LoadScene("CrowdControl");
-
         }
     }
 }
