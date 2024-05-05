@@ -7,7 +7,7 @@ public class PersonajeController : MonoBehaviour
 {
     public Camera camara;
     private Vector3 offset;
-    private Animator animator;
+    public Animator animator;
 
     private Vector3 targetPosition;
 
@@ -25,7 +25,6 @@ public class PersonajeController : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();
         offset = camara.transform.position - transform.position;
 
         enMovimiento = false;
@@ -103,7 +102,7 @@ public class PersonajeController : MonoBehaviour
 
             animator.SetTrigger("Down");
             isJumping = false;
-            
+
             // Vemos si se puede entrar en un juego
             EntrarEnJuego();
         }
