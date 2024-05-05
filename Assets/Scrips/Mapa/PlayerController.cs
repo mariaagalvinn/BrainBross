@@ -8,6 +8,7 @@ public class PersonajeController : MonoBehaviour
     public Camera camara;
     private Vector3 offset;
     public Animator animator;
+    public PlayerData playerData;
 
     private Vector3 targetPosition;
 
@@ -15,6 +16,8 @@ public class PersonajeController : MonoBehaviour
     private bool enMovimiento;
     public float distanciaMinima = 1f; // Distancia mínima para llegar a la posición deseada
     public Transform[] plataformas;
+
+    public Transform[] plataformasNubes;
 
     private int index;
     private bool isJumping = false;
@@ -25,9 +28,15 @@ public class PersonajeController : MonoBehaviour
 
     void Start()
     {
+        int plataformaIndex = playerData.GetPlataforma();
+        transform.position = plataformas[plataformaIndex].position;
         offset = camara.transform.position - transform.position;
 
         enMovimiento = false;
+
+        animator.SetBool("isGrounded", false); 
+        animator.SetBool("isJumping", false);
+        animator.SetBool("isFlying", false);
     }
 
     void Update(){
@@ -48,6 +57,7 @@ public class PersonajeController : MonoBehaviour
         if(enMovimiento){
              // La velocidad a la que se moverá el personaje
             StartCoroutine(Jump());
+            animator.SetBool("isGrounded", false);
             // Si ya llegamos a la posición deseada
             float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
             if(distanceToTarget < distanciaMinima)
@@ -57,7 +67,6 @@ public class PersonajeController : MonoBehaviour
         } 
 
         camara.transform.position = transform.position + offset;
-        
     }
 
     void incrementarIndex()
@@ -79,34 +88,46 @@ public class PersonajeController : MonoBehaviour
     
 
     IEnumerator Jump()
+{
+    if (!isJumping)
     {
-        if (!isJumping)
+        animator.SetBool("isGrounded", false);
+        animator.SetBool("isJumping", true);
+
+        isJumping = true;
+
+        Vector3 startPosition = transform.position;
+        float time = 0f;
+
+        while (time < 1f)
         {
-            animator.SetTrigger("Up");
+            float height = Mathf.Sin(Mathf.PI * time) * jumpHeight;
+            transform.position = Vector3.Lerp(startPosition, targetPosition, time) + Vector3.up * height;
 
-            isJumping = true;
-
-
-            Vector3 startPosition = transform.position;
-
-            float time = 0f;
-
-            while (time < 1f)
+            // Actualizar estados de animación según el progreso del salto
+            if (time < 0.5f)
             {
-                animator.SetTrigger("Sky");
-                float height = Mathf.Sin(Mathf.PI * time) * jumpHeight;
-                transform.position = Vector3.Lerp(startPosition, targetPosition, time) + Vector3.up * height;
-                time += Time.deltaTime * jumpSpeed;
-                yield return null;
+                animator.SetBool("isJumping", true);
+                animator.SetBool("isFlying", false);
+            }
+            else
+            {
+                animator.SetBool("isJumping", false);
+                animator.SetBool("isFlying", true);
             }
 
-            animator.SetTrigger("Down");
-            isJumping = false;
-
-            // Vemos si se puede entrar en un juego
-            EntrarEnJuego();
+            time += Time.deltaTime * jumpSpeed;
+            yield return null;
         }
+        // Restablecer estados de animación al aterrizar
+        animator.SetBool("isFlying", false);
+        animator.SetBool("isGrounded", true);
+        isJumping = false;
+
+        // Vemos si se puede entrar en un juego
+        EntrarEnJuego();
     }
+}
 
     void RotacionPersonaje()
     {
@@ -128,10 +149,44 @@ public class PersonajeController : MonoBehaviour
 
     void EntrarEnJuego(){
         bool jugado1 = false;
-        if(index == 1 && !jugado1){
+        if(index == 1 && !jugado1 && !isJumping){
             // Entrar en escena
             jugado1 = true;
-            SceneManager.LoadScene("CrowdToad");
+            //playerData.SetPlataforma(index);
+            //SceneManager.LoadScene("CrowdToad");
+        } if(index == 12){
+            camara.transform.position = new Vector3(379, 196, 161);
+            camara.transform.rotation = Quaternion.Euler(11, 174, 0);
+            StartCoroutine(SaltarEnNubes());
+
         }
     }
+
+   IEnumerator SaltarEnNubes()
+    {
+        // Iterar sobre cada una de las plataformas de nube
+        for (int i = 0; i < plataformasNubes.Length; i++)
+        {
+            // Establecer la posición de destino como la posición de la plataforma de nube actual
+            targetPosition = plataformasNubes[i].position;
+
+            // Esperar 5 segundos antes de saltar hacia la plataforma de nube actual
+            yield return new WaitForSeconds(5f);
+
+            // Saltar hacia la plataforma de nube actual
+            StartCoroutine(Jump());
+
+            // Esperar hasta que el personaje llegue a la plataforma de nube actual
+            while(Vector3.Distance(transform.position, targetPosition) > distanciaMinima)
+            {
+                yield return null;
+            }
+        }
+
+            // Si el personaje ha llegado a la plataforma de nube, cargar la siguiente escena
+            SceneManager.LoadScene("CrowdToad");
+    }
+
+
+
 }

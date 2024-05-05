@@ -13,6 +13,7 @@ TagManager:
   - Damageable
   - Modifier
   - Meta
+  - Player1
   layers:
   - Default
   - TransparentFX

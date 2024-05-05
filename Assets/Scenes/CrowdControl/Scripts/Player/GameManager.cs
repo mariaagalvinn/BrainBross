@@ -26,4 +26,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1; // Reanuda el tiempo
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Recarga la escena actual
     }
+
+    public void BackToMapa(){
+        Time.timeScale = 1; // Reanuda el tiempo
+        SceneManager.LoadScene("Mapa"); // Carga la escena del mapa
+    }
 }
