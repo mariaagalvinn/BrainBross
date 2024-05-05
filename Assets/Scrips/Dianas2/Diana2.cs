@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class Diana2 : MonoBehaviour
 {
     public float velocidad = 30;
-
     public int cantidadDisparos = 15;
     public float duracionPartida = 15;
     public Text textoPuntuacionActual;
@@ -27,6 +26,9 @@ public class Diana2 : MonoBehaviour
 
     public delegate void textoTiempo(int puntuacion);
     public static event textoTiempo tiempoActualizado;
+    
+    public Canvas ganar;
+    public Canvas perder;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,9 @@ public class Diana2 : MonoBehaviour
 
         EstablecerPatronesMovimiento();
         PatronMovimientoAleatorio();
+
+        ganar.gameObject.SetActive(false);
+        perder.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -78,10 +83,14 @@ public class Diana2 : MonoBehaviour
             if(puntuacionActual >= 200)
             {
                 Destroy(gameObject);
+                //ganar.gameObject.SetActive(true);
                 SceneManager.LoadScene("Dianas3");
             }
             else 
             {
+                //Destroy(gameObject);
+                //perder.gameObject.SetActive(true);
+                
                 puntuacionActual = 0;
                 duracionActual = 0;
                 cantidadDisparos = 15;
