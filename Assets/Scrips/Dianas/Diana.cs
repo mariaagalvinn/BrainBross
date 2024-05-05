@@ -30,6 +30,8 @@ public class Diana : MonoBehaviour
     public Canvas ganar;
     public Canvas perder;
 
+    public Text mensajePerder;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -92,7 +94,10 @@ public class Diana : MonoBehaviour
                 //Destroy(gameObject);
                 //perder.gameObject.SetActive(true);
                 //SceneManager.LoadScene("Dianas");
-                
+                mensajePerder.gameObject.SetActive(true);
+
+                Invoke("DesactivarMensajeGanar", 1f);
+                mensajePerder.gameObject.SetActive(true);
                 puntuacionActual = 0;
                 duracionActual = 0;
                 cantidadDisparos = 20;
@@ -106,6 +111,13 @@ public class Diana : MonoBehaviour
             //Destroy(gameObject);      
         }
 
+    }
+
+    
+    void DesactivarMensajeGanar()
+    {
+        // Desactivar el mensaje de ganar
+        mensajePerder.gameObject.SetActive(false);
     }
 
     private void EstablecerPatronesMovimiento()

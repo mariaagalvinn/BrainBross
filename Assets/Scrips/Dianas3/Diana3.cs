@@ -30,6 +30,8 @@ public class Diana3 : MonoBehaviour
     public Canvas ganar;
     public Canvas perder;
 
+    public Text mensajePerder;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -88,7 +90,10 @@ public class Diana3 : MonoBehaviour
             {
                 //Destroy(gameObject);
                 //perder.gameObject.SetActive(true);
-                
+                mensajePerder.gameObject.SetActive(true);
+
+                Invoke("DesactivarMensajeGanar", 1f);
+
                 puntuacionActual = 0;
                 duracionActual = 0;
                 cantidadDisparos = 10;
@@ -100,6 +105,12 @@ public class Diana3 : MonoBehaviour
             }           
         }
 
+    }
+    
+    void DesactivarMensajeGanar()
+    {
+        // Desactivar el mensaje de ganar
+        mensajePerder.gameObject.SetActive(false);
     }
 
     private void EstablecerPatronesMovimiento()
