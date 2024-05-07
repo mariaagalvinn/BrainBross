@@ -6,34 +6,37 @@ using UnityEngine.SceneManagement;
 public class PersonajeController : MonoBehaviour
 {
     public Camera camara;
-    private Vector3 offset;
     public Animator animator;
     public PlayerData playerData;
-
+    public Transform[] plataformas;
+    public Transform[] plataformasNubes;
+    
+    private Vector3 offset;
     private Vector3 targetPosition;
+    private int index;
+    private bool enMovimiento;
+    private bool isJumping;
 
     public float velocidadMovimiento = 10f; 
-    private bool enMovimiento;
-    public float distanciaMinima = 1f; // Distancia mínima para llegar a la posición deseada
-    public Transform[] plataformas;
-
-    public Transform[] plataformasNubes;
-
-    private int index;
-    private bool isJumping = false;
+    public float distanciaMinima = 1f; 
     public float jumpHeight = 2f;
     public float jumpSpeed = 4f;
 
 
-
     void Start()
     {
+        // Cargar la posición de la plataforma actual del jugador
         int plataformaIndex = playerData.GetPlataforma();
         transform.position = plataformas[plataformaIndex].position;
+        
+        // Inicializar el índice de la plataforma actual
         offset = camara.transform.position - transform.position;
 
+        // booleanos
         enMovimiento = false;
+        isJumping = false;
 
+        // Animaciones
         animator.SetBool("isGrounded", false); 
         animator.SetBool("isJumping", false);
         animator.SetBool("isFlying", false);
@@ -42,7 +45,6 @@ public class PersonajeController : MonoBehaviour
     void Update(){
 
         if(!enMovimiento && Input.GetKeyDown(KeyCode.RightArrow)){
-            
             incrementarIndex(); // Movemos el índice a la derecha
             targetPosition = plataformas[index].position;
             enMovimiento = true;
@@ -55,95 +57,81 @@ public class PersonajeController : MonoBehaviour
         }
 
         if(enMovimiento){
-             // La velocidad a la que se moverá el personaje
-            StartCoroutine(Jump());
+
             animator.SetBool("isGrounded", false);
-            // Si ya llegamos a la posición deseada
-            float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
-            if(distanceToTarget < distanciaMinima)
+            animator.SetBool("isJumping", true);
+            StartCoroutine(Jump()); // Empieza el salto
+
+            if(Vector3.Distance(transform.position, targetPosition) < distanciaMinima)
             {
+                animator.SetBool("isFlying", false);
+                animator.SetBool("isGrounded", true);
+
                 enMovimiento = false;
+                EntrarEnJuego();
             }
         } 
 
         camara.transform.position = transform.position + offset;
     }
 
-    void incrementarIndex()
-    {
-        if (index < plataformas.Length - 1)
-        {
-            index++;
-        }
-    }
 
-    void decrementarIndex()
-    {
-        if (index > 0)
-        {
-            index--;
-        }
-    }
 
-    
 
     IEnumerator Jump()
-{
-    if (!isJumping)
     {
-        animator.SetBool("isGrounded", false);
-        animator.SetBool("isJumping", true);
 
-        isJumping = true;
-
-        Vector3 startPosition = transform.position;
-        float time = 0f;
-
-        while (time < 1f)
+        if (!isJumping)
         {
-            float height = Mathf.Sin(Mathf.PI * time) * jumpHeight;
-            transform.position = Vector3.Lerp(startPosition, targetPosition, time) + Vector3.up * height;
+            isJumping = true;
 
-            // Actualizar estados de animación según el progreso del salto
-            if (time < 0.5f)
+            Vector3 startPosition = transform.position;
+            float time = 0f;
+
+            animator.SetBool("isJumping", false);
+            
+            while (time < 1f)
             {
-                animator.SetBool("isJumping", true);
-                animator.SetBool("isFlying", false);
-            }
-            else
-            {
-                animator.SetBool("isJumping", false);
+                float height = Mathf.Sin(Mathf.PI * time) * jumpHeight;
+                transform.position = Vector3.Lerp(startPosition, targetPosition, time) + Vector3.up * height;
+        
                 animator.SetBool("isFlying", true);
+                Debug.Log("Volando");
+
+                time += Time.deltaTime * jumpSpeed;
+                yield return null;
             }
-
-            time += Time.deltaTime * jumpSpeed;
-            yield return null;
+            
+            
+            isJumping = false;
         }
-        // Restablecer estados de animación al aterrizar
-        animator.SetBool("isFlying", false);
-        animator.SetBool("isGrounded", true);
-        isJumping = false;
-
-        // Vemos si se puede entrar en un juego
-        EntrarEnJuego();
     }
-}
 
     void RotacionPersonaje()
     {
-        float umbral = 20.0f; // Ajusta este valor según sea necesario
+
+        float umbral = 20.0f;
+        float rotationY = 0f;
+
         if(targetPosition.x > transform.position.x + umbral)
         {
-            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+            rotationY = 90f;
         }
         else if(targetPosition.x < transform.position.x - umbral)
         {
-            transform.rotation = Quaternion.Euler(0f, -90f, 0f);
-        } else if(targetPosition.z > transform.position.z + umbral){
-            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-        } else {
-            transform.rotation = Quaternion.Euler(0f, -180f, 0f);
+            rotationY = -90f;
+        } 
+        else if(targetPosition.z > transform.position.z + umbral)
+        {
+            rotationY = 0f;
+            
+        } 
+        else 
+        {
+            rotationY = -180f;
         }
+
+        transform.rotation = Quaternion.Euler(0, rotationY, 0);
 
     }
 
@@ -187,6 +175,20 @@ public class PersonajeController : MonoBehaviour
             SceneManager.LoadScene("CrowdToad");
     }
 
+    void incrementarIndex()
+    {
+        if (index < plataformas.Length - 1)
+        {
+            index++;
+        }
+    }
 
+    void decrementarIndex()
+    {
+        if (index > 0)
+        {
+            index--;
+        }
+    }
 
 }
