@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Diana/Dianas3.unity
     guid: 7b1b4d758209735409c7100934d34f5c
   - enabled: 1
-    path: Assets/Scenes/Mapa.unity
+    path: Assets/Scenes/Mapa/Mapa.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/CrossingRoad/CrossingRoad.unity
