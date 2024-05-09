@@ -792,8 +792,8 @@ MonoBehaviour:
   plataformas:
   - {fileID: 1763210984}
   - {fileID: 1163284026}
-  indexJuego: 2
-  nombreJuego: CrowdToad
+  indexJuego: 1
+  nombreJuego: Mapa 7
   velocidadMovimiento: 10
   distanciaMinima: 4
   jumpHeight: 20

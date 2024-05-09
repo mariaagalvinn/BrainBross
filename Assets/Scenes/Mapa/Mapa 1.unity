@@ -799,7 +799,7 @@ MonoBehaviour:
   - {fileID: 200311439}
   - {fileID: 485585098}
   indexJuego: 2
-  nombreJuego: CrowdToad
+  nombreJuego: CrowdToad2
   velocidadMovimiento: 10
   distanciaMinima: 4
   jumpHeight: 20
