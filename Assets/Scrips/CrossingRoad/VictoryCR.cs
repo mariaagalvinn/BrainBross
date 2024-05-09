@@ -13,6 +13,6 @@ public class VictoryCR : MonoBehaviour
 
     public void Onclick2()
     {
-        SceneManager.LoadScene("Mapa");
+        SceneManager.LoadScene("Mapa 2");
     }
 }

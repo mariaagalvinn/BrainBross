@@ -13,6 +13,6 @@ public class VictoryD3 : MonoBehaviour
 
     public void Onclick()
     {
-        SceneManager.LoadScene("Mapa");
+        SceneManager.LoadScene("Mapa 3");
     }
 }

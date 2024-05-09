@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -477,8 +477,8 @@ MonoBehaviour:
   lipSyncComp: {fileID: 335428256}
   s1: {fileID: 11400000, guid: aea51b6c72bbdf94ea1e7904b8ca69ae, type: 2}
   s2: {fileID: 11400000, guid: c2210da8efc341d41b892ce71e910702, type: 2}
-  s3: {fileID: 11400000, guid: 8ea4e70829359b94b99de1dfdd8db5f8, type: 2}
-  s4: {fileID: 11400000, guid: 89b68cc5c8f9fd24b99e233e83dda986, type: 2}
+  s3: {fileID: 11400000, guid: e15bd6d9f6b587046b06096f44fdbb11, type: 2}
+  s4: {fileID: 11400000, guid: 0722056207848e9459fb92e8c71e1ceb, type: 2}
   s5: {fileID: 11400000, guid: 7e131b9d631c6ba46bb8ec62bcd0b947, type: 2}
   bakedPlayer: {fileID: 335428260}
 --- !u!82 &335428258

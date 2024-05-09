@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CrowdControl/Juego/CrowdToad.unity
     guid: 7049d614c7a4a4a788b64d3eba1e596d
+  - enabled: 1
+    path: Assets/Scenes/CrossingRoad/CrowdToad2.unity
+    guid: aa64d0c9caa4b184499952db9e57fc78
+  - enabled: 1
+    path: Assets/Scenes/Diana/CrowdToad3.unity
+    guid: 9c345710cf2d17342a488519d7870b0f
   m_configObjects: {}

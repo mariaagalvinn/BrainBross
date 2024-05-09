@@ -10,8 +10,8 @@ public class DialogoToad3 : MonoBehaviour
     private string[] frases = {
         "¡Has llegado al primer nivel casita!",
         "Vas a tener que superar 3 niveles del minijuego dianas.",
-        "Con el ratón podrás mover la mira y haciendo click podrás disparar.",
-        "Cada vez será más difícil conseguir los puntos antes de que se acabe el tiempo. El valor de cada parte de la diana aumentará.",
+        "Con el ratón moverás la mira y haciendo click dispararás.",
+        "Cada vez será más difícil y el valor aumentará.",
         "¡Suerte!"
     };
     private int indice = 0;
