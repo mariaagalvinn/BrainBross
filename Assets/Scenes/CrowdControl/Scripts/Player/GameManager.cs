@@ -24,11 +24,11 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame() {
         Time.timeScale = 1; // Reanuda el tiempo
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Recarga la escena actual
+        SceneManager.LoadScene("CrowdControl"); // Recarga la escena actual
     }
 
     public void BackToMapa(){
         Time.timeScale = 1; // Reanuda el tiempo
-        SceneManager.LoadScene("Mapa"); // Carga la escena del mapa
+        SceneManager.LoadScene("Mapa 1"); // Carga la escena del mapa
     }
 }

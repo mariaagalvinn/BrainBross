@@ -15,24 +15,44 @@ EditorBuildSettings:
     path: Assets/Scenes/Diana/Dianas3.unity
     guid: 7b1b4d758209735409c7100934d34f5c
   - enabled: 1
-    path: Assets/Scenes/Mapa.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/CrossingRoad/CrossingRoad.unity
     guid: 5bfea6b1ddf1e784cb707c9138c40e4f
   - enabled: 1
     path: Assets/Scenes/CrowdControl/Juego/CrowdControl.unity
     guid: 9207ffece91c34861a0702951a0d9018
-  - enabled: 0
-    path: Assets/Scenes/CrowdControl/Juego/CrowdControlGameOver.unity
-    guid: c93e3fa32df8545c5a4af3f420fd8977
   - enabled: 1
     path: Assets/Scenes/CrowdControl/Juego/CrowdToad.unity
     guid: 7049d614c7a4a4a788b64d3eba1e596d
   - enabled: 1
+
     path: Assets/Scenes/CrossingRoad/CrowdToad2.unity
     guid: aa64d0c9caa4b184499952db9e57fc78
   - enabled: 1
     path: Assets/Scenes/Diana/CrowdToad3.unity
     guid: 9c345710cf2d17342a488519d7870b0f
+
+    path: Assets/Scenes/Mapa/Mapa.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Mapa/Mapa 1.unity
+    guid: c92b7d1faa8ba4c4385eb9674ebe1f7f
+  - enabled: 1
+    path: Assets/Scenes/Mapa/Mapa 2.unity
+    guid: 4782f339b64fa4ed68ed657f8da89c57
+  - enabled: 1
+    path: Assets/Scenes/Mapa/Mapa 3.unity
+    guid: 22785289668f74e62a801c554d5e9331
+  - enabled: 1
+    path: Assets/Scenes/Mapa/Mapa 4.unity
+    guid: 316aab600af594927a910b7709ae4064
+  - enabled: 1
+    path: Assets/Scenes/Mapa/Mapa 5.unity
+    guid: 41b078f176d0a4fae85ba13ebb730fb7
+  - enabled: 1
+    path: Assets/Scenes/Mapa/Mapa 6.unity
+    guid: 9435ba3ca635e4b02ac324eedf0cc058
+  - enabled: 1
+    path: Assets/Scenes/Mapa/Mapa 7.unity
+    guid: e654539ed6b3e4ff59ebff704b9177cc
+
   m_configObjects: {}

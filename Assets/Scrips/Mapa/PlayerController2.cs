@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
-public class PersonajeController : MonoBehaviour
+public class PlayerController2 : MonoBehaviour
 {
     public Camera camara;
+    public Transform playerPosicion;
     public Animator animator;
     public Transform[] plataformas;
     
@@ -14,18 +15,19 @@ public class PersonajeController : MonoBehaviour
     private int index;
     private bool enMovimiento;
     private bool isJumping;
+    public int indexJuego;
+    public string nombreJuego;
 
     public float velocidadMovimiento = 10f; 
     public float distanciaMinima = 1f; 
     public float jumpHeight = 2f;
     public float jumpSpeed = 4f;
-    
 
 
     void Start()
     {
         // Inicializar el índice de la plataforma actual
-        offset = camara.transform.position - transform.position;
+        offset = camara.transform.position - playerPosicion.position;
 
         // booleanos
         enMovimiento = false;
@@ -35,6 +37,7 @@ public class PersonajeController : MonoBehaviour
     }
 
     void Update(){
+        Debug.Log(index);
 
         if(!enMovimiento && Input.GetKeyDown(KeyCode.RightArrow)){
             incrementarIndex(); // Movemos el índice a la derecha
@@ -50,11 +53,9 @@ public class PersonajeController : MonoBehaviour
 
         if(enMovimiento){
 
-            
             StartCoroutine(Jump()); // Empieza el salto
             
-
-            if(Vector3.Distance(transform.position, targetPosition) < distanciaMinima)
+            if(Vector3.Distance(transform.position, targetPosition) < 6)
             {
                 enMovimiento = false;
                 EntrarEnJuego();
@@ -120,9 +121,8 @@ public class PersonajeController : MonoBehaviour
     }
 
     void EntrarEnJuego(){
-
-        if(index == 1){
-            SceneManager.LoadScene("CrowdToad");
+        if(index == indexJuego){
+            SceneManager.LoadScene(nombreJuego);
         } 
     }
 
