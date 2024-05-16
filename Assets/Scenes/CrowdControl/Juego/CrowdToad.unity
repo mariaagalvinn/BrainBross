@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641228, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571337, b: 0.3069219, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -259,8 +259,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogoToad: {fileID: 161865099}
   textoDialogo: {fileID: 1823662741}
+  frases:
+  - "\xA1Hola! Te ha tocado jugar a tu primer minijuego."
+  - Para superarlo tienes que matar a tantos enemigos como indica el contador de
+    la esquina izquierda.
+  - "Si ves que el contador llega a 0 o a menos cuando pases la meta \xA1Has ganado!,
+    de lo contrario deber\xE1s volverlo a intentar."
+  - "Puedes moverte arrastrando el rat\xF3n de izquierda a derecha por la pantalla."
+  - "\xA1Buena suerte!"
   bakedDataTest: {fileID: 335428257}
-  button: {fileID: 0}
+  button: {fileID: 1179103633}
 --- !u!114 &161865097
 MonoBehaviour:
   m_ObjectHideFlags: 0
