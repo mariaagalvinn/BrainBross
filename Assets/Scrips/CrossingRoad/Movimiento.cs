@@ -121,7 +121,6 @@ public class Movimiento : MonoBehaviour
             return; 
         }
         posicionZ++;
-        //animaciones.SetTrigger("saltar");
         if(posicionZ > carril)
         {
             carril=posicionZ;
@@ -145,7 +144,6 @@ public class Movimiento : MonoBehaviour
             return ;
         }
         posicionZ--;
-        //animaciones.SetTrigger("saltar");
        if(posicionZ < 0)
        {
             carril=posicionZ;
@@ -165,7 +163,6 @@ public class Movimiento : MonoBehaviour
             return ;
         }
         lateral += cuanto;
-        //animaciones.SetTrigger("saltar");
         lateral = Mathf.Clamp(lateral, -4, 4);
         StartCoroutine(CambiarPosicion());
     }

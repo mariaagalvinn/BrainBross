@@ -86,14 +86,10 @@ public class Diana : MonoBehaviour
             if(puntuacionActual >= 100)
             {
                 Destroy(gameObject);
-                //ganar.gameObject.SetActive(true);
                 SceneManager.LoadScene("Dianas2");
             }
             else 
             {
-                //Destroy(gameObject);
-                //perder.gameObject.SetActive(true);
-                //SceneManager.LoadScene("Dianas");
                 mensajePerder.gameObject.SetActive(true);
 
                 Invoke("DesactivarMensajeGanar", 1f);
@@ -108,7 +104,6 @@ public class Diana : MonoBehaviour
                 tiempoActualizado?.Invoke((int)(duracionPartida - duracionActual));
 
             }     
-            //Destroy(gameObject);      
         }
 
     }
