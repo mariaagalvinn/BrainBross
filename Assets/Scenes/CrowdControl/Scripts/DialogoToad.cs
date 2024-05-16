@@ -7,13 +7,9 @@ public class DialogoToad : MonoBehaviour
     public Canvas dialogoToad;
     public Text textoDialogo;
     // Cambia las frases según tu juego
-    private string[] frases = {
-        "¡Hola! Te ha tocado jugar a tu primer minijuego.",
-        "Para superarlo tienes que matar a tantos enemigos como indica el contador de la esquina izquierda.",
-        "Si ves que el contador llega a 0 o a menos cuando pases la meta ¡Has ganado!, de lo contrario deberás volverlo a intentar.",
-        "Puedes moverte arrastrando el ratón de izquierda a derecha por la pantalla.",
-        "¡Buena suerte!"
-    };
+
+
+    public  string[] frases;
     private int indice = 0;
     public BakedDataTest bakedDataTest;
     public Button button;
@@ -22,10 +18,7 @@ public class DialogoToad : MonoBehaviour
     {
         MostrarSiguienteFrase(); // Muestra la primera frase
     }
-
-
-
-
+    
     public void onClick()
     {
         Debug.Log("Click");
