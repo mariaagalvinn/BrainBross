@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TriggerLoss : MonoBehaviour
 {
@@ -11,9 +12,16 @@ public class TriggerLoss : MonoBehaviour
         if (collision.gameObject.layer == 7)
         {
             _timer += Time.deltaTime;
-            if (_timer > GameManager.instance.TimeTillGameOver)
+            if (_timer > SuikaGameManager.instance.TimeTillGameOver)
             {
-                GameManager.instance.GameOver();
+                if (SuikaGameManager.instance.CurrentScore < 150)
+                {
+                    SuikaGameManager.instance.GameOver();
+                }
+                else
+                {
+                    SceneManager.LoadScene("Mapa 4");
+                }
             }
         }
     }

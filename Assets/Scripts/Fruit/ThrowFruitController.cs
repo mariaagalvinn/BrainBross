@@ -11,7 +11,7 @@ public class ThrowFruitController : MonoBehaviour
     [SerializeField] private Transform _parentAfterThrow;
     [SerializeField] private FruitSelector _selector;
 
-    private PlayerController _playerController;
+    private SuikaPlayerController _playerController;
 
     private Rigidbody2D _rb;
     private PolygonCollider2D _polygonCollider;
@@ -33,7 +33,7 @@ public class ThrowFruitController : MonoBehaviour
 
     private void Start()
     {
-        _playerController = GetComponent<PlayerController>();
+        _playerController = GetComponent<SuikaPlayerController>();
 
         SpawnAFruit(_selector.PickRandomFruitForThrow());
     }
@@ -60,7 +60,6 @@ public class ThrowFruitController : MonoBehaviour
 
     public void SpawnAFruit(GameObject fruit)
     {
-        //GameObject go = Instantiate(fruit, _fruitTransform);
         Vector3 globalPosition = _fruitTransform.TransformPoint(Vector3.zero);
         GameObject go = Instantiate(fruit, globalPosition, Quaternion.identity, _parentAfterThrow);
 

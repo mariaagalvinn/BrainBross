@@ -5,9 +5,9 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class SuikaGameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static SuikaGameManager instance;
 
     public int CurrentScore { get; set; }
 

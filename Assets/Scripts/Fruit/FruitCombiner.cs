@@ -29,19 +29,19 @@ public class FruitCombiner : MonoBehaviour
 
                     if (thisID > otherID)
                     {
-                        GameManager.instance.IncreaseScore(_info.PointsWhenAnnihilated);
+                        SuikaGameManager.instance.IncreaseScore(_info.PointsWhenAnnihilated);
 
                         if (_info.FruitIndex == FruitSelector.instance.Fruits.Length -1)
                         {
                             Destroy(collision.gameObject);
                             Destroy(gameObject);
-                            SceneManager.LoadScene("Win");
+                            SceneManager.LoadScene("Mapa 4");
                         }
 
                         else
                         {
                             Vector3 middlePosition = (transform.position + collision.transform.position) / 2f;
-                            GameObject go = Instantiate(SpawnCombinedFruit(_info.FruitIndex), GameManager.instance.transform);
+                            GameObject go = Instantiate(SpawnCombinedFruit(_info.FruitIndex), SuikaGameManager.instance.transform);
                             go.transform.position = middlePosition;
 
                             ColliderInformer informer = go.GetComponent<ColliderInformer>();
