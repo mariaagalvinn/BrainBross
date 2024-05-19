@@ -65,4 +65,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Suika/Suika.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Stack/PreStack.unity
+    guid: 541a0bd63f5bead4a8bcb4c3a87f74a4
+  - enabled: 1
+    path: Assets/Scenes/Suika/PreSuika.unity
+    guid: d5a85ce8017f662438e75c97e8d74445
   m_configObjects: {}

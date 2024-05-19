@@ -794,7 +794,7 @@ MonoBehaviour:
   - {fileID: 1539457408}
   - {fileID: 1763210984}
   indexJuego: 2
-  nombreJuego: CrowdToad
+  nombreJuego: PreSuika
   velocidadMovimiento: 10
   distanciaMinima: 4
   jumpHeight: 20
