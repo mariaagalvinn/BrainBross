@@ -794,7 +794,7 @@ MonoBehaviour:
   - {fileID: 1452491920}
   - {fileID: 1088435047}
   indexJuego: 2
-  nombreJuego: CrowdToad
+  nombreJuego: Suika
   velocidadMovimiento: 10
   distanciaMinima: 4
   jumpHeight: 20
