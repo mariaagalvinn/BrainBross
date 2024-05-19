@@ -269,6 +269,7 @@ MonoBehaviour:
   - "\xA1Buena suerte!"
   bakedDataTest: {fileID: 335428257}
   button: {fileID: 1179103633}
+  nivel: CrowdControl
 --- !u!114 &161865097
 MonoBehaviour:
   m_ObjectHideFlags: 0

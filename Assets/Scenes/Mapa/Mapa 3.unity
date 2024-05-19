@@ -794,7 +794,7 @@ MonoBehaviour:
   - {fileID: 1452491920}
   - {fileID: 1088435047}
   indexJuego: 2
-  nombreJuego: Suika
+  nombreJuego: PreSuika
   velocidadMovimiento: 10
   distanciaMinima: 4
   jumpHeight: 20
@@ -835,7 +835,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 918571496}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &277057406
+--- !u!1 &285163503
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -843,10 +843,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 277057410}
-  - component: {fileID: 277057409}
-  - component: {fileID: 277057408}
-  - component: {fileID: 277057407}
+  - component: {fileID: 285163507}
+  - component: {fileID: 285163506}
+  - component: {fileID: 285163505}
+  - component: {fileID: 285163504}
   m_Layer: 0
   m_Name: Suelo
   m_TagString: Untagged
@@ -854,13 +854,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &277057407
+--- !u!64 &285163504
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277057406}
+  m_GameObject: {fileID: 285163503}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -876,13 +876,13 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &277057408
+--- !u!23 &285163505
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277057406}
+  m_GameObject: {fileID: 285163503}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -918,24 +918,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &277057409
+--- !u!33 &285163506
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277057406}
+  m_GameObject: {fileID: 285163503}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &277057410
+--- !u!4 &285163507
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277057406}
+  m_GameObject: {fileID: 285163503}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.99994844, z: -0, w: 0.010156016}
-  m_LocalPosition: {x: -10, y: -16.5, z: -159}
+  m_LocalPosition: {x: -10, y: -0, z: -159}
   m_LocalScale: {x: 400, y: 400, z: 400}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4991,7 +4991,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 705507995}
-  - {fileID: 277057410}
   - {fileID: 215020416}
   - {fileID: 457450342}
   - {fileID: 1519045684}
@@ -5002,3 +5001,4 @@ SceneRoots:
   - {fileID: 1770374631}
   - {fileID: 113654740}
   - {fileID: 2106390589}
+  - {fileID: 285163507}
