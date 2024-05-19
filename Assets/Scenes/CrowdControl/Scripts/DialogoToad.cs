@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,8 @@ public class DialogoToad : MonoBehaviour
     private int indice = 0;
     public BakedDataTest bakedDataTest;
     public Button button;
+
+    public string nivel;
     
     void Start()
     {
@@ -37,7 +40,7 @@ public class DialogoToad : MonoBehaviour
         }
         else {
             // Cambiar tu juego
-            SceneManager.LoadScene("CrowdControl");
+            SceneManager.LoadScene(nivel);
         }
     }
 }
