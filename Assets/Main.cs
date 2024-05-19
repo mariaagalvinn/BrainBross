@@ -113,7 +113,7 @@ public class Main : MonoBehaviour
                 SceneManager.LoadScene("Stack3");
                 break;
             case 3:
-                SceneManager.LoadScene("Win");
+                SceneManager.LoadScene("Mapa 5");
                 break;
         }
     }
