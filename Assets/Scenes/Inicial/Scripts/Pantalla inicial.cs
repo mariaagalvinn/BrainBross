@@ -9,7 +9,8 @@ public class Pantallainicial : MonoBehaviour
     public Canvas canvas;
 
     // dialogo
-     
+    public AudioSource audio1;
+    public AudioSource audio2;
     public Canvas peach;
     public Text textoPeach;
     public Canvas bowser;
@@ -19,12 +20,15 @@ public class Pantallainicial : MonoBehaviour
 
     private void Start() {
         canvas.gameObject.SetActive(true);
+        audio1.Play();
        Debug.Log(index);
     }
 
     public void Onclick(){
         //Esconder Canvas
         canvas.gameObject.SetActive(false);
+        audio1.Stop();
+        audio2.Play();
         //Mostrar dialogo
         index = 0;
         dialogo();
@@ -53,6 +57,7 @@ public class Pantallainicial : MonoBehaviour
             textoPeach.text = "¡No me rendiré! ¡Te voy a derrotar!".ToString();
         } else {
             peach.gameObject.SetActive(false);
+            audio2.Stop();
             SceneManager.LoadScene("Mapa");
         }
         
