@@ -12,16 +12,20 @@ public class SwerveMovement: MonoBehaviour
     private void Update()
     {
         var inputX = GetInput();
-        
+
         var displacementX = GetDisplacement(inputX);
-        
+
         displacementX = SmoothOutDisplacement(displacementX);
-        
+
         var newPosition = GetNewLocalPosition(displacementX);
-        
+
         newPosition = GetLimitedLocalPosition(newPosition);
 
+        newPosition.y = 0;
+
         transform.localPosition = newPosition;
+
+        transform.localRotation = Quaternion.Euler(0,0,0);
     }
 
     private Vector3 GetLimitedLocalPosition(Vector3 position)

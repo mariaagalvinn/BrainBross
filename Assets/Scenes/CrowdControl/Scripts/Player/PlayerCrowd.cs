@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace BrainBross
@@ -22,11 +24,13 @@ namespace BrainBross
 
         private int _year;
 
+        private float _timer = 0f;
+
         private void Start()
         {
             Set(startingCrowdSize);
+            crowdSize = 1;
             yearText.text = crowdSize.ToString();
-            crowdSize = 0;
         }
 
         public void Update(){
@@ -87,6 +91,32 @@ namespace BrainBross
             var shooter = Instantiate(shooterPrefab, position, Quaternion.identity, transform);
             _shooters.Add(shooter);
             yearText.text = crowdSize.ToString();
+        }
+
+        public void OnCollisionEnter(Collision other)
+        {
+            if(other.transform.CompareTag("Damageable"))
+            {
+                RemoveShooter();
+            }
+        }
+
+        public void OnCollisionStay(Collision other)
+        {
+            if(other.transform.CompareTag("Damageable"))
+            {
+                _timer += Time.deltaTime;
+                if (_timer > 0.5f)
+                {
+                    RemoveShooter();
+                    _timer = 0f;
+                }
+            }
+        }
+
+        public void OnCollisionExit()
+        {
+            _timer = 0f;
         }
     }
 }
