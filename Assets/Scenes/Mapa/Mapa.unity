@@ -699,14 +699,19 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 837235473489397149, guid: d52343563d83f456db1eed72e894d218, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 258784891}
+      addedObject: {fileID: 258784895}
   m_SourcePrefab: {fileID: 100100000, guid: d52343563d83f456db1eed72e894d218, type: 3}
 --- !u!1 &258784890 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 837235473489397149, guid: d52343563d83f456db1eed72e894d218, type: 3}
   m_PrefabInstance: {fileID: 258784889}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &258784891
+--- !u!95 &258784894 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6212022178418558301, guid: d52343563d83f456db1eed72e894d218, type: 3}
+  m_PrefabInstance: {fileID: 258784889}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &258784895
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -715,32 +720,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 258784890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a70c6d2fdad5a47c192c164d094c3856, type: 3}
+  m_Script: {fileID: 11500000, guid: dc93edd668a5e4293a7c1431e9d92c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   camara: {fileID: 963194227}
+  playerPosicion: {fileID: 258784896}
   animator: {fileID: 258784894}
   plataformas:
   - {fileID: 870147001}
   - {fileID: 9055000}
-  - {fileID: 200311439}
-  - {fileID: 485585098}
-  - {fileID: 1035742774}
-  - {fileID: 1501055010}
-  - {fileID: 1452491920}
-  - {fileID: 1088435047}
-  - {fileID: 1061907815}
-  - {fileID: 389662764}
-  - {fileID: 1539457408}
-  - {fileID: 1763210984}
-  - {fileID: 1163284026}
-  velocidadMovimiento: 20
+  indexJuego: 1
+  nombreJuego: CrowdControl
+  velocidadMovimiento: 10
   distanciaMinima: 4
   jumpHeight: 20
   jumpSpeed: 3
---- !u!95 &258784894 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6212022178418558301, guid: d52343563d83f456db1eed72e894d218, type: 3}
+--- !u!4 &258784896 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 60136236723035943, guid: d52343563d83f456db1eed72e894d218, type: 3}
   m_PrefabInstance: {fileID: 258784889}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &266850717
