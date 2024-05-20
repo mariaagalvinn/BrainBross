@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
     public Canvas victoryCanvas;
     public Canvas darkCanvas;
 
+    public AudioSource audioGanar;
+    public AudioSource audioPerder;
+    public AudioSource audioPpal;
+
     private MoveForward moveForwardScript;
     public PlayerShooter playerShooter;
     public EnemigosScript enemigos_;
@@ -44,10 +48,17 @@ public class PlayerController : MonoBehaviour
                 // Mostrar el canvas de victoria
                 victoryCanvas.gameObject.SetActive(true);
                 victoryParticles.Play();
+                audioGanar.gameObject.SetActive(true);
+                audioPpal.gameObject.SetActive(false);
+                audioPerder.gameObject.SetActive(false);
                 moveForwardScript.StopMoving();
                 playerShooter.StopShooting();
             } else {
+                audioPpal.gameObject.SetActive(false); // Desactiva el audio principal
+                audioPerder.gameObject.SetActive(true);
                 darkCanvas.gameObject.SetActive(true);
+                moveForwardScript.StopMoving();
+                playerShooter.StopShooting();
                 GameManager.Instance.GameOver();
             }
         }
