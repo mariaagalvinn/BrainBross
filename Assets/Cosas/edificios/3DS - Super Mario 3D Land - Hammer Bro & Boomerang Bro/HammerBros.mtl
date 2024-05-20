@@ -1,0 +1,16 @@
+# Created by Every File Explorer
+
+newmtl HammerBrosBodyMat00
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.07843138 0.07843138 0.05882353
+d 1
+map_Kd Tex/enemy_xx01_HammerBros_dif.0.png
+
+newmtl HammerBrosMetalMat00
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.1490196 0.4 0.2509804
+d 1
+map_Kd enemy_xx01_HammerBros_dif.0.png
+

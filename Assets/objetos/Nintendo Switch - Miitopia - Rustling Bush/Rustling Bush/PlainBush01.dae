@@ -1,0 +1,1371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Centrixe</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.6;  Revision: 68</authoring_tool>
+    </contributor>
+    <created>2022-04-29T19:03:46</created>
+    <modified>2022-04-29T19:03:46</modified>
+    <unit name="inch" meter="0.0254"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="mtPlainMinigameBush01">
+      <profile_COMMON>
+        <newparam sid="PlainMinigameBush00_alb_png-surface">
+          <surface type="2D">
+            <init_from>PlainMinigameBush00_alb_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_alb_png-sampler">
+          <sampler2D>
+            <source>PlainMinigameBush00_alb_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_nml_png-surface">
+          <surface type="2D">
+            <init_from>PlainMinigameBush00_nml_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_nml_png-sampler">
+          <sampler2D>
+            <source>PlainMinigameBush00_nml_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="PlainMinigameBush00_alb_png-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <texture texture="PlainMinigameBush00_alb_png-sampler" texcoord="CHANNEL1"/>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="PlainMinigameBush00_nml_png-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <opacity_type sid="opacity_type" type="int">0</opacity_type>
+            <falloff_type sid="falloff_type" type="int">0</falloff_type>
+            <falloff sid="falloff" type="float">0</falloff>
+            <index_of_refraction sid="index_of_refraction" type="float">1.5</index_of_refraction>
+            <wire_size sid="wire_size" type="float">1</wire_size>
+            <wire_units sid="wire_units" type="int">0</wire_units>
+            <apply_reflection_dimming sid="apply_reflection_dimming" type="bool">0</apply_reflection_dimming>
+            <dim_level sid="dim_level" type="float">0</dim_level>
+            <reflection_level sid="reflection_level" type="float">3</reflection_level>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_texture_lock sid="ambient_diffuse_texture_lock" type="bool">1</ambient_diffuse_texture_lock>
+            <ambient_diffuse_lock sid="ambient_diffuse_lock" type="bool">1</ambient_diffuse_lock>
+            <diffuse_specular_lock sid="diffuse_specular_lock" type="bool">0</diffuse_specular_lock>
+            <use_self_illum_color sid="use_self_illum_color" type="bool">0</use_self_illum_color>
+            <self_illumination sid="self_illumination" type="float">0</self_illumination>
+            <specular_level sid="specular_level" type="float">0</specular_level>
+            <soften sid="soften" type="float">0.1</soften>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="mtPlainMinigameBush01_1">
+      <profile_COMMON>
+        <newparam sid="PlainMinigameBush00_alb_png-surface">
+          <surface type="2D">
+            <init_from>PlainMinigameBush00_alb_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_alb_png-sampler">
+          <sampler2D>
+            <source>PlainMinigameBush00_alb_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_nml_png-surface">
+          <surface type="2D">
+            <init_from>PlainMinigameBush00_nml_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_nml_png-sampler">
+          <sampler2D>
+            <source>PlainMinigameBush00_nml_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="PlainMinigameBush00_alb_png-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <texture texture="PlainMinigameBush00_alb_png-sampler" texcoord="CHANNEL1"/>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="PlainMinigameBush00_nml_png-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <opacity_type sid="opacity_type" type="int">0</opacity_type>
+            <falloff_type sid="falloff_type" type="int">0</falloff_type>
+            <falloff sid="falloff" type="float">0</falloff>
+            <index_of_refraction sid="index_of_refraction" type="float">1.5</index_of_refraction>
+            <wire_size sid="wire_size" type="float">1</wire_size>
+            <wire_units sid="wire_units" type="int">0</wire_units>
+            <apply_reflection_dimming sid="apply_reflection_dimming" type="bool">0</apply_reflection_dimming>
+            <dim_level sid="dim_level" type="float">0</dim_level>
+            <reflection_level sid="reflection_level" type="float">3</reflection_level>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_texture_lock sid="ambient_diffuse_texture_lock" type="bool">1</ambient_diffuse_texture_lock>
+            <ambient_diffuse_lock sid="ambient_diffuse_lock" type="bool">1</ambient_diffuse_lock>
+            <diffuse_specular_lock sid="diffuse_specular_lock" type="bool">0</diffuse_specular_lock>
+            <use_self_illum_color sid="use_self_illum_color" type="bool">0</use_self_illum_color>
+            <self_illumination sid="self_illumination" type="float">0</self_illumination>
+            <specular_level sid="specular_level" type="float">0</specular_level>
+            <soften sid="soften" type="float">0.1</soften>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="mtPlainMinigameBush01_2">
+      <profile_COMMON>
+        <newparam sid="PlainMinigameBush00_alb_png-surface">
+          <surface type="2D">
+            <init_from>PlainMinigameBush00_alb_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_alb_png-sampler">
+          <sampler2D>
+            <source>PlainMinigameBush00_alb_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_nml_png-surface">
+          <surface type="2D">
+            <init_from>PlainMinigameBush00_nml_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_nml_png-sampler">
+          <sampler2D>
+            <source>PlainMinigameBush00_nml_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="PlainMinigameBush00_alb_png-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <texture texture="PlainMinigameBush00_alb_png-sampler" texcoord="CHANNEL1"/>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="PlainMinigameBush00_nml_png-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <opacity_type sid="opacity_type" type="int">0</opacity_type>
+            <falloff_type sid="falloff_type" type="int">0</falloff_type>
+            <falloff sid="falloff" type="float">0</falloff>
+            <index_of_refraction sid="index_of_refraction" type="float">1.5</index_of_refraction>
+            <wire_size sid="wire_size" type="float">1</wire_size>
+            <wire_units sid="wire_units" type="int">0</wire_units>
+            <apply_reflection_dimming sid="apply_reflection_dimming" type="bool">0</apply_reflection_dimming>
+            <dim_level sid="dim_level" type="float">0</dim_level>
+            <reflection_level sid="reflection_level" type="float">3</reflection_level>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_texture_lock sid="ambient_diffuse_texture_lock" type="bool">1</ambient_diffuse_texture_lock>
+            <ambient_diffuse_lock sid="ambient_diffuse_lock" type="bool">1</ambient_diffuse_lock>
+            <diffuse_specular_lock sid="diffuse_specular_lock" type="bool">0</diffuse_specular_lock>
+            <use_self_illum_color sid="use_self_illum_color" type="bool">0</use_self_illum_color>
+            <self_illumination sid="self_illumination" type="float">0</self_illumination>
+            <specular_level sid="specular_level" type="float">0</specular_level>
+            <soften sid="soften" type="float">0.1</soften>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="mtPlainMinigameBush01_3">
+      <profile_COMMON>
+        <newparam sid="PlainMinigameBush00_alb_png-surface">
+          <surface type="2D">
+            <init_from>PlainMinigameBush00_alb_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_alb_png-sampler">
+          <sampler2D>
+            <source>PlainMinigameBush00_alb_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_nml_png-surface">
+          <surface type="2D">
+            <init_from>PlainMinigameBush00_nml_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_nml_png-sampler">
+          <sampler2D>
+            <source>PlainMinigameBush00_nml_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="PlainMinigameBush00_alb_png-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <texture texture="PlainMinigameBush00_alb_png-sampler" texcoord="CHANNEL1"/>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="PlainMinigameBush00_nml_png-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <opacity_type sid="opacity_type" type="int">0</opacity_type>
+            <falloff_type sid="falloff_type" type="int">0</falloff_type>
+            <falloff sid="falloff" type="float">0</falloff>
+            <index_of_refraction sid="index_of_refraction" type="float">1.5</index_of_refraction>
+            <wire_size sid="wire_size" type="float">1</wire_size>
+            <wire_units sid="wire_units" type="int">0</wire_units>
+            <apply_reflection_dimming sid="apply_reflection_dimming" type="bool">0</apply_reflection_dimming>
+            <dim_level sid="dim_level" type="float">0</dim_level>
+            <reflection_level sid="reflection_level" type="float">3</reflection_level>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_texture_lock sid="ambient_diffuse_texture_lock" type="bool">1</ambient_diffuse_texture_lock>
+            <ambient_diffuse_lock sid="ambient_diffuse_lock" type="bool">1</ambient_diffuse_lock>
+            <diffuse_specular_lock sid="diffuse_specular_lock" type="bool">0</diffuse_specular_lock>
+            <use_self_illum_color sid="use_self_illum_color" type="bool">0</use_self_illum_color>
+            <self_illumination sid="self_illumination" type="float">0</self_illumination>
+            <specular_level sid="specular_level" type="float">0</specular_level>
+            <soften sid="soften" type="float">0.1</soften>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="mtPlainMinigameBush01_4">
+      <profile_COMMON>
+        <newparam sid="PlainMinigameBush00_alb_png-surface">
+          <surface type="2D">
+            <init_from>PlainMinigameBush00_alb_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_alb_png-sampler">
+          <sampler2D>
+            <source>PlainMinigameBush00_alb_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_nml_png-surface">
+          <surface type="2D">
+            <init_from>PlainMinigameBush00_nml_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_nml_png-sampler">
+          <sampler2D>
+            <source>PlainMinigameBush00_nml_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="PlainMinigameBush00_alb_png-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <texture texture="PlainMinigameBush00_alb_png-sampler" texcoord="CHANNEL1"/>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="PlainMinigameBush00_nml_png-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <opacity_type sid="opacity_type" type="int">0</opacity_type>
+            <falloff_type sid="falloff_type" type="int">0</falloff_type>
+            <falloff sid="falloff" type="float">0</falloff>
+            <index_of_refraction sid="index_of_refraction" type="float">1.5</index_of_refraction>
+            <wire_size sid="wire_size" type="float">1</wire_size>
+            <wire_units sid="wire_units" type="int">0</wire_units>
+            <apply_reflection_dimming sid="apply_reflection_dimming" type="bool">0</apply_reflection_dimming>
+            <dim_level sid="dim_level" type="float">0</dim_level>
+            <reflection_level sid="reflection_level" type="float">3</reflection_level>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_texture_lock sid="ambient_diffuse_texture_lock" type="bool">1</ambient_diffuse_texture_lock>
+            <ambient_diffuse_lock sid="ambient_diffuse_lock" type="bool">1</ambient_diffuse_lock>
+            <diffuse_specular_lock sid="diffuse_specular_lock" type="bool">0</diffuse_specular_lock>
+            <use_self_illum_color sid="use_self_illum_color" type="bool">0</use_self_illum_color>
+            <self_illumination sid="self_illumination" type="float">0</self_illumination>
+            <specular_level sid="specular_level" type="float">0</specular_level>
+            <soften sid="soften" type="float">0.1</soften>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="mtPlainMinigameBush01_5">
+      <profile_COMMON>
+        <newparam sid="PlainMinigameBush00_alb_png-surface">
+          <surface type="2D">
+            <init_from>PlainMinigameBush00_alb_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_alb_png-sampler">
+          <sampler2D>
+            <source>PlainMinigameBush00_alb_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_nml_png-surface">
+          <surface type="2D">
+            <init_from>PlainMinigameBush00_nml_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="PlainMinigameBush00_nml_png-sampler">
+          <sampler2D>
+            <source>PlainMinigameBush00_nml_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="PlainMinigameBush00_alb_png-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <texture texture="PlainMinigameBush00_alb_png-sampler" texcoord="CHANNEL1"/>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="PlainMinigameBush00_nml_png-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <opacity_type sid="opacity_type" type="int">0</opacity_type>
+            <falloff_type sid="falloff_type" type="int">0</falloff_type>
+            <falloff sid="falloff" type="float">0</falloff>
+            <index_of_refraction sid="index_of_refraction" type="float">1.5</index_of_refraction>
+            <wire_size sid="wire_size" type="float">1</wire_size>
+            <wire_units sid="wire_units" type="int">0</wire_units>
+            <apply_reflection_dimming sid="apply_reflection_dimming" type="bool">0</apply_reflection_dimming>
+            <dim_level sid="dim_level" type="float">0</dim_level>
+            <reflection_level sid="reflection_level" type="float">3</reflection_level>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_texture_lock sid="ambient_diffuse_texture_lock" type="bool">1</ambient_diffuse_texture_lock>
+            <ambient_diffuse_lock sid="ambient_diffuse_lock" type="bool">1</ambient_diffuse_lock>
+            <diffuse_specular_lock sid="diffuse_specular_lock" type="bool">0</diffuse_specular_lock>
+            <use_self_illum_color sid="use_self_illum_color" type="bool">0</use_self_illum_color>
+            <self_illumination sid="self_illumination" type="float">0</self_illumination>
+            <specular_level sid="specular_level" type="float">0</specular_level>
+            <soften sid="soften" type="float">0.1</soften>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="mtPlainMinigameBush01-material" name="mtPlainMinigameBush01">
+      <instance_effect url="#mtPlainMinigameBush01"/>
+    </material>
+    <material id="mtPlainMinigameBush01_1-material" name="mtPlainMinigameBush01">
+      <instance_effect url="#mtPlainMinigameBush01_1"/>
+    </material>
+    <material id="mtPlainMinigameBush01_2-material" name="mtPlainMinigameBush01">
+      <instance_effect url="#mtPlainMinigameBush01_2"/>
+    </material>
+    <material id="mtPlainMinigameBush01_3-material" name="mtPlainMinigameBush01">
+      <instance_effect url="#mtPlainMinigameBush01_3"/>
+    </material>
+    <material id="mtPlainMinigameBush01_4-material" name="mtPlainMinigameBush01">
+      <instance_effect url="#mtPlainMinigameBush01_4"/>
+    </material>
+    <material id="mtPlainMinigameBush01_5-material" name="mtPlainMinigameBush01">
+      <instance_effect url="#mtPlainMinigameBush01_5"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-pPlane10__mtPlainMinigameBush01" name="pPlane10__mtPlainMinigameBush01">
+      <mesh>
+        <source id="geom-pPlane10__mtPlainMinigameBush01-positions">
+          <float_array id="geom-pPlane10__mtPlainMinigameBush01-positions-array" count="72">-4.292573 -5.435961 0.3932548 -4.292573 -5.435961 0 -1.507938 -5.435961 0 -1.507938 -5.435961 0.3932548 -1.507938 -5.435961 0 1.490551 -5.435961 0 1.490551 -5.435961 0.3932548 4.275187 -5.435961 0.3932548 4.275187 -5.435961 2.592887 1.490551 -5.435961 2.592887 4.275187 -5.435961 4.813029 4.275187 -5.435961 0.3932548 1.490551 -5.435961 0 4.275187 -5.435961 0 1.490551 -5.435961 4.813029 4.275187 -5.435961 7.015527 1.490551 -5.435961 7.015527 -1.507938 -5.435961 2.592887 -4.292573 -5.435961 0.3932548 -4.292573 -5.435961 2.592887 -1.507938 -5.435961 4.813029 -1.507938 -5.435961 7.015527 -4.292574 -5.435961 4.813029 -4.292573 -5.435961 7.015527</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane10__mtPlainMinigameBush01-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane10__mtPlainMinigameBush01-normals">
+          <float_array id="geom-pPlane10__mtPlainMinigameBush01-normals-array" count="72">-0.1312213 -0.9910262 0.02546228 -0.1312706 -0.9912766 -0.01177764 0.06456473 -0.9978446 -0.01173037 0.06455182 -0.9975907 0.02541541 0.06456473 -0.9978446 -0.01173037 0.2682267 -0.9632844 -0.01172993 0.268166 -0.9630374 0.02541587 0.4289932 -0.903003 0.02346206 0.4209569 -0.8830177 0.2075459 0.2604017 -0.9398018 0.2212771 0.3991159 -0.8373327 0.3736049 0.4289932 -0.903003 0.02346206 0.2682267 -0.9632844 -0.01172993 0.4306755 -0.902454 -0.009775074 0.24665 -0.8847927 0.3953552 0.3699825 -0.7772065 0.5089823 0.2270379 -0.814218 0.5343246 0.0625717 -0.9719175 0.2268507 -0.1312213 -0.9910262 0.02546228 -0.1292631 -0.9652537 0.2271045 0.05869982 -0.9115877 0.4068933 0.05479839 -0.8358632 0.5461958 -0.1214043 -0.9069086 0.4034573 -0.1115281 -0.831669 0.543956</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane10__mtPlainMinigameBush01-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane10__mtPlainMinigameBush01-map-2">
+          <float_array id="geom-pPlane10__mtPlainMinigameBush01-map-2-array" count="72">1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane10__mtPlainMinigameBush01-map-2-array" count="24" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane10__mtPlainMinigameBush01-map0">
+          <float_array id="geom-pPlane10__mtPlainMinigameBush01-map0-array" count="72">1 1 1 0.7725491 0.8588236 1 0.7725491 0.8588236 1 0.8901961 1 1 0.7725491 0.8588236 1 0.7725491 0.8588236 1 0.8901961 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.7725491 0.8588236 1 0.7725491 0.8588236 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane10__mtPlainMinigameBush01-map0-array" count="24" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane10__mtPlainMinigameBush01-map1">
+          <float_array id="geom-pPlane10__mtPlainMinigameBush01-map1-array" count="72">0.6292515 0.05679411 0 0.6292515 0 0 0.7591821 0.001998961 0 0.7591974 0.0571298 0 0.7591821 0.001998961 0 0.8801861 0.001998961 0 0.8801709 0.0571298 0 0.9984894 0.05679411 0 0.9984894 0.3699092 0 0.8801556 0.3698635 0 0.9984894 0.6860609 0 0.9984894 0.05679411 0 0.8801861 0.001998961 0 0.9984894 0 0 0.8801709 0.6859236 0 0.9984894 0.9903105 0 0.8801861 0.9903105 0 0.7592126 0.3698635 0 0.6292515 0.05679411 0 0.6292515 0.3699092 0 0.7591974 0.6859236 0 0.7591821 0.9903105 0 0.6292515 0.6860609 0 0.6292515 0.9903105 0</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane10__mtPlainMinigameBush01-map1-array" count="24" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-pPlane10__mtPlainMinigameBush01-vertices">
+          <input semantic="POSITION" source="#geom-pPlane10__mtPlainMinigameBush01-positions"/>
+        </vertices>
+        <triangles material="mtPlainMinigameBush01" count="24">
+          <input semantic="VERTEX" source="#geom-pPlane10__mtPlainMinigameBush01-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-pPlane10__mtPlainMinigameBush01-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-pPlane10__mtPlainMinigameBush01-map0" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-pPlane10__mtPlainMinigameBush01-map1" offset="3" set="0"/>
+          <p>0 0 0 0 1 1 1 1 2 2 2 2 3 3 3 3 0 0 0 0 2 2 2 2 3 3 3 3 4 4 4 4 5 5 5 5 6 6 6 6 3 3 3 3 5 5 5 5 6 6 6 6 7 7 7 7 8 8 8 8 9 9 9 9 6 6 6 6 8 8 8 8 3 3 3 3 6 6 6 6 9 9 9 9 9 9 9 9 8 8 8 8 10 10 10 10 11 11 11 11 6 6 6 6 12 12 12 12 13 13 13 13 11 11 11 11 12 12 12 12 14 14 14 14 9 9 9 9 10 10 10 10 10 10 10 10 15 15 15 15 14 14 14 14 15 15 15 15 16 16 16 16 14 14 14 14 17 17 17 17 3 3 3 3 9 9 9 9 17 17 17 17 9 9 9 9 14 14 14 14 18 18 18 18 3 3 3 3 17 17 17 17 19 19 19 19 18 18 18 18 17 17 17 17 14 14 14 14 16 16 16 16 20 20 20 20 20 20 20 20 17 17 17 17 14 14 14 14 19 19 19 19 17 17 17 17 20 20 20 20 16 16 16 16 21 21 21 21 20 20 20 20 22 22 22 22 19 19 19 19 20 20 20 20 20 20 20 20 21 21 21 21 22 22 22 22 21 21 21 21 23 23 23 23 22 22 22 22</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-pPlane11__mtPlainMinigameBush01" name="pPlane11__mtPlainMinigameBush01">
+      <mesh>
+        <source id="geom-pPlane11__mtPlainMinigameBush01-positions">
+          <float_array id="geom-pPlane11__mtPlainMinigameBush01-positions-array" count="72">-1.369373 -4.216866 0.3816781 -1.369373 -4.216866 0 1.603354 -4.216866 0 1.603354 -4.216866 0.3816781 1.603354 -4.216866 0 4.804379 -4.216866 0 4.804379 -4.216866 0.3816781 7.777106 -4.216866 0.3816781 7.777106 -4.216866 2.553863 4.804379 -4.216866 2.553863 7.777107 -4.216866 4.740591 7.777106 -4.216866 0.3816781 4.804379 -4.216866 0 7.777106 -4.216866 0 4.804379 -4.216866 4.740591 7.777107 -4.216866 6.909941 4.804379 -4.216866 6.909941 1.603354 -4.216866 2.553863 -1.369373 -4.216866 0.3816781 -1.369373 -4.216866 2.553863 1.603354 -4.216866 4.740591 1.603354 -4.216866 6.909941 -1.369374 -4.216866 4.740591 -1.369374 -4.216866 6.909941</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane11__mtPlainMinigameBush01-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane11__mtPlainMinigameBush01-normals">
+          <float_array id="geom-pPlane11__mtPlainMinigameBush01-normals-array" count="72">0.01759502 -0.999292 0.03325887 0.01760714 -0.9998278 0.005865071 0.1799103 -0.9836656 0.005865086 0.1801571 -0.9830738 0.03330636 0.1799103 -0.9836656 0.005865086 0.3384502 -0.940966 0.005864945 0.3388822 -0.9403063 0.03135149 0.4657282 -0.8844402 0.02937326 0.4578442 -0.8725836 0.1702253 0.3327329 -0.9256729 0.1800515 0.4443194 -0.8436251 0.3014582 0.4657282 -0.8844402 0.02937326 0.3384502 -0.940966 0.005864945 0.4659133 -0.8848109 0.005865043 0.3208147 -0.8918726 0.3188121 0.4228075 -0.8046073 0.4169424 0.3052555 -0.845389 0.4383339 0.1760474 -0.9663057 0.1877775 0.01759502 -0.999292 0.03325887 0.01763116 -0.9812412 0.1919758 0.170231 -0.9275446 0.3326896 0.1604457 -0.8764849 0.4539067 0.01566389 -0.9415023 0.3366425 0.01565232 -0.887974 0.4596274</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane11__mtPlainMinigameBush01-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane11__mtPlainMinigameBush01-map-2">
+          <float_array id="geom-pPlane11__mtPlainMinigameBush01-map-2-array" count="72">1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane11__mtPlainMinigameBush01-map-2-array" count="24" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane11__mtPlainMinigameBush01-map0">
+          <float_array id="geom-pPlane11__mtPlainMinigameBush01-map0-array" count="72">0.7294118 0.8078432 0.8784314 0.7725491 0.8588236 1 0.7725491 0.8588236 1 0.7294118 0.8078432 0.8784314 0.7725491 0.8588236 1 0.7725491 0.8588236 1 0.909804 0.9921569 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.7725491 0.8588236 1 0.7725491 0.8588236 1 1 1 1 1 1 1 1 1 1 0.8078432 0.9058824 1 0.7294118 0.8078432 0.8784314 0.8078432 0.9058824 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane11__mtPlainMinigameBush01-map0-array" count="24" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane11__mtPlainMinigameBush01-map1">
+          <float_array id="geom-pPlane11__mtPlainMinigameBush01-map1-array" count="72">0.6292515 0.05609214 0 0.6292515 0 0 0.7636836 0.001998961 0 0.7636988 0.0563668 0 0.7636836 0.001998961 0 0.8889754 0.001998961 0 0.8889754 0.0563668 0 0.9984894 0.05609214 0 0.9984894 0.3699092 0 0.8889449 0.3698635 0 0.9984894 0.6860609 0 0.9984894 0.05609214 0 0.8889754 0.001998961 0 0.9984894 0 0 0.8889601 0.6859236 0 0.9984894 0.9903105 0 0.8889754 0.9903105 0 0.7637141 0.3698635 0 0.6292515 0.05609214 0 0.6292515 0.3699092 0 0.7636988 0.6859236 0 0.7636836 0.9903105 0 0.6292515 0.6860609 0 0.6292515 0.9903105 0</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane11__mtPlainMinigameBush01-map1-array" count="24" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-pPlane11__mtPlainMinigameBush01-vertices">
+          <input semantic="POSITION" source="#geom-pPlane11__mtPlainMinigameBush01-positions"/>
+        </vertices>
+        <triangles material="mtPlainMinigameBush01" count="24">
+          <input semantic="VERTEX" source="#geom-pPlane11__mtPlainMinigameBush01-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-pPlane11__mtPlainMinigameBush01-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-pPlane11__mtPlainMinigameBush01-map0" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-pPlane11__mtPlainMinigameBush01-map1" offset="3" set="0"/>
+          <p>0 0 0 0 1 1 1 1 2 2 2 2 3 3 3 3 0 0 0 0 2 2 2 2 3 3 3 3 4 4 4 4 5 5 5 5 6 6 6 6 3 3 3 3 5 5 5 5 6 6 6 6 7 7 7 7 8 8 8 8 9 9 9 9 6 6 6 6 8 8 8 8 3 3 3 3 6 6 6 6 9 9 9 9 9 9 9 9 8 8 8 8 10 10 10 10 11 11 11 11 6 6 6 6 12 12 12 12 13 13 13 13 11 11 11 11 12 12 12 12 14 14 14 14 9 9 9 9 10 10 10 10 10 10 10 10 15 15 15 15 14 14 14 14 15 15 15 15 16 16 16 16 14 14 14 14 17 17 17 17 3 3 3 3 9 9 9 9 17 17 17 17 9 9 9 9 14 14 14 14 18 18 18 18 3 3 3 3 17 17 17 17 19 19 19 19 18 18 18 18 17 17 17 17 14 14 14 14 16 16 16 16 20 20 20 20 20 20 20 20 17 17 17 17 14 14 14 14 19 19 19 19 17 17 17 17 20 20 20 20 16 16 16 16 21 21 21 21 20 20 20 20 22 22 22 22 19 19 19 19 20 20 20 20 20 20 20 20 21 21 21 21 22 22 22 22 21 21 21 21 23 23 23 23 22 22 22 22</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-pPlane12__mtPlainMinigameBush01" name="pPlane12__mtPlainMinigameBush01">
+      <mesh>
+        <source id="geom-pPlane12__mtPlainMinigameBush01-positions">
+          <float_array id="geom-pPlane12__mtPlainMinigameBush01-positions-array" count="72">-7.728868 -4.216866 0.3816781 -7.728868 -4.216866 0 -4.756141 -4.216866 0 -4.756141 -4.216866 0.3816781 -4.756141 -4.216866 0 -1.555116 -4.216866 0 -1.555116 -4.216866 0.3816781 1.417611 -4.216866 0.3816781 1.417611 -4.216866 2.553863 -1.555116 -4.216866 2.553863 1.417611 -4.216866 4.740591 1.417611 -4.216866 0.3816781 -1.555116 -4.216866 0 1.417611 -4.216866 0 -1.555116 -4.216866 4.740591 1.417611 -4.216866 6.909941 -1.555116 -4.216866 6.909941 -4.756142 -4.216866 2.553863 -7.728868 -4.216866 0.3816781 -7.728868 -4.216866 2.553863 -4.756142 -4.216866 4.740591 -4.756142 -4.216866 6.909941 -7.728868 -4.216866 4.740591 -7.728868 -4.216866 6.909941</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane12__mtPlainMinigameBush01-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane12__mtPlainMinigameBush01-normals">
+          <float_array id="geom-pPlane12__mtPlainMinigameBush01-normals-array" count="72">-0.4170466 -0.9085284 0.0254634 -0.4171915 -0.9088185 0 -0.2855362 -0.9583679 0 -0.2854784 -0.9580476 0.0254389 -0.2855362 -0.9583679 0 -0.1213816 -0.992606 0 -0.1213409 -0.9922323 0.02741763 0.0391713 -0.9988564 0.02741753 0.03915818 -0.9825187 0.1819991 -0.1193061 -0.9760496 0.1819155 0.03716782 -0.9450497 0.3248072 0.0391713 -0.9988564 0.02741753 -0.1213816 -0.992606 0 0.03911345 -0.9992349 0 -0.1154649 -0.9393597 0.3229108 0.03524984 -0.8931071 0.4484609 -0.1095566 -0.888279 0.4460469 -0.2799485 -0.9436998 0.1762374 -0.4170466 -0.9085284 0.0254634 -0.4109764 -0.8963377 0.1663646 -0.2701622 -0.9104267 0.3132662 -0.2564505 -0.8633389 0.4346021 -0.3991094 -0.866692 0.2992605 -0.3799928 -0.8265522 0.4152312</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane12__mtPlainMinigameBush01-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane12__mtPlainMinigameBush01-map-2">
+          <float_array id="geom-pPlane12__mtPlainMinigameBush01-map-2-array" count="72">1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane12__mtPlainMinigameBush01-map-2-array" count="24" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane12__mtPlainMinigameBush01-map0">
+          <float_array id="geom-pPlane12__mtPlainMinigameBush01-map0-array" count="72">1 1 1 0.6705883 0.7568628 0.9882354 0.6705883 0.7568628 0.9882354 0.8078432 0.8901961 0.9686275 0.6705883 0.7568628 0.9882354 0.6705883 0.7568628 0.9882354 0.627451 0.7058824 0.7764707 0.627451 0.7058824 0.7764707 0.7058824 0.8039216 0.8980393 0.7058824 0.8039216 0.8980393 0.9568628 1 1 0.627451 0.7058824 0.7764707 0.6705883 0.7568628 0.9882354 0.6705883 0.7568628 0.9882354 0.9568628 1 1 1 1 1 1 1 1 0.937255 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane12__mtPlainMinigameBush01-map0-array" count="24" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane12__mtPlainMinigameBush01-map1">
+          <float_array id="geom-pPlane12__mtPlainMinigameBush01-map1-array" count="72">0.6292515 0.05609214 0 0.6292515 0 0 0.7590905 0.001998961 0 0.7591058 0.0563668 0 0.7590905 0.001998961 0 0.8876631 0.001998961 0 0.8876478 0.0563668 0 0.9984894 0.05609214 0 0.9984894 0.3699092 0 0.8876325 0.3698635 0 0.9984894 0.6860609 0 0.9984894 0.05609214 0 0.8876631 0.001998961 0 0.9984894 0 0 0.8876325 0.6859236 0 0.9984894 0.9903105 0 0.8876631 0.9903105 0 0.7591363 0.3698635 0 0.6292515 0.05609214 0 0.6292515 0.3699092 0 0.7591211 0.6859236 0 0.7590905 0.9903105 0 0.6292515 0.6860609 0 0.6292515 0.9903105 0</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane12__mtPlainMinigameBush01-map1-array" count="24" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-pPlane12__mtPlainMinigameBush01-vertices">
+          <input semantic="POSITION" source="#geom-pPlane12__mtPlainMinigameBush01-positions"/>
+        </vertices>
+        <triangles material="mtPlainMinigameBush01" count="24">
+          <input semantic="VERTEX" source="#geom-pPlane12__mtPlainMinigameBush01-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-pPlane12__mtPlainMinigameBush01-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-pPlane12__mtPlainMinigameBush01-map0" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-pPlane12__mtPlainMinigameBush01-map1" offset="3" set="0"/>
+          <p>0 0 0 0 1 1 1 1 2 2 2 2 3 3 3 3 0 0 0 0 2 2 2 2 3 3 3 3 4 4 4 4 5 5 5 5 6 6 6 6 3 3 3 3 5 5 5 5 6 6 6 6 7 7 7 7 8 8 8 8 9 9 9 9 6 6 6 6 8 8 8 8 3 3 3 3 6 6 6 6 9 9 9 9 9 9 9 9 8 8 8 8 10 10 10 10 11 11 11 11 6 6 6 6 12 12 12 12 13 13 13 13 11 11 11 11 12 12 12 12 14 14 14 14 9 9 9 9 10 10 10 10 10 10 10 10 15 15 15 15 14 14 14 14 15 15 15 15 16 16 16 16 14 14 14 14 17 17 17 17 3 3 3 3 9 9 9 9 17 17 17 17 9 9 9 9 14 14 14 14 18 18 18 18 3 3 3 3 17 17 17 17 19 19 19 19 18 18 18 18 17 17 17 17 14 14 14 14 16 16 16 16 20 20 20 20 20 20 20 20 17 17 17 17 14 14 14 14 19 19 19 19 17 17 17 17 20 20 20 20 16 16 16 16 21 21 21 21 20 20 20 20 22 22 22 22 19 19 19 19 20 20 20 20 20 20 20 20 21 21 21 21 22 22 22 22 21 21 21 21 23 23 23 23 22 22 22 22</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-pPlane7__mtPlainMinigameBush01" name="pPlane7__mtPlainMinigameBush01">
+      <mesh>
+        <source id="geom-pPlane7__mtPlainMinigameBush01-positions">
+          <float_array id="geom-pPlane7__mtPlainMinigameBush01-positions-array" count="81">-5.584345 4.094814 0 -1.960024 4.094814 0 -1.960024 4.094814 0.4346142 -5.584345 4.094814 0.4346142 -1.960024 4.094814 1.815849 -5.584345 4.094814 1.81585 -1.960024 4.094814 2.93218 -5.584345 4.094814 2.93218 -1.960023 4.094814 5.442841 -5.584345 4.094814 5.442841 -1.960023 4.094814 7.933548 -5.584345 4.094814 7.933548 1.942637 4.094814 7.933548 1.942637 4.094814 5.442841 5.56696 4.094814 7.933547 5.56696 4.094814 5.44284 1.942637 4.094814 2.93218 5.56696 4.094814 2.93218 1.942637 4.094814 1.815849 -1.960024 4.094814 0.4346142 5.56696 4.094814 1.81585 1.942637 4.094814 0.4346142 -1.960024 4.094814 0 1.942637 4.094814 0 5.56696 4.094814 0.4346142 1.942637 4.094814 0 5.56696 4.094814 0</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane7__mtPlainMinigameBush01-positions-array" count="27" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane7__mtPlainMinigameBush01-normals">
+          <float_array id="geom-pPlane7__mtPlainMinigameBush01-normals-array" count="81">-0.262258 -0.9648711 -0.01564012 -0.1018164 -0.9946803 -0.01564023 -0.1018047 -0.9946815 0.01564025 -0.2622655 -0.9648987 0.01368549 -0.09982757 -0.9885004 0.1135846 -0.2603055 -0.9590629 0.1115323 -0.09977625 -0.9763529 0.1917802 -0.2562543 -0.9485795 0.1858249 -0.09393732 -0.9312192 0.3521457 -0.2446762 -0.9063653 0.3444351 -0.08812086 -0.8688108 0.4872397 -0.2308396 -0.8490185 0.4752691 0.0704314 -0.8704978 0.4871068 0.07441133 -0.9321325 0.3543896 0.2131485 -0.8525939 0.4771283 0.2272111 -0.9107992 0.3447028 0.07825976 -0.9783125 0.1917811 0.2386587 -0.9527752 0.1877798 0.0802388 -0.9902834 0.1135812 -0.1018047 -0.9946815 0.01564025 0.2405624 -0.9642047 0.1115313 0.08027656 -0.9966499 0.01564046 -0.1018164 -0.9946803 -0.01564023 0.08027655 -0.9966499 -0.01564046 0.2425241 -0.9700488 0.01368549 0.08027656 -0.99665 -0.01564046 0.2425172 -0.970021 -0.01564012</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane7__mtPlainMinigameBush01-normals-array" count="27" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane7__mtPlainMinigameBush01-map-2">
+          <float_array id="geom-pPlane7__mtPlainMinigameBush01-map-2-array" count="81">0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane7__mtPlainMinigameBush01-map-2-array" count="27" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane7__mtPlainMinigameBush01-map0">
+          <float_array id="geom-pPlane7__mtPlainMinigameBush01-map0-array" count="81">0.6196079 0.7058824 0.937255 0.6196079 0.7058824 0.937255 0.4039216 0.4588236 0.6039216 0.4039216 0.4588236 0.6039216 0.6745098 0.7176471 0.7568628 0.6745098 0.7176471 0.7568628 0.6745098 0.7176471 0.7568628 0.9882354 0.9882354 0.9882354 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.6745098 0.7176471 0.7568628 0.9882354 0.9882354 0.9882354 0.6745098 0.7176471 0.7568628 0.4039216 0.4588236 0.6039216 1 1 1 0.4039216 0.4588236 0.6039216 0.6196079 0.7058824 0.937255 0.6196079 0.7058824 0.937255 0.4039216 0.4588236 0.6039216 0.6196079 0.7058824 0.937255 0.6196079 0.7058824 0.937255</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane7__mtPlainMinigameBush01-map0-array" count="27" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane7__mtPlainMinigameBush01-map1">
+          <float_array id="geom-pPlane7__mtPlainMinigameBush01-map1-array" count="81">0.6467994 0 0 0.7591821 0.001998961 0 0.7591974 0.0554055 0 0.646891 0.05503929 0 0.7591974 0.1102312 0 0.6468605 0.1103532 0 0.7592126 0.3698635 0 0.6469978 0.3699092 0 0.7591974 0.6859236 0 0.6469673 0.6860609 0 0.7591821 0.9903105 0 0.6467994 0.9903105 0 0.8801861 0.9903105 0 0.8801709 0.6859236 0 0.9925689 0.9903105 0 0.992401 0.6860609 0 0.8801556 0.3698635 0 0.9923705 0.3699092 0 0.8801709 0.1102312 0 0.7591974 0.0554055 0 0.9925078 0.1103532 0 0.8801709 0.0554055 0 0.7591821 0.001998961 0 0.8801861 0.001998961 0 0.9924773 0.05503929 0 0.8801861 0.001998961 0 0.9925689 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane7__mtPlainMinigameBush01-map1-array" count="27" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-pPlane7__mtPlainMinigameBush01-vertices">
+          <input semantic="POSITION" source="#geom-pPlane7__mtPlainMinigameBush01-positions"/>
+        </vertices>
+        <triangles material="mtPlainMinigameBush01" count="30">
+          <input semantic="VERTEX" source="#geom-pPlane7__mtPlainMinigameBush01-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-pPlane7__mtPlainMinigameBush01-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-pPlane7__mtPlainMinigameBush01-map0" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-pPlane7__mtPlainMinigameBush01-map1" offset="3" set="0"/>
+          <p>0 0 0 0 1 1 1 1 2 2 2 2 3 3 3 3 0 0 0 0 2 2 2 2 3 3 3 3 2 2 2 2 4 4 4 4 5 5 5 5 3 3 3 3 4 4 4 4 5 5 5 5 4 4 4 4 6 6 6 6 7 7 7 7 5 5 5 5 6 6 6 6 7 7 7 7 6 6 6 6 8 8 8 8 9 9 9 9 7 7 7 7 8 8 8 8 10 10 10 10 11 11 11 11 9 9 9 9 8 8 8 8 10 10 10 10 9 9 9 9 12 12 12 12 10 10 10 10 8 8 8 8 13 13 13 13 12 12 12 12 8 8 8 8 8 8 8 8 6 6 6 6 13 13 13 13 14 14 14 14 12 12 12 12 13 13 13 13 15 15 15 15 14 14 14 14 13 13 13 13 6 6 6 6 16 16 16 16 13 13 13 13 13 13 13 13 16 16 16 16 15 15 15 15 6 6 6 6 4 4 4 4 16 16 16 16 16 16 16 16 17 17 17 17 15 15 15 15 4 4 4 4 18 18 18 18 16 16 16 16 16 16 16 16 18 18 18 18 17 17 17 17 4 4 4 4 19 19 19 19 18 18 18 18 18 18 18 18 20 20 20 20 17 17 17 17 19 19 19 19 21 21 21 21 18 18 18 18 18 18 18 18 21 21 21 21 20 20 20 20 19 19 19 19 22 22 22 22 21 21 21 21 22 22 22 22 23 23 23 23 21 21 21 21 21 21 21 21 24 24 24 24 20 20 20 20 21 21 21 21 25 25 25 25 24 24 24 24 25 25 25 25 26 26 26 26 24 24 24 24</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-pPlane8__mtPlainMinigameBush01" name="pPlane8__mtPlainMinigameBush01">
+      <mesh>
+        <source id="geom-pPlane8__mtPlainMinigameBush01-positions">
+          <float_array id="geom-pPlane8__mtPlainMinigameBush01-positions-array" count="72">-10.17838 2.231283 0.3723025 -10.17838 2.231283 0 -6.279852 2.231283 0 -6.279852 2.231283 0.3723025 -6.279852 2.231283 0 -2.858652 2.231283 0 -2.858652 2.231283 0.3723025 0.3185477 2.231283 0.3723025 0.3185477 2.231283 2.342638 -2.858652 2.231283 2.342638 0.3185477 2.231283 4.567748 0.3185477 2.231283 0.3723025 -2.858652 2.231283 0 0.3185477 2.231283 0 -2.858652 2.231283 4.567748 0.3185477 2.231283 6.650776 -2.858652 2.231283 6.650776 -6.279853 2.231283 2.342638 -10.17838 2.231283 0.3723025 -10.17838 2.231283 2.342638 -6.279853 2.231283 4.567749 -6.279853 2.231283 6.650776 -10.17838 2.231283 4.567749 -10.17838 2.231283 6.650776</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane8__mtPlainMinigameBush01-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane8__mtPlainMinigameBush01-normals">
+          <float_array id="geom-pPlane8__mtPlainMinigameBush01-normals-array" count="72">-0.5071673 -0.8615788 0.02152934 -0.506407 -0.8622747 -0.005865165 -0.3598706 -0.9329839 -0.005865125 -0.3598242 -0.9327723 0.02150552 -0.3598706 -0.9329838 -0.005865124 -0.2036356 -0.9790293 -0.005865164 -0.2035848 -0.9787756 0.02348413 -0.04308572 -0.9987948 0.02350835 -0.04306696 -0.9827051 0.1800998 -0.2017043 -0.9634597 0.1762409 -0.04109755 -0.9393248 0.3405583 -0.04308572 -0.9987948 0.02350835 -0.2036356 -0.9790293 -0.005865164 -0.04301318 -0.9990572 -0.005865027 -0.1919541 -0.9224812 0.3349362 -0.03915486 -0.8829246 0.4678795 -0.1818675 -0.8683051 0.4614875 -0.3542051 -0.9198936 0.1683285 -0.5071673 -0.8615788 0.02152934 -0.5009589 -0.8511915 0.1565676 -0.3402778 -0.8839545 0.3206794 -0.3229192 -0.835694 0.4442284 -0.4839046 -0.8228954 0.2977911 -0.4596641 -0.7843138 0.4166064</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane8__mtPlainMinigameBush01-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane8__mtPlainMinigameBush01-map-2">
+          <float_array id="geom-pPlane8__mtPlainMinigameBush01-map-2-array" count="72">1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane8__mtPlainMinigameBush01-map-2-array" count="24" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane8__mtPlainMinigameBush01-map0">
+          <float_array id="geom-pPlane8__mtPlainMinigameBush01-map0-array" count="72">1 1 1 0.8745099 0.9607844 1 0.8745099 0.9607844 1 0.9882354 1 1 0.8745099 0.9607844 1 0.8745099 0.9607844 1 0.682353 0.7921569 0.8980393 0.682353 0.7921569 0.8980393 0.764706 0.8980393 1 0.764706 0.8980393 1 1 1 1 0.682353 0.7921569 0.8980393 0.8745099 0.9607844 1 0.8745099 0.9607844 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane8__mtPlainMinigameBush01-map0-array" count="24" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane8__mtPlainMinigameBush01-map1">
+          <float_array id="geom-pPlane8__mtPlainMinigameBush01-map1-array" count="72">0.002166781 0.05957121 0 0.002166781 0 0 0.2115969 0.001998961 0 0.2227207 0.05987638 0 0.2115969 0.001998961 0 0.4375372 0.001998961 0 0.4375067 0.05986112 0 0.6269627 0.05957121 0 0.6269627 0.3699092 0 0.4374609 0.3698635 0 0.6269627 0.6860609 0 0.6269627 0.05957121 0 0.4375372 0.001998961 0 0.6269627 0 0 0.4374914 0.6859236 0 0.6269627 0.9903105 0 0.4375372 0.9903105 0 0.2116732 0.3698635 0 0.002166781 0.05957121 0 0.002166781 0.3699092 0 0.2116426 0.6859236 0 0.2115969 0.9903105 0 0.002166781 0.6860609 0 0.002166781 0.9903105 0</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane8__mtPlainMinigameBush01-map1-array" count="24" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-pPlane8__mtPlainMinigameBush01-vertices">
+          <input semantic="POSITION" source="#geom-pPlane8__mtPlainMinigameBush01-positions"/>
+        </vertices>
+        <triangles material="mtPlainMinigameBush01" count="24">
+          <input semantic="VERTEX" source="#geom-pPlane8__mtPlainMinigameBush01-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-pPlane8__mtPlainMinigameBush01-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-pPlane8__mtPlainMinigameBush01-map0" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-pPlane8__mtPlainMinigameBush01-map1" offset="3" set="0"/>
+          <p>0 0 0 0 1 1 1 1 2 2 2 2 3 3 3 3 0 0 0 0 2 2 2 2 3 3 3 3 4 4 4 4 5 5 5 5 6 6 6 6 3 3 3 3 5 5 5 5 6 6 6 6 7 7 7 7 8 8 8 8 9 9 9 9 6 6 6 6 8 8 8 8 3 3 3 3 6 6 6 6 9 9 9 9 9 9 9 9 8 8 8 8 10 10 10 10 11 11 11 11 6 6 6 6 12 12 12 12 13 13 13 13 11 11 11 11 12 12 12 12 14 14 14 14 9 9 9 9 10 10 10 10 10 10 10 10 15 15 15 15 14 14 14 14 15 15 15 15 16 16 16 16 14 14 14 14 17 17 17 17 3 3 3 3 9 9 9 9 17 17 17 17 9 9 9 9 14 14 14 14 18 18 18 18 3 3 3 3 17 17 17 17 19 19 19 19 18 18 18 18 17 17 17 17 14 14 14 14 16 16 16 16 20 20 20 20 20 20 20 20 17 17 17 17 14 14 14 14 19 19 19 19 17 17 17 17 20 20 20 20 16 16 16 16 21 21 21 21 20 20 20 20 22 22 22 22 19 19 19 19 20 20 20 20 20 20 20 20 21 21 21 21 22 22 22 22 21 21 21 21 23 23 23 23 22 22 22 22</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-pPlane9__mtPlainMinigameBush01" name="pPlane9__mtPlainMinigameBush01">
+      <mesh>
+        <source id="geom-pPlane9__mtPlainMinigameBush01-positions">
+          <float_array id="geom-pPlane9__mtPlainMinigameBush01-positions-array" count="72">-0.1702551 2.231283 0.3723025 -0.1702551 2.231283 0 3.006945 2.231283 0 3.006945 2.231283 0.3723025 3.006945 2.231283 0 6.428146 2.231283 0 6.428146 2.231283 0.3723025 10.32668 2.231283 0.3723025 10.32668 2.231283 2.342638 6.428146 2.231283 2.342638 10.32668 2.231283 4.923588 10.32668 2.231283 0.3723025 6.428146 2.231283 0 10.32668 2.231283 0 6.428147 2.231283 4.923588 10.32668 2.231283 7.405145 6.428146 2.231283 7.405145 3.006945 2.231283 2.342638 -0.1702551 2.231283 0.3723025 -0.1702552 2.231283 2.342638 3.006945 2.231283 4.923588 3.006945 2.231283 7.405145 -0.1702552 2.231283 4.923588 -0.1702552 2.231283 7.405145</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane9__mtPlainMinigameBush01-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane9__mtPlainMinigameBush01-normals">
+          <float_array id="geom-pPlane9__mtPlainMinigameBush01-normals-array" count="72">-0.07636474 -0.9966472 0.02937346 -0.0762475 -0.997087 0.001955026 0.08029846 -0.996769 0.00195501 0.08025099 -0.9963425 0.02934907 0.08029845 -0.9967689 0.00195501 0.2407059 -0.9705961 0.00195502 0.2406133 -0.9701779 0.02932564 0.4027363 -0.9149067 0.02737043 0.3969208 -0.9033953 0.1622683 0.2366054 -0.9562442 0.1720896 0.3798335 -0.8653301 0.3270021 0.4027364 -0.9149068 0.02737043 0.2407059 -0.9705961 0.00195502 0.4028345 -0.9152707 0.001955044 0.2267406 -0.9111111 0.344188 0.3580027 -0.8116572 0.4615698 0.2115736 -0.8502759 0.4819414 0.07834537 -0.9812244 0.1762413 -0.07636474 -0.9966472 0.02937346 -0.07430295 -0.9815904 0.1759524 0.07434081 -0.9330033 0.3521055 0.07043077 -0.8670567 0.4932062 -0.07043534 -0.9332727 0.3521945 -0.06656447 -0.8672842 0.493343</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane9__mtPlainMinigameBush01-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane9__mtPlainMinigameBush01-map-2">
+          <float_array id="geom-pPlane9__mtPlainMinigameBush01-map-2-array" count="72">1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane9__mtPlainMinigameBush01-map-2-array" count="24" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane9__mtPlainMinigameBush01-map0">
+          <float_array id="geom-pPlane9__mtPlainMinigameBush01-map0-array" count="72">0.5294118 0.6392157 0.7450981 0.7215686 0.8078432 1 0.7215686 0.8078432 1 0.5294118 0.6392157 0.7450981 0.7215686 0.8078432 1 0.7215686 0.8078432 1 0.8352942 0.9254903 0.9843138 1 1 1 1 1 1 0.9176471 1 1 1 1 1 1 1 1 0.7215686 0.8078432 1 0.7215686 0.8078432 1 1 1 1 1 1 1 1 1 1 0.6117647 0.7450981 0.8666667 0.5294118 0.6392157 0.7450981 0.6117647 0.7450981 0.8666667 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane9__mtPlainMinigameBush01-map0-array" count="24" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane9__mtPlainMinigameBush01-map1">
+          <float_array id="geom-pPlane9__mtPlainMinigameBush01-map1-array" count="72">0.002166781 0.05957121 0 0.002166781 0 0 0.2082399 0.001998961 0 0.2082551 0.05986112 0 0.2082399 0.001998961 0 0.4350042 0.001998961 0 0.4238346 0.05987638 0 0.6269627 0.05957121 0 0.6269627 0.3699092 0 0.4349279 0.3698635 0 0.6269627 0.6860609 0 0.6269627 0.05957121 0 0.4350042 0.001998961 0 0.6269627 0 0 0.4349584 0.6859236 0 0.6269627 0.9903105 0 0.4350042 0.9903105 0 0.2083009 0.3698635 0 0.002166781 0.05957121 0 0.002166781 0.3699092 0 0.2082704 0.6859236 0 0.2082399 0.9903105 0 0.002166781 0.6860609 0 0.002166781 0.9903105 0</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane9__mtPlainMinigameBush01-map1-array" count="24" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-pPlane9__mtPlainMinigameBush01-vertices">
+          <input semantic="POSITION" source="#geom-pPlane9__mtPlainMinigameBush01-positions"/>
+        </vertices>
+        <triangles material="mtPlainMinigameBush01" count="24">
+          <input semantic="VERTEX" source="#geom-pPlane9__mtPlainMinigameBush01-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-pPlane9__mtPlainMinigameBush01-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-pPlane9__mtPlainMinigameBush01-map0" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-pPlane9__mtPlainMinigameBush01-map1" offset="3" set="0"/>
+          <p>0 0 0 0 1 1 1 1 2 2 2 2 3 3 3 3 0 0 0 0 2 2 2 2 3 3 3 3 4 4 4 4 5 5 5 5 6 6 6 6 3 3 3 3 5 5 5 5 6 6 6 6 7 7 7 7 8 8 8 8 9 9 9 9 6 6 6 6 8 8 8 8 3 3 3 3 6 6 6 6 9 9 9 9 9 9 9 9 8 8 8 8 10 10 10 10 11 11 11 11 6 6 6 6 12 12 12 12 13 13 13 13 11 11 11 11 12 12 12 12 14 14 14 14 9 9 9 9 10 10 10 10 10 10 10 10 15 15 15 15 14 14 14 14 15 15 15 15 16 16 16 16 14 14 14 14 17 17 17 17 3 3 3 3 9 9 9 9 17 17 17 17 9 9 9 9 14 14 14 14 18 18 18 18 3 3 3 3 17 17 17 17 19 19 19 19 18 18 18 18 17 17 17 17 14 14 14 14 16 16 16 16 20 20 20 20 20 20 20 20 17 17 17 17 14 14 14 14 19 19 19 19 17 17 17 17 20 20 20 20 16 16 16 16 21 21 21 21 20 20 20 20 22 22 22 22 19 19 19 19 20 20 20 20 20 20 20 20 21 21 21 21 22 22 22 22 21 21 21 21 23 23 23 23 22 22 22 22</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="geom-pPlane10__mtPlainMinigameBush01-skin1">
+      <skin source="#geom-pPlane10__mtPlainMinigameBush01">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="geom-pPlane10__mtPlainMinigameBush01-skin1-joints">
+          <Name_array id="geom-pPlane10__mtPlainMinigameBush01-skin1-joints-array" count="5">joint0 joint1 joint2 joint3 joint4</Name_array>
+          <technique_common>
+            <accessor source="#geom-pPlane10__mtPlainMinigameBush01-skin1-joints-array" count="5" stride="1">
+              <param name="JOINT" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane10__mtPlainMinigameBush01-skin1-bind_poses">
+          <float_array id="geom-pPlane10__mtPlainMinigameBush01-skin1-bind_poses-array" count="80">1 0 0 0 0 0 1 0 0 -1 0 0 0 0 0 1 0 0 1 -0.3132974 0 -1 0 2.094387 1 0 0 0 0 0 0 1 0 0 1 -1.734319 0 -1 0 -4.622649 1 0 0 0 0 0 0 1 0 0 1 -1.857403 0 -1 0 2.094387 1 0 0 3.285869 0 0 0 1 -0.05499957 1.05265e-7 -0.9984859 2.069703 -1.61577e-8 0.999999 2.48531e-7 -2.094385 0.9984865 1.25188e-7 -0.05499951 -3.803111 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane10__mtPlainMinigameBush01-skin1-bind_poses-array" count="5" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane10__mtPlainMinigameBush01-skin1-weights">
+          <float_array id="geom-pPlane10__mtPlainMinigameBush01-skin1-weights-array" count="25">1 0.6980392 0.3019608 0.6980392 0.3019608 0.4980392 0.5019608 0.4980392 0.5019608 0.3019608 0.6980392 0.3019608 0.6980392 0.6980392 0.3019608 0.6980392 0.3019608 0.4980392 0.5019608 0.3019608 0.6980392 0.4980392 0.5019608 0.3019608 0.6980392</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane10__mtPlainMinigameBush01-skin1-weights-array" count="25" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#geom-pPlane10__mtPlainMinigameBush01-skin1-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#geom-pPlane10__mtPlainMinigameBush01-skin1-bind_poses"/>
+        </joints>
+        <vertex_weights count="24">
+          <input semantic="JOINT" source="#geom-pPlane10__mtPlainMinigameBush01-skin1-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#geom-pPlane10__mtPlainMinigameBush01-skin1-weights" offset="1"/>
+          <vcount>1 1 1 1 1 1 1 1 2 2 2 1 1 1 2 2 2 2 1 2 2 2 2 2</vcount>
+          <v>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 2 2 1 3 2 4 1 5 2 6 1 0 1 0 1 0 1 7 2 8 1 9 2 10 1 11 2 12 1 13 2 14 1 0 1 15 2 16 1 17 2 18 1 19 2 20 1 21 2 22 1 23 2 24</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="geom-pPlane11__mtPlainMinigameBush01-skin1">
+      <skin source="#geom-pPlane11__mtPlainMinigameBush01">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="geom-pPlane11__mtPlainMinigameBush01-skin1-joints">
+          <Name_array id="geom-pPlane11__mtPlainMinigameBush01-skin1-joints-array" count="5">joint0 joint1 joint2 joint3 joint4</Name_array>
+          <technique_common>
+            <accessor source="#geom-pPlane11__mtPlainMinigameBush01-skin1-joints-array" count="5" stride="1">
+              <param name="JOINT" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane11__mtPlainMinigameBush01-skin1-bind_poses">
+          <float_array id="geom-pPlane11__mtPlainMinigameBush01-skin1-bind_poses-array" count="80">1 0 0 0 0 0 1 0 0 -1 0 0 0 0 0 1 0 0 1 -0.3132974 0 -1 0 2.094387 1 0 0 0 0 0 0 1 0 0 1 -1.734319 0 -1 0 -4.622649 1 0 0 0 0 0 0 1 0 0 1 -1.857403 0 -1 0 2.094387 1 0 0 3.285869 0 0 0 1 -0.05499957 1.05265e-7 -0.9984859 2.069703 -1.61577e-8 0.999999 2.48531e-7 -2.094385 0.9984865 1.25188e-7 -0.05499951 -3.803111 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane11__mtPlainMinigameBush01-skin1-bind_poses-array" count="5" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane11__mtPlainMinigameBush01-skin1-weights">
+          <float_array id="geom-pPlane11__mtPlainMinigameBush01-skin1-weights-array" count="25">1 0.6980392 0.3019608 0.6980392 0.3019608 0.4980392 0.5019608 0.4980392 0.5019608 0.3019608 0.6980392 0.3019608 0.6980392 0.6980392 0.3019608 0.6980392 0.3019608 0.4980392 0.5019608 0.3019608 0.6980392 0.4980392 0.5019608 0.3019608 0.6980392</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane11__mtPlainMinigameBush01-skin1-weights-array" count="25" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#geom-pPlane11__mtPlainMinigameBush01-skin1-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#geom-pPlane11__mtPlainMinigameBush01-skin1-bind_poses"/>
+        </joints>
+        <vertex_weights count="24">
+          <input semantic="JOINT" source="#geom-pPlane11__mtPlainMinigameBush01-skin1-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#geom-pPlane11__mtPlainMinigameBush01-skin1-weights" offset="1"/>
+          <vcount>1 1 1 1 1 1 1 1 2 2 2 1 1 1 2 2 2 2 1 2 2 2 2 2</vcount>
+          <v>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 4 2 1 3 4 4 1 5 4 6 1 0 1 0 1 0 1 7 4 8 1 9 4 10 1 11 4 12 1 13 4 14 1 0 1 15 4 16 1 17 4 18 1 19 4 20 1 21 4 22 1 23 4 24</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="geom-pPlane12__mtPlainMinigameBush01-skin1">
+      <skin source="#geom-pPlane12__mtPlainMinigameBush01">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="geom-pPlane12__mtPlainMinigameBush01-skin1-joints">
+          <Name_array id="geom-pPlane12__mtPlainMinigameBush01-skin1-joints-array" count="5">joint0 joint1 joint2 joint3 joint4</Name_array>
+          <technique_common>
+            <accessor source="#geom-pPlane12__mtPlainMinigameBush01-skin1-joints-array" count="5" stride="1">
+              <param name="JOINT" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane12__mtPlainMinigameBush01-skin1-bind_poses">
+          <float_array id="geom-pPlane12__mtPlainMinigameBush01-skin1-bind_poses-array" count="80">1 0 0 0 0 0 1 0 0 -1 0 0 0 0 0 1 0 0 1 -0.3132974 0 -1 0 2.094387 1 0 0 0 0 0 0 1 0 0 1 -1.734319 0 -1 0 -4.622649 1 0 0 0 0 0 0 1 0 0 1 -1.857403 0 -1 0 2.094387 1 0 0 3.285869 0 0 0 1 -0.05499957 1.05265e-7 -0.9984859 2.069703 -1.61577e-8 0.999999 2.48531e-7 -2.094385 0.9984865 1.25188e-7 -0.05499951 -3.803111 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane12__mtPlainMinigameBush01-skin1-bind_poses-array" count="5" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane12__mtPlainMinigameBush01-skin1-weights">
+          <float_array id="geom-pPlane12__mtPlainMinigameBush01-skin1-weights-array" count="25">1 0.6980392 0.3019608 0.6980392 0.3019608 0.4980392 0.5019608 0.4980392 0.5019608 0.3019608 0.6980392 0.3019608 0.6980392 0.6980392 0.3019608 0.6980392 0.3019608 0.4980392 0.5019608 0.3019608 0.6980392 0.4980392 0.5019608 0.3019608 0.6980392</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane12__mtPlainMinigameBush01-skin1-weights-array" count="25" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#geom-pPlane12__mtPlainMinigameBush01-skin1-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#geom-pPlane12__mtPlainMinigameBush01-skin1-bind_poses"/>
+        </joints>
+        <vertex_weights count="24">
+          <input semantic="JOINT" source="#geom-pPlane12__mtPlainMinigameBush01-skin1-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#geom-pPlane12__mtPlainMinigameBush01-skin1-weights" offset="1"/>
+          <vcount>1 1 1 1 1 1 1 1 2 2 2 1 1 1 2 2 2 2 1 2 2 2 2 2</vcount>
+          <v>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 3 2 1 3 3 4 1 5 3 6 1 0 1 0 1 0 1 7 3 8 1 9 3 10 1 11 3 12 1 13 3 14 1 0 1 15 3 16 1 17 3 18 1 19 3 20 1 21 3 22 1 23 3 24</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="geom-pPlane7__mtPlainMinigameBush01-skin1">
+      <skin source="#geom-pPlane7__mtPlainMinigameBush01">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="geom-pPlane7__mtPlainMinigameBush01-skin1-joints">
+          <Name_array id="geom-pPlane7__mtPlainMinigameBush01-skin1-joints-array" count="5">joint0 joint1 joint2 joint3 joint4</Name_array>
+          <technique_common>
+            <accessor source="#geom-pPlane7__mtPlainMinigameBush01-skin1-joints-array" count="5" stride="1">
+              <param name="JOINT" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane7__mtPlainMinigameBush01-skin1-bind_poses">
+          <float_array id="geom-pPlane7__mtPlainMinigameBush01-skin1-bind_poses-array" count="80">1 0 0 0 0 0 1 0 0 -1 0 0 0 0 0 1 0 0 1 -0.3132974 0 -1 0 2.094387 1 0 0 0 0 0 0 1 0 0 1 -1.734319 0 -1 0 -4.622649 1 0 0 0 0 0 0 1 0 0 1 -1.857403 0 -1 0 2.094387 1 0 0 3.285869 0 0 0 1 -0.05499957 1.05265e-7 -0.9984859 2.069703 -1.61577e-8 0.999999 2.48531e-7 -2.094385 0.9984865 1.25188e-7 -0.05499951 -3.803111 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane7__mtPlainMinigameBush01-skin1-bind_poses-array" count="5" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane7__mtPlainMinigameBush01-skin1-weights">
+          <float_array id="geom-pPlane7__mtPlainMinigameBush01-skin1-weights-array" count="1">1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane7__mtPlainMinigameBush01-skin1-weights-array" count="1" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#geom-pPlane7__mtPlainMinigameBush01-skin1-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#geom-pPlane7__mtPlainMinigameBush01-skin1-bind_poses"/>
+        </joints>
+        <vertex_weights count="27">
+          <input semantic="JOINT" source="#geom-pPlane7__mtPlainMinigameBush01-skin1-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#geom-pPlane7__mtPlainMinigameBush01-skin1-weights" offset="1"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="geom-pPlane8__mtPlainMinigameBush01-skin1">
+      <skin source="#geom-pPlane8__mtPlainMinigameBush01">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="geom-pPlane8__mtPlainMinigameBush01-skin1-joints">
+          <Name_array id="geom-pPlane8__mtPlainMinigameBush01-skin1-joints-array" count="5">joint0 joint1 joint2 joint3 joint4</Name_array>
+          <technique_common>
+            <accessor source="#geom-pPlane8__mtPlainMinigameBush01-skin1-joints-array" count="5" stride="1">
+              <param name="JOINT" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane8__mtPlainMinigameBush01-skin1-bind_poses">
+          <float_array id="geom-pPlane8__mtPlainMinigameBush01-skin1-bind_poses-array" count="80">1 0 0 0 0 0 1 0 0 -1 0 0 0 0 0 1 0 0 1 -0.3132974 0 -1 0 2.094387 1 0 0 0 0 0 0 1 0 0 1 -1.734319 0 -1 0 -4.622649 1 0 0 0 0 0 0 1 0 0 1 -1.857403 0 -1 0 2.094387 1 0 0 3.285869 0 0 0 1 -0.05499957 1.05265e-7 -0.9984859 2.069703 -1.61577e-8 0.999999 2.48531e-7 -2.094385 0.9984865 1.25188e-7 -0.05499951 -3.803111 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane8__mtPlainMinigameBush01-skin1-bind_poses-array" count="5" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane8__mtPlainMinigameBush01-skin1-weights">
+          <float_array id="geom-pPlane8__mtPlainMinigameBush01-skin1-weights-array" count="25">1 0.6980392 0.3019608 0.6980392 0.3019608 0.4980392 0.5019608 0.4980392 0.5019608 0.3019608 0.6980392 0.3019608 0.6980392 0.6980392 0.3019608 0.6980392 0.3019608 0.8392158 0.1607843 0.3019608 0.6980392 0.8392158 0.1607843 0.3019608 0.6980392</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane8__mtPlainMinigameBush01-skin1-weights-array" count="25" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#geom-pPlane8__mtPlainMinigameBush01-skin1-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#geom-pPlane8__mtPlainMinigameBush01-skin1-bind_poses"/>
+        </joints>
+        <vertex_weights count="24">
+          <input semantic="JOINT" source="#geom-pPlane8__mtPlainMinigameBush01-skin1-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#geom-pPlane8__mtPlainMinigameBush01-skin1-weights" offset="1"/>
+          <vcount>1 1 1 1 1 1 1 1 2 2 2 1 1 1 2 2 2 2 1 2 2 2 2 2</vcount>
+          <v>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 3 2 1 3 3 4 1 5 3 6 1 0 1 0 1 0 1 7 3 8 1 9 3 10 1 11 3 12 1 13 3 14 1 0 1 15 3 16 1 17 3 18 1 19 3 20 1 21 3 22 1 23 3 24</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="geom-pPlane9__mtPlainMinigameBush01-skin1">
+      <skin source="#geom-pPlane9__mtPlainMinigameBush01">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="geom-pPlane9__mtPlainMinigameBush01-skin1-joints">
+          <Name_array id="geom-pPlane9__mtPlainMinigameBush01-skin1-joints-array" count="5">joint0 joint1 joint2 joint3 joint4</Name_array>
+          <technique_common>
+            <accessor source="#geom-pPlane9__mtPlainMinigameBush01-skin1-joints-array" count="5" stride="1">
+              <param name="JOINT" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane9__mtPlainMinigameBush01-skin1-bind_poses">
+          <float_array id="geom-pPlane9__mtPlainMinigameBush01-skin1-bind_poses-array" count="80">1 0 0 0 0 0 1 0 0 -1 0 0 0 0 0 1 0 0 1 -0.3132974 0 -1 0 2.094387 1 0 0 0 0 0 0 1 0 0 1 -1.734319 0 -1 0 -4.622649 1 0 0 0 0 0 0 1 0 0 1 -1.857403 0 -1 0 2.094387 1 0 0 3.285869 0 0 0 1 -0.05499957 1.05265e-7 -0.9984859 2.069703 -1.61577e-8 0.999999 2.48531e-7 -2.094385 0.9984865 1.25188e-7 -0.05499951 -3.803111 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane9__mtPlainMinigameBush01-skin1-bind_poses-array" count="5" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-pPlane9__mtPlainMinigameBush01-skin1-weights">
+          <float_array id="geom-pPlane9__mtPlainMinigameBush01-skin1-weights-array" count="25">1 0.6980392 0.3019608 0.6980392 0.3019608 0.4980392 0.5019608 0.4980392 0.5019608 0.3019608 0.6980392 0.3019608 0.6980392 0.6980392 0.3019608 0.6980392 0.3019608 0.4980392 0.5019608 0.3019608 0.6980392 0.4980392 0.5019608 0.3019608 0.6980392</float_array>
+          <technique_common>
+            <accessor source="#geom-pPlane9__mtPlainMinigameBush01-skin1-weights-array" count="25" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#geom-pPlane9__mtPlainMinigameBush01-skin1-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#geom-pPlane9__mtPlainMinigameBush01-skin1-bind_poses"/>
+        </joints>
+        <vertex_weights count="24">
+          <input semantic="JOINT" source="#geom-pPlane9__mtPlainMinigameBush01-skin1-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#geom-pPlane9__mtPlainMinigameBush01-skin1-weights" offset="1"/>
+          <vcount>1 1 1 1 1 1 1 1 2 2 2 1 1 1 2 2 2 2 1 2 2 2 2 2</vcount>
+          <v>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 4 2 1 3 4 4 1 5 4 6 1 0 1 0 1 0 1 7 4 8 1 9 4 10 1 11 4 12 1 13 4 14 1 0 1 15 4 16 1 17 4 18 1 19 4 20 1 21 4 22 1 23 4 24</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="PlainMinigameBush00_alb_png">
+      <init_from>./PlainMinigameBush00_alb.png</init_from>
+    </image>
+    <image id="PlainMinigameBush00_nml_png">
+      <init_from>./PlainMinigameBush00_nml.png</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-bushGroup00" name="bushGroup00" sid="joint0" type="JOINT">
+        <rotate>-1 0 0 -90</rotate>
+        <node id="node-Bush" name="Bush" sid="joint1" type="JOINT">
+          <translate>0 0.3132974 -2.094387</translate>
+          <rotate>0.5773503 0.5773503 0.5773503 -240</rotate>
+          <node id="node-BushC" name="BushC" sid="joint2" type="JOINT">
+            <translate>1.421021 6.717036 0</translate>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+                <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+                <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+                <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-BushL" name="BushL" sid="joint3" type="JOINT">
+            <translate>1.544105 0 -3.285869</translate>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+                <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+                <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+                <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-BushR" name="BushR" sid="joint4" type="JOINT">
+            <translate>1.544105 0 3.911187</translate>
+            <rotate>-0.02751019 -3.63084e-8 0.9996215 -180</rotate>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+                <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+                <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+                <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <extra>
+            <technique profile="OpenCOLLADA">
+              <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+              <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+              <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+              <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+            </technique>
+          </extra>
+        </node>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+            <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+            <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+            <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+      <node id="node-pPlane10__mtPlainMinigameBush01" name="pPlane10__mtPlainMinigameBush01">
+        <instance_controller url="#geom-pPlane10__mtPlainMinigameBush01-skin1">
+          <skeleton>#node-bushGroup00</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="mtPlainMinigameBush01" target="#mtPlainMinigameBush01-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+            <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+            <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+            <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+      <node id="node-pPlane11__mtPlainMinigameBush01" name="pPlane11__mtPlainMinigameBush01">
+        <instance_controller url="#geom-pPlane11__mtPlainMinigameBush01-skin1">
+          <skeleton>#node-bushGroup00</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="mtPlainMinigameBush01" target="#mtPlainMinigameBush01_1-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+            <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+            <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+            <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+      <node id="node-pPlane12__mtPlainMinigameBush01" name="pPlane12__mtPlainMinigameBush01">
+        <instance_controller url="#geom-pPlane12__mtPlainMinigameBush01-skin1">
+          <skeleton>#node-bushGroup00</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="mtPlainMinigameBush01" target="#mtPlainMinigameBush01_2-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+            <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+            <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+            <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+      <node id="node-pPlane7__mtPlainMinigameBush01" name="pPlane7__mtPlainMinigameBush01">
+        <instance_controller url="#geom-pPlane7__mtPlainMinigameBush01-skin1">
+          <skeleton>#node-bushGroup00</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="mtPlainMinigameBush01" target="#mtPlainMinigameBush01_3-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+            <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+            <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+            <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+      <node id="node-pPlane8__mtPlainMinigameBush01" name="pPlane8__mtPlainMinigameBush01">
+        <instance_controller url="#geom-pPlane8__mtPlainMinigameBush01-skin1">
+          <skeleton>#node-bushGroup00</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="mtPlainMinigameBush01" target="#mtPlainMinigameBush01_4-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+            <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+            <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+            <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+      <node id="node-pPlane9__mtPlainMinigameBush01" name="pPlane9__mtPlainMinigameBush01">
+        <instance_controller url="#geom-pPlane9__mtPlainMinigameBush01-skin1">
+          <skeleton>#node-bushGroup00</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="mtPlainMinigameBush01" target="#mtPlainMinigameBush01_5-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+            <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+            <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+            <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

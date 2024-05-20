@@ -1,0 +1,32 @@
+newmtl f_kage
+Ka 0.972549 0.972549 0.972549
+Kd 0.7843137 0.7843137 0.7843137
+d 0.2903226
+Tr 0.2903226
+map_Ka f_kage.png
+map_Kd f_kage.png
+map_d f_kage.png
+newmtl msp_001
+Ka 0.972549 0.972549 0.972549
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka msp_001.png
+map_Kd msp_001.png
+map_d msp_001.png
+newmtl msp_001w
+Ka 0.972549 0.972549 0.972549
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka msp_001w.png
+map_Kd msp_001w.png
+map_d msp_001w.png
+newmtl msp_002
+Ka 0.972549 0.972549 0.972549
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka msp_002.png
+map_Kd msp_002.png
+map_d msp_002.png

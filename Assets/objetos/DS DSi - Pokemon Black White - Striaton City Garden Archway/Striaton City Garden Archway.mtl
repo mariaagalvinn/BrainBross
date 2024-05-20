@@ -1,0 +1,24 @@
+newmtl c01arch_a_1
+Ka 0.7843137 0.7843137 0.7843137
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka c01arch_a_1.png
+map_Kd c01arch_a_1.png
+map_d c01arch_a_1.png
+newmtl c01arch_b_1
+Ka 0.7843137 0.7843137 0.7843137
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka c01arch_b_1.png
+map_Kd c01arch_b_1.png
+map_d c01arch_b_1.png
+newmtl h_kage_1
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka h_kage_1.png
+map_Kd h_kage_1.png
+map_d h_kage_1.png
