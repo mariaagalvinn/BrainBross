@@ -22,6 +22,7 @@ public class PlayerController2 : MonoBehaviour
     public float distanciaMinima = 1f; 
     public float jumpHeight = 2f;
     public float jumpSpeed = 4f;
+    public AudioSource jumpSound;
 
 
     void Start()
@@ -71,6 +72,7 @@ public class PlayerController2 : MonoBehaviour
 
         if (!isJumping)
         {
+            jumpSound.Play();
             animator.SetBool("isJumping", true);
             isJumping = true;
 
