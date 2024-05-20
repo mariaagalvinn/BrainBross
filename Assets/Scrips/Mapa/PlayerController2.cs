@@ -73,7 +73,7 @@ public class PlayerController2 : MonoBehaviour
         if (!isJumping)
         {
             jumpSound.gameObject.SetActive(true);
-            //jumpSound.Play();
+            jumpSound.Play();
             animator.SetBool("isJumping", true);
             isJumping = true;
 
