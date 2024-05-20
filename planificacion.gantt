@@ -1,0 +1,258 @@
+{
+  "data": [
+    {
+      "TaskID": 1,
+      "TaskName": "Brain Bros",
+      "StartDate": "2024-03-18T07:00:00.000Z",
+      "EndDate": "2024-05-21T16:00:00.000Z",
+      "Duration": 65,
+      "Progress": 0,
+      "color": "",
+      "Predecessor": null,
+      "resources": [],
+      "info": "<p><br></p>",
+      "DurationUnit": "day",
+      "subtasks": [
+        {
+          "TaskID": 2,
+          "TaskName": "Diseño de los mapas, escenarios y minijuegos de forma conceptual",
+          "StartDate": "2024-03-18T07:00:00.000Z",
+          "EndDate": "2024-03-22T16:00:00.000Z",
+          "Duration": 5,
+          "Progress": 0,
+          "color": "",
+          "Predecessor": "",
+          "resources": [],
+          "info": "<p><br></p>",
+          "DurationUnit": "day"
+        },
+        {
+          "TaskID": 3,
+          "TaskName": "Minijuegos y mapas",
+          "StartDate": "2024-03-22T07:00:00.000Z",
+          "EndDate": "2024-05-01T16:00:00.000Z",
+          "Duration": 41,
+          "Progress": 0,
+          "color": "",
+          "Predecessor": "",
+          "resources": [],
+          "info": "<p><br></p>",
+          "DurationUnit": "day",
+          "subtasks": [
+            {
+              "TaskID": 4,
+              "TaskName": "Minijuego 1",
+              "StartDate": "2024-03-22T07:00:00.000Z",
+              "EndDate": "2024-05-01T16:00:00.000Z",
+              "Duration": 41,
+              "Progress": 0,
+              "color": "",
+              "Predecessor": "",
+              "resources": [],
+              "info": "<p><br></p>",
+              "DurationUnit": "day"
+            },
+            {
+              "TaskID": 5,
+              "TaskName": "Minijuego 2",
+              "StartDate": "2024-03-22T07:00:00.000Z",
+              "EndDate": "2024-05-01T16:00:00.000Z",
+              "Duration": 41,
+              "Progress": 0,
+              "color": "",
+              "Predecessor": "",
+              "resources": [],
+              "info": "<p><br></p>",
+              "DurationUnit": "day"
+            },
+            {
+              "TaskID": 6,
+              "TaskName": "Minijuego 3",
+              "StartDate": "2024-03-22T07:00:00.000Z",
+              "EndDate": "2024-05-01T16:00:00.000Z",
+              "Duration": 41,
+              "Progress": 0,
+              "color": "",
+              "Predecessor": "",
+              "resources": [],
+              "info": "<p><br></p>",
+              "DurationUnit": "day"
+            },
+            {
+              "TaskID": 7,
+              "TaskName": "Minijuego 4",
+              "StartDate": "2024-03-22T07:00:00.000Z",
+              "EndDate": "2024-05-01T16:00:00.000Z",
+              "Duration": 41,
+              "Progress": 0,
+              "color": "",
+              "Predecessor": "",
+              "resources": [],
+              "info": "<p><br></p>",
+              "DurationUnit": "day"
+            },
+            {
+              "TaskID": 8,
+              "TaskName": "Minijuego 5",
+              "StartDate": "2024-03-22T07:00:00.000Z",
+              "EndDate": "2024-05-01T16:00:00.000Z",
+              "Duration": 41,
+              "Progress": 0,
+              "color": "",
+              "Predecessor": "",
+              "resources": [],
+              "info": "<p><br></p>",
+              "DurationUnit": "day"
+            },
+            {
+              "TaskID": 9,
+              "TaskName": "Minijuego 6",
+              "StartDate": "2024-03-22T07:00:00.000Z",
+              "EndDate": "2024-05-01T16:00:00.000Z",
+              "Duration": 41,
+              "Progress": 0,
+              "color": "",
+              "Predecessor": "",
+              "resources": [],
+              "info": "<p><br></p>",
+              "DurationUnit": "day"
+            },
+            {
+              "TaskID": 10,
+              "TaskName": "Minijuego 7",
+              "StartDate": "2024-03-22T07:00:00.000Z",
+              "EndDate": "2024-05-01T16:00:00.000Z",
+              "Duration": 41,
+              "Progress": 0,
+              "color": "",
+              "Predecessor": "",
+              "resources": [],
+              "info": "<p><br></p>",
+              "DurationUnit": "day"
+            },
+            {
+              "TaskID": 11,
+              "TaskName": "Escenas de LipSync",
+              "StartDate": "2024-03-22T07:00:00.000Z",
+              "EndDate": "2024-05-01T16:00:00.000Z",
+              "Duration": 41,
+              "Progress": 0,
+              "color": "",
+              "Predecessor": "",
+              "resources": [],
+              "info": "<p><br></p>",
+              "DurationUnit": "day"
+            },
+            {
+              "TaskID": 12,
+              "TaskName": "Mapa principal",
+              "StartDate": "2024-03-22T07:00:00.000Z",
+              "EndDate": "2024-05-01T16:00:00.000Z",
+              "Duration": 41,
+              "Progress": 0,
+              "color": "",
+              "Predecessor": "",
+              "resources": [],
+              "info": "<p><br></p>",
+              "DurationUnit": "day"
+            }
+          ]
+        },
+        {
+          "TaskID": 13,
+          "TaskName": "Integración de los minijuegos y el mapa",
+          "StartDate": "2024-05-01T07:00:00.000Z",
+          "EndDate": "2024-05-21T16:00:00.000Z",
+          "Duration": 15,
+          "Progress": 0,
+          "color": "",
+          "Predecessor": "",
+          "resources": [],
+          "info": "<p><br></p>",
+          "DurationUnit": "day"
+        },
+        {
+          "TaskID": 14,
+          "TaskName": "Documentación",
+          "StartDate": "2024-03-18T07:00:00.000Z",
+          "EndDate": "2024-05-21T16:00:00.000Z",
+          "Duration": 65,
+          "Progress": 0,
+          "color": "",
+          "Predecessor": "",
+          "resources": [],
+          "info": "<p><br></p>",
+          "DurationUnit": "day"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "resourceId": "Team Member 1",
+      "resourceName": "Team Member 1"
+    },
+    {
+      "resourceId": "Team Member 2",
+      "resourceName": "Team Member 2"
+    },
+    {
+      "resourceId": "Team Member 3",
+      "resourceName": "Team Member 3"
+    }
+  ],
+  "projectStartDate": null,
+  "projectEndDate": null,
+  "advanced": {
+    "columns": [
+      {
+        "name": "Task ID",
+        "width": "70",
+        "show": true
+      },
+      {
+        "name": "Task Name",
+        "width": "350",
+        "show": true
+      },
+      {
+        "name": "Start Date",
+        "width": "130",
+        "show": false
+      },
+      {
+        "name": "End Date",
+        "width": "130",
+        "show": false
+      },
+      {
+        "name": "Duration",
+        "width": "130",
+        "show": false
+      },
+      {
+        "name": "Progress %",
+        "width": "150",
+        "show": false
+      },
+      {
+        "name": "Dependency",
+        "width": "150",
+        "show": false
+      },
+      {
+        "name": "Resources",
+        "width": "200",
+        "show": false
+      },
+      {
+        "name": "Color",
+        "width": "100",
+        "show": false
+      }
+    ],
+    "firstDayOfWeek": 0,
+    "workWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "holidays": []
+  }
+}
