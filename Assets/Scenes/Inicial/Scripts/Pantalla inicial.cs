@@ -20,6 +20,7 @@ public class Pantallainicial : MonoBehaviour
 
     private void Start() {
         canvas.gameObject.SetActive(true);
+        audio2.gameObject.SetActive(false);
         audio1.Play();
        Debug.Log(index);
     }
@@ -28,6 +29,10 @@ public class Pantallainicial : MonoBehaviour
         //Esconder Canvas
         canvas.gameObject.SetActive(false);
         audio1.Stop();
+        // Desactivar audio 1
+        audio1.gameObject.SetActive(false);
+        //Activar audio 2
+        audio2.gameObject.SetActive(true);
         audio2.Play();
         //Mostrar dialogo
         index = 0;
@@ -38,23 +43,23 @@ public class Pantallainicial : MonoBehaviour
     public void dialogo(){
         if(index == 0){
             peach.gameObject.SetActive(true);
-            textoPeach.text = "¡Bowser! ¿Qué estás tramando esta vez?".ToString();
+            textoPeach.text = "¡Bowser! ¿Qué estás tramando esta vez?";
         } else if(index == 1) {
             peach.gameObject.SetActive(false);
             bowser.gameObject.SetActive(true);
-            textoBowser.text = "¡Ja, ja, ja! ¡Princesa Peach! ¡He venido a conquistar este reino!".ToString();
+            textoBowser.text = "¡Ja, ja, ja! ¡Princesa Peach! ¡He venido a conquistar este reino!";
         } else if(index == 2){
             bowser.gameObject.SetActive(false);
             peach.gameObject.SetActive(true);
-            textoPeach.text = "¡No lo permitiré!".ToString();
+            textoPeach.text = "¡No lo permitiré!";
         } else if(index == 3){
             peach.gameObject.SetActive(false);
             bowser.gameObject.SetActive(true);
-            textoBowser.text = "Bueno, veamos quién es el más astuto en mi BrainBross. ¡Prepárate para ser derrotada, Peach!".ToString();
+            textoBowser.text = "Bueno, veamos quién es el más astuto en mi BrainBros. ¡Prepárate para ser derrotada, Peach!";
         } else if(index == 4){
             bowser.gameObject.SetActive(false);
             peach.gameObject.SetActive(true);
-            textoPeach.text = "¡No me rendiré! ¡Te voy a derrotar!".ToString();
+            textoPeach.text = "¡No me rendiré! ¡Te voy a derrotar!";
         } else {
             peach.gameObject.SetActive(false);
             audio2.Stop();
