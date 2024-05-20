@@ -67,6 +67,9 @@ namespace BrainBross
         }
         public void RemoveShooter()
         {
+            if (crowdSize == 0){
+                return;
+            }
             crowdSize--;
             if (!CanRemove()) return;
             var lastShooter = _shooters[_shooters.Count - 1];

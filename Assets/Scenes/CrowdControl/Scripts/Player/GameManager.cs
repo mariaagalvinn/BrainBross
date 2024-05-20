@@ -7,17 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public AudioSource audioGanar;
-    public AudioSource audioPerder;
-    public AudioSource audioPpal;
+
     public GameObject gameOverUI;
 
-    private void Start()
-    {
-        audioGanar.gameObject.SetActive(false);
-        audioPerder.gameObject.SetActive(false);
-        audioPpal.gameObject.SetActive(true);
-    }
 
     void Awake()
     {
