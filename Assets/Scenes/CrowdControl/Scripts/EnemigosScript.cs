@@ -19,7 +19,9 @@ namespace bb {
         }
 
         public void disparoEnemy(){
-            enemigos = enemigos - 1;
+            if(enemigos > 0){
+                enemigos--;
+            }
         }
 
         public int getEnemigos(){
