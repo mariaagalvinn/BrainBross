@@ -6,11 +6,15 @@ using bb;
 
 
 public class PlayerController : MonoBehaviour
-{
-    public ParticleSystem victoryParticles;
+{ 
+
     public GameObject moveForwardObject;
     public Canvas victoryCanvas;
     public Canvas darkCanvas;
+
+    public AudioSource audioGanar;
+    public AudioSource audioPerder;
+    public AudioSource audioPpal;
 
     private MoveForward moveForwardScript;
     public PlayerShooter playerShooter;
@@ -19,9 +23,11 @@ public class PlayerController : MonoBehaviour
     
 
     private void Start() {
-        // Ocultar las partículas al inicio
-        victoryParticles.Stop();
-        victoryParticles.Clear();
+
+        audioGanar.gameObject.SetActive(false);
+        audioPerder.gameObject.SetActive(false);
+        audioPpal.gameObject.SetActive(true);
+    
         // Obtener el script de movimiento
         moveForwardScript = moveForwardObject.GetComponent<MoveForward>();
         // Ocultar el canvas de victoria
@@ -43,11 +49,18 @@ public class PlayerController : MonoBehaviour
             if(enemigos_.getEnemigos() <= 0){
                 // Mostrar el canvas de victoria
                 victoryCanvas.gameObject.SetActive(true);
-                victoryParticles.Play();
+                audioGanar.gameObject.SetActive(true);
+                audioPpal.gameObject.SetActive(false);
+                audioPerder.gameObject.SetActive(false);
                 moveForwardScript.StopMoving();
                 playerShooter.StopShooting();
             } else {
+                audioPpal.gameObject.SetActive(false); // Desactiva el audio principal
+                audioPerder.gameObject.SetActive(true);
+                audioGanar.gameObject.SetActive(false);
                 darkCanvas.gameObject.SetActive(true);
+                moveForwardScript.StopMoving();
+                playerShooter.StopShooting();
                 GameManager.Instance.GameOver();
             }
         }

@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+
     public GameObject gameOverUI;
+
 
     void Awake()
     {
@@ -18,8 +20,9 @@ public class GameManager : MonoBehaviour
     }
 
     public void GameOver() {
-        Time.timeScale = 0; // Pausa el juego
+        
         gameOverUI.SetActive(true); // Activa el panel de Game Over
+
     }
 
     public void RestartGame() {

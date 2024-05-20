@@ -22,13 +22,14 @@ public class PlayerController2 : MonoBehaviour
     public float distanciaMinima = 1f; 
     public float jumpHeight = 2f;
     public float jumpSpeed = 4f;
+    public AudioSource jumpSound;
 
 
     void Start()
     {
         // Inicializar el índice de la plataforma actual
         offset = camara.transform.position - playerPosicion.position;
-
+        jumpSound.gameObject.SetActive(false);
         // booleanos
         enMovimiento = false;
         isJumping = false;
@@ -71,6 +72,8 @@ public class PlayerController2 : MonoBehaviour
 
         if (!isJumping)
         {
+            jumpSound.gameObject.SetActive(true);
+            jumpSound.Play();
             animator.SetBool("isJumping", true);
             isJumping = true;
 
