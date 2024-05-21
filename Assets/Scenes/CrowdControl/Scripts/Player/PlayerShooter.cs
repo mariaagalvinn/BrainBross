@@ -13,7 +13,6 @@ public class PlayerShooter : MonoBehaviour
     private float _runningTimer;
     private float _damagePerShootable;
     private int _year = 0;
-    private int points = 50;
     private bool canShoot = true;
 
     private void Start()
