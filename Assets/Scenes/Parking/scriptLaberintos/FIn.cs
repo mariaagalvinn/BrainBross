@@ -15,7 +15,6 @@ public class FIn : MonoBehaviour
 
     void Update()
     {
-        // Cambiar de escena si se ha alcanzado la puntuación total
         if (puntuacion >= 11)
         {
             CambiarDeEscena();
@@ -31,6 +30,6 @@ public class FIn : MonoBehaviour
     void CambiarDeEscena()
     {
         Debug.Log("Puntuación alcanzada, cambiando a la siguiente escena.");
-        SceneManager.LoadScene(2); // Cambia de escena, ajusta el índice según sea necesario
+        SceneManager.LoadScene("Mapa 6");
     }
 }
