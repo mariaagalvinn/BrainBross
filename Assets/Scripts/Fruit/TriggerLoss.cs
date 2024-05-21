@@ -7,6 +7,8 @@ public class TriggerLoss : MonoBehaviour
 {
     private float _timer = 0f;
 
+    [SerializeField] private int puntuacionMinima = 50;
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 7)
@@ -14,7 +16,7 @@ public class TriggerLoss : MonoBehaviour
             _timer += Time.deltaTime;
             if (_timer > SuikaGameManager.instance.TimeTillGameOver)
             {
-                if (SuikaGameManager.instance.CurrentScore < 150)
+                if (SuikaGameManager.instance.CurrentScore < puntuacionMinima)
                 {
                     SuikaGameManager.instance.GameOver();
                 }
