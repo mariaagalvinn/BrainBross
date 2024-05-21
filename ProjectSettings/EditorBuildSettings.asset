@@ -92,4 +92,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Laberintos/LipSyncFin.unity
     guid: 03276cddd60628a4993ee5041f1a6499
+  - enabled: 1
+    path: Assets/Scenes/Parking/LipSyncParking.unity
+    guid: 58df91ca29f04764484775ed05641625
   m_configObjects: {}
