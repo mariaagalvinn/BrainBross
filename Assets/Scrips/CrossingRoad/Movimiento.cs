@@ -30,7 +30,6 @@ public class Movimiento : MonoBehaviour
     public Canvas perder;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = escalainicial;
@@ -71,8 +70,6 @@ public class Movimiento : MonoBehaviour
     {
         if(saltos==20)
         {
-            //ganado.text = "Ha ganado";
-            //SceneManager.LoadScene("Mapa");
             Destroy(gameObject);
             ganar.gameObject.SetActive(true);
         }

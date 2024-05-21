@@ -7,7 +7,7 @@ public class Mundo : MonoBehaviour
     public int carril=0;
     public GameObject[] pisos;
     public int pisosDiferencia;
-    // Start is called before the first frame update
+    
     void Start()
     {
         for(int i=0;i<pisosDiferencia;i++)
@@ -16,7 +16,6 @@ public class Mundo : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         

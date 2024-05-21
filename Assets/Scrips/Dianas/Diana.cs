@@ -32,7 +32,6 @@ public class Diana : MonoBehaviour
 
     public Text mensajePerder;
 
-    // Start is called before the first frame update
     void Start()
     {
         puntuacionActual = 0;
@@ -50,7 +49,6 @@ public class Diana : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(puntuacionActual < 100 && cantidadDisparos > 0 && duracionActual < duracionPartida)
@@ -111,7 +109,6 @@ public class Diana : MonoBehaviour
     
     void DesactivarMensajeGanar()
     {
-        // Desactivar el mensaje de ganar
         mensajePerder.gameObject.SetActive(false);
     }
 
