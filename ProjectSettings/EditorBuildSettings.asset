@@ -69,24 +69,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Suika/PreSuika.unity
     guid: d5a85ce8017f662438e75c97e8d74445
   - enabled: 1
-    path: Assets/Parking/Juego.unity
+    path: Assets/Scenes/Parking/Juego.unity
     guid: 60a46d517f6eaad46ab868c87aad66e9
   - enabled: 1
-    path: Assets/Parking/MenuPrincipal.unity
+    path: Assets/Scenes/Parking/MenuPrincipal.unity
     guid: 84602cef4b0faec4f8dc1bc3822aa71f
   - enabled: 1
     path: Assets/Scenes/Diana/Dianas2.unity
     guid: d1e34a3c76c6c1c4099c6881cfa29fd6
   - enabled: 1
-    path: Assets/Laberintos/LabCastillo.unity
+    path: Assets/Scenes/Laberintos/LabCastillo.unity
     guid: aa846adc23a46ad40aaec85893f6d186
   - enabled: 1
-    path: Assets/Laberintos/SampleScene.unity
+    path: Assets/Scenes/Laberintos/SampleScene.unity
     guid: a3777080277a97c45bb45397564c9eb6
   - enabled: 1
-    path: Assets/Laberintos/Gameover.unity
+    path: Assets/Scenes/Laberintos/Gameover.unity
     guid: 25ce6bf8c9a58a3489d4e9a0e51a3fd1
   - enabled: 1
-    path: Assets/Laberintos/LipSyncLaberinto.unity
+    path: Assets/Scenes/Laberintos/LipSyncLaberinto.unity
     guid: f3f1ea7e3a9f0d04086434a909473929
+  - enabled: 1
+    path: Assets/Scenes/Laberintos/LipSyncFin.unity
+    guid: 03276cddd60628a4993ee5041f1a6499
   m_configObjects: {}

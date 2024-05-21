@@ -22,7 +22,7 @@ public class cronometroLaberinto : MonoBehaviour
         textoTiempo.text = "Tiempo restante: " + tiempo.ToString("f0");
 
         if (tiempo <= 0.0f){
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(26);
         }
     }
 

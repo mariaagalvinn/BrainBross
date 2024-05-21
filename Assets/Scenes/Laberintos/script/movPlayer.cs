@@ -96,7 +96,7 @@ public class movPlayer : MonoBehaviour
 
         else if (other.CompareTag("fin"))
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(27);
         }
     }
 }
