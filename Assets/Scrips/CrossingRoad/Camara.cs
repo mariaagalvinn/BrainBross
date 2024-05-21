@@ -6,13 +6,11 @@ public class Camara : MonoBehaviour
 {
     public Movimiento movimiento;
     public float velocidad;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.position = Vector3.Lerp(transform.position, Vector3.forward*movimiento.carril, velocidad*Time.deltaTime);   

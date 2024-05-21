@@ -32,7 +32,6 @@ public class Diana2 : MonoBehaviour
 
     public Text mensajePerder;
 
-    // Start is called before the first frame update
     void Start()
     {
         puntuacionActual = 0;
@@ -49,7 +48,6 @@ public class Diana2 : MonoBehaviour
         perder.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(puntuacionActual < 200 && cantidadDisparos > 0 && duracionActual < duracionPartida)
@@ -85,13 +83,10 @@ public class Diana2 : MonoBehaviour
             if(puntuacionActual >= 200)
             {
                 Destroy(gameObject);
-                //ganar.gameObject.SetActive(true);
                 SceneManager.LoadScene("Dianas3");
             }
             else 
             {
-                //Destroy(gameObject);
-                //perder.gameObject.SetActive(true);
                 mensajePerder.gameObject.SetActive(true);
 
                 Invoke("DesactivarMensajeGanar", 1f);
