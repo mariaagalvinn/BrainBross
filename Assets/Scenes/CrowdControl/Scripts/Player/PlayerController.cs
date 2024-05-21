@@ -3,6 +3,7 @@ using Modifiers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using bb;
+using BrainBross;
 
 
 public class PlayerController : MonoBehaviour
@@ -19,8 +20,8 @@ public class PlayerController : MonoBehaviour
     private MoveForward moveForwardScript;
     public PlayerShooter playerShooter;
     public EnemigosScript enemigos_;
-    
-    
+
+    private PlayerCrowd pc;
 
     private void Start() {
 
@@ -31,8 +32,15 @@ public class PlayerController : MonoBehaviour
         // Obtener el script de movimiento
         moveForwardScript = moveForwardObject.GetComponent<MoveForward>();
         // Ocultar el canvas de victoria
-
         victoryCanvas.gameObject.SetActive(false);    
+    }
+
+    private void Update()
+    {
+        if (PlayerCrowd.crowdSize == 0)
+        {
+            perder();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -47,21 +55,10 @@ public class PlayerController : MonoBehaviour
         } else if (other.CompareTag("Meta"))
         {
             if(enemigos_.getEnemigos() <= 0){
-                // Mostrar el canvas de victoria
-                victoryCanvas.gameObject.SetActive(true);
-                audioGanar.gameObject.SetActive(true);
-                audioPpal.gameObject.SetActive(false);
-                audioPerder.gameObject.SetActive(false);
-                moveForwardScript.StopMoving();
-                playerShooter.StopShooting();
-            } else {
-                audioPpal.gameObject.SetActive(false); // Desactiva el audio principal
-                audioPerder.gameObject.SetActive(true);
-                audioGanar.gameObject.SetActive(false);
-                darkCanvas.gameObject.SetActive(true);
-                moveForwardScript.StopMoving();
-                playerShooter.StopShooting();
-                GameManager.Instance.GameOver();
+                ganar();
+            } else
+            {
+                perder();
             }
         }
     }
@@ -74,6 +71,25 @@ public class PlayerController : MonoBehaviour
         playerShooter.ContinueShooting();
     }
 
+    private void ganar()
+    {
+        victoryCanvas.gameObject.SetActive(true);
+        audioGanar.gameObject.SetActive(true);
+        audioPpal.gameObject.SetActive(false);
+        audioPerder.gameObject.SetActive(false);
+        moveForwardScript.StopMoving();
+        playerShooter.StopShooting();
+    }
 
+    private void perder()
+    {
+        audioPpal.gameObject.SetActive(false); // Desactiva el audio principal
+        audioPerder.gameObject.SetActive(true);
+        audioGanar.gameObject.SetActive(false);
+        darkCanvas.gameObject.SetActive(true);
+        moveForwardScript.StopMoving();
+        playerShooter.StopShooting();
+        GameManager.Instance.GameOver();
+    }
     
 }

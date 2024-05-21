@@ -11,7 +11,7 @@ namespace BrainBross
     {
         [SerializeField] private int crowdSizeForDebug = 5;
         [SerializeField] private int startingCrowdSize = 1;
-        private int crowdSize;
+        public static int crowdSize;
 
         [SerializeField] private PlayerShooter shooterPrefab;
         [SerializeField] private List<Transform> spawnPoints = new List<Transform>();
@@ -26,14 +26,15 @@ namespace BrainBross
 
         private float _timer = 0f;
 
+        private void Awake()
+        {
+            crowdSize = 1;
+        }
+
         private void Start()
         {
             Set(startingCrowdSize);
             crowdSize = 1;
-            yearText.text = crowdSize.ToString();
-        }
-
-        public void Update(){
             yearText.text = crowdSize.ToString();
         }
 
@@ -65,17 +66,12 @@ namespace BrainBross
             return _shooters.Count + 1 <= spawnPoints.Count;
         }
 
-        public bool CanRemove()
-        {
-            return _shooters.Count - 2 >= 0;
-        }
         public void RemoveShooter()
         {
-            if (crowdSize == 0){
-                return;
+            if (crowdSize>0)
+            {
+                crowdSize--;
             }
-            crowdSize--;
-            if (!CanRemove()) return;
             var lastShooter = _shooters[_shooters.Count - 1];
             _shooters.Remove(lastShooter);
             Destroy(lastShooter.gameObject);
@@ -84,8 +80,8 @@ namespace BrainBross
 
         public void AddShooter()
         {
-            crowdSize++;
             if (!CanAdd()) return;
+            crowdSize++;
             var lastShooterIndex = _shooters.Count - 1;
             var position = spawnPoints[lastShooterIndex + 1].position;
             var shooter = Instantiate(shooterPrefab, position, Quaternion.identity, transform);
