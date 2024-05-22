@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Inicial/Escena inicial.unity
+    guid: b6050f3c8905a4955ad7ec4110d663f0
+  - enabled: 1
     path: Assets/Scenes/Diana/Dianas.unity
     guid: 79e68b5896db04739af2796777bff9bc
   - enabled: 1
