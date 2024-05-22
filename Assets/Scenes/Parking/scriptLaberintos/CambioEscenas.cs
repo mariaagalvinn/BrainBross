@@ -11,20 +11,12 @@ public class CambioEscenas : MonoBehaviour
   
     public void CambiarEscena1()
     {
-        Debug.Log("¡Hola, mundo!");
         SceneManager.LoadScene(21);
-    }
-
-    public void CambiarEscenaOpciones()
-    {
-        Debug.Log("¡Hola, mundo!");
-        SceneManager.LoadScene(2);
     }
 
     public void CambiarEscenaPrincipal()
     {
-        Debug.Log("¡Hola, mundo!");
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Mapa 5");
     }
     
 }
